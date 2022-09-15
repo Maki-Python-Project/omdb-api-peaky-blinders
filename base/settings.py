@@ -1,8 +1,14 @@
+import os
+
 from pathlib import Path
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = "django-insecure-_ju3y&#s_v+7o^==huvo%l3)(a@67)n53t(!fs*x&4%8e5i0+b"
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = True
 
@@ -18,6 +24,7 @@ INSTALLED_APPS = [
 
     # 3-rd party apps
     'rest_framework',
+    'django_filters',
 
     # local apps
     'episodes',
@@ -64,6 +71,11 @@ DATABASES = {
     }
 }
 
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': [
+        'django_filters.rest_framework.DjangoFilterBackend'
+    ]
+}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
