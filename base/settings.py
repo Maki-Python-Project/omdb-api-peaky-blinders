@@ -1,12 +1,15 @@
+import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = "django-insecure-_ju3y&#s_v+7o^==huvo%l3)(a@67)n53t(!fs*x&4%8e5i0+b"
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
-DEBUG = True
+DEBUG = int(os.environ.get('DEBUG', default=0))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(' ')
+
+CSRF_TRUSTED_ORIGINS = ['http://localhost:8443']
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -20,7 +23,7 @@ INSTALLED_APPS = [
     'rest_framework',
 
     # local apps
-    'episodes',
+    'episodes.apps.EpisodesConfig',
 ]
 
 MIDDLEWARE = [
@@ -53,17 +56,26 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "base.wsgi.application"
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql_psycopg2",
+#         'HOST': 'host.docker.internal',
+#         'PORT': 6666,
+#         'USER': 'postgres',
+#         'PASSWORD': 'admin',
+#         "NAME": "episode",
+#     }
+# }
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
         'HOST': 'host.docker.internal',
-        'PORT': 6666,
+        'PORT': 5434,
         'USER': 'postgres',
-        'PASSWORD': 'admin',
-        "NAME": "episode",
+        'PASSWORD': '517484',
+        "NAME": "episods",
     }
 }
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {

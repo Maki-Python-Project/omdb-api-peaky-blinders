@@ -18,7 +18,7 @@ RUN apk update \
 
 # lint
 RUN pip install --upgrade pip
-# RUN pip install flake8==3.9.2
+RUN pip install flake8==3.9.2
 COPY . .
 # RUN flake8 --ignore=E501,F401 .
 
@@ -45,7 +45,6 @@ ENV HOME=/home/app
 ENV APP_HOME=/home/app/web
 RUN mkdir $APP_HOME
 RUN mkdir $APP_HOME/staticfiles
-RUN mkdir $APP_HOME/mediafiles
 WORKDIR $APP_HOME
 
 # install dependencies
@@ -54,7 +53,7 @@ COPY --from=builder /app/wheels /wheels
 COPY --from=builder /app/requirements.txt .
 RUN pip install --no-cache /wheels/*
 
-# copy entrypoint.prod.sh
+# copy start.sh
 COPY scripts/start.sh .
 RUN sed -i 's/\r$//g'  $APP_HOME/start.sh
 RUN chmod +x  $APP_HOME/start.sh
@@ -68,5 +67,5 @@ RUN chown -R app:app $APP_HOME
 # change to the app user
 USER app
 
-# run entrypoint.prod.sh
+# run start.sh
 ENTRYPOINT ["/home/app/web/start.sh"]
