@@ -1,9 +1,14 @@
 import os
+
 from pathlib import Path
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = int(os.environ.get('DEBUG', default=0))
 
@@ -21,6 +26,7 @@ INSTALLED_APPS = [
 
     # 3-rd party apps
     'rest_framework',
+    'django_filters',
 
     # local apps
     'episodes.apps.EpisodesConfig',
@@ -75,6 +81,12 @@ DATABASES = {
         'PASSWORD': '517484',
         "NAME": "episods",
     }
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': [
+        'django_filters.rest_framework.DjangoFilterBackend'
+    ]
 }
 
 AUTH_PASSWORD_VALIDATORS = [
