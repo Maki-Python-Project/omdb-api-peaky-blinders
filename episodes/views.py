@@ -1,11 +1,11 @@
-import imp
-from rest_framework import generics
-from rest_framework import filters
+from rest_framework import generics, filters, permissions
 from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.permissions import IsAuthenticated
 
 from .models import Episode, Comment
 from .serializers import EpisodeSerializer, CommentSerializer
 from .filters import CommentFilter
+from .permissions import AdminOrAccountOwnerPermission
 
 
 class EpisodeList(generics.ListCreateAPIView):
@@ -27,11 +27,22 @@ class EpisodeDetail(generics.RetrieveUpdateDestroyAPIView):
 
 
 class CommentList(generics.ListCreateAPIView):
+    permission_classes = (IsAuthenticated,)
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
     filterset_class = CommentFilter
 
-    def perform_create(self, serializer):
+    def perform_create(self, serializer: CommentSerializer) -> None:
         serializer.save(
             customer=self.request.user
         )
+
+
+class CommentDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer
+
+    def get_permissions(self) -> permissions.BasePermission:
+        if self.request.method not in permissions.SAFE_METHODS:
+            return [AdminOrAccountOwnerPermission(), IsAuthenticated()]
+        return [IsAuthenticated()]
