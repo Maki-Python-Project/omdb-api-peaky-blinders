@@ -5,7 +5,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 
 from .models import Episode, Comment
 from .serializers import EpisodeSerializer, CommentSerializer
-from .filters import CommentFilter
+from .filters import CommentFilter, ImdbFilter
 
 
 class EpisodeList(generics.ListCreateAPIView):
@@ -35,3 +35,9 @@ class CommentList(generics.ListCreateAPIView):
         serializer.save(
             customer=self.request.user
         )
+
+
+class EpisodeImdb(generics.ListCreateAPIView):
+    queryset = Episode.objects.filter(imdb_rating__gte=8.8)
+    serializer_class = EpisodeSerializer
+    filterset_class = ImdbFilter

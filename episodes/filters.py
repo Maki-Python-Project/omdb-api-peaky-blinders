@@ -1,6 +1,7 @@
+from dataclasses import field
 from django_filters import rest_framework as filters
 
-from .models import Comment
+from .models import Comment, Episode
 
 
 class CommentFilter(filters.FilterSet):
@@ -10,3 +11,11 @@ class CommentFilter(filters.FilterSet):
     class Meta:
         model = Comment
         fields = ['id', 'episode', 'author']
+
+
+class ImdbFilter(filters.FilterSet):
+    season = filters.NumberFilter(field_name='season', lookup_expr='exact')
+
+    class Meta:
+        model = Episode
+        fields = ['season']
