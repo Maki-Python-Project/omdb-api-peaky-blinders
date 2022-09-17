@@ -10,9 +10,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = int(os.environ.get('DEBUG', default=0))
+DEBUG = int(os.getenv('DEBUG', default=0))
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(' ')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(' ')
 
 CSRF_TRUSTED_ORIGINS = ['http://localhost:8443']
 
@@ -154,7 +154,7 @@ LOGGING = {
         },
         'file_warning': {
             'level': 'WARNING',
-            'filters': ['require_debug_false'],
+            'filters': ['require_debug_true'],
             'class': 'logging.FileHandler',
             'formatter': 'verbose',
             'filename': os.path.join(BASE_DIR, 'django_warning.log'),

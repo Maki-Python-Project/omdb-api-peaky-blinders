@@ -9,8 +9,6 @@ services:
         - 8081
         depends_on:
         - db
-        env_file:
-        - .env.dev
     db:
         image: postgres
         volumes:
