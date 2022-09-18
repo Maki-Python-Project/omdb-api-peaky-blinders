@@ -1,19 +1,38 @@
 from rest_framework import serializers
-from .models import Episode, Comment
+from .models import Episode, Comment, Genre, Actor
+
+
+class GenreSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Genre
+        fields = [
+            'name',
+        ]
+
+
+class ActorsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Actor
+        fields = [
+            'name',
+            'surname',
+        ]
 
 
 class EpisodeSerializer(serializers.ModelSerializer):
+    genres = serializers.ReadOnlyField()
+    actors = serializers.ReadOnlyField()
+
     class Meta:
         model = Episode
         fields = [
-            'id',
             'title_episode',
             'season',
             'released',
             'number_episode',
             'imdb_rating',
-            'genre',
-            'actor',
+            'genres',
+            'actors',
             'language'
         ]
 

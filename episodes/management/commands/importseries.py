@@ -1,0 +1,95 @@
+import os
+import json
+from urllib.request import urlopen
+from django.core.management.base import BaseCommand, CommandError
+from episodes.serializers import EpisodeSerializer, ActorsSerializer, GenreSerializer
+from episodes.models import Actor, Episode, Genre
+from dotenv import load_dotenv
+
+
+load_dotenv()
+
+api_key = os.getenv('API_KEY')
+
+
+class Command(BaseCommand):
+    def add_arguments(self, parser):
+        pass
+
+    def handle(self, *args, **options):
+        response_series = urlopen(f'https://www.omdbapi.com/?i=tt2442560&apikey={api_key}')
+        series = json.loads(response_series.read())
+        seasons_count = int(series['totalSeasons'])
+
+        language = series['Language']
+        if not Actor.objects.exists():
+            actors_data = []
+            for name_surname in series['Actors'].split(', '):
+                name_surname = name_surname.split()
+                actors_data.append({
+                    'name': name_surname[0],
+                    'surname': name_surname[1],
+                })
+            actors = ActorsSerializer(data=actors_data, many=True)
+        else:
+            actors = []
+            for name_surname in series['Actors'].split(', '):
+                name_surname = name_surname.split()
+                actors.append(Actor.objects.get(name=name_surname[0], surname=name_surname[1]))
+
+        if not Genre.objects.exists():
+            genres_data = []
+            for genre in series['Genre'].split(', '):
+                genres_data.append({
+                    'name': genre,
+                })
+            genres = GenreSerializer(data=genres_data, many=True)
+        else:
+            genres = []
+            for genre in series['Genre'].split(', '):
+                genres.append(Genre.objects.get(name=genre))
+
+        if not Episode.objects.exists():
+            for i in range(1, seasons_count + 1):
+                response_season = urlopen(f'https://www.omdbapi.com/?t=Peaky%20Blinders&Season={i}&type=series&apikey={api_key}')
+                season = json.loads(response_season.read())
+                episodes = season['Episodes']
+                self.import_season(i, episodes, int(episodes[0]['Episode']),
+                                   int(episodes[-1]['Episode']), genres, actors, language)
+        else:
+            local_episode = Episode.objects.order_by('-season', '-number_episode')[0]
+            response_season = urlopen(f'https://www.omdbapi.com/?t=Peaky%20Blinders&Season={local_episode.season}&type=series&apikey={api_key}')
+            season = json.loads(response_season.read())
+            episodes = season['Episodes']
+
+            if (local_episode.season == seasons_count and local_episode.number_episode < int(season['Episodes'][-1]['Episode'])):
+                self.import_season(local_episode.season, episodes, int(local_episode.number_episode),
+                                   int(season['Episodes'][-1]['Episode']), genres, actors, language)
+            elif local_episode.season < seasons_count:
+                self.import_season(local_episode.season, episodes, int(local_episode.number_episode),
+                                   int(season['Episodes'][-1]['Episode']), genres, actors, language)
+                for i in range(local_episode.season + 1, seasons_count + 1):
+                    response_season = urlopen(f'https://www.omdbapi.com/?t=Peaky%20Blinders&Season={i}&type=series&apikey={api_key}')
+                    season = json.loads(response_season.read())
+                    episodes = season['Episodes']
+                    self.import_season(i, episodes, int(episodes[0]['Episode']),
+                                       int(episodes[-1]['Episode']), genres, actors, language)
+
+    def import_season(self, season, episodes, local_episode_number, current_episode_number,
+                      genres, actors, language='English, Romanian, Irish Gaelic, Italian, Yiddish, French'):
+        for episode in episodes[local_episode_number - 1:current_episode_number]:
+            episode_data = {
+                'title_episode': episode['Title'],
+                'season': season,
+                'released': episode['Released'],
+                'number_episode': episode['Episode'],
+                'imdb_rating': episode['imdbRating'],
+                'genres': genres,
+                'actors': actors,
+                'language': language
+            }
+            episode_serializer = EpisodeSerializer(data=episode_data)
+            if episode_serializer.is_valid():
+                episode_serializer.save()
+            else:
+                raise CommandError(episode_serializer.errors)
