@@ -1,0 +1,400 @@
+WARNING 2022-09-16 14:23:56,281 log 13428 5860 Not Found: /api/episod/1/
+WARNING 2022-09-16 14:23:56,283 basehttp 13428 5860 "GET /api/episod/1/ HTTP/1.1" 404 3242
+WARNING 2022-09-16 14:26:00,545 log 13428 5860 Not Found: /api/episod/1/
+WARNING 2022-09-16 14:26:00,546 basehttp 13428 5860 "GET /api/episod/1/ HTTP/1.1" 404 3242
+WARNING 2022-09-16 15:59:06,791 log 12664 9372 Unauthorized: /api/comments/
+WARNING 2022-09-16 15:59:06,792 basehttp 12664 9372 "GET /api/comments/ HTTP/1.1" 401 58
+WARNING 2022-09-16 16:00:10,262 log 12664 9372 Not Found: /api/logout/
+WARNING 2022-09-16 16:00:10,263 basehttp 12664 9372 "POST /api/logout/ HTTP/1.1" 404 3237
+ERROR 2022-09-16 16:00:21,455 log 12664 9372 Internal Server Error: /api/users/logout/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\users\views.py", line 38, in post
+    token.blacklist()
+AttributeError: 'RefreshToken' object has no attribute 'blacklist'
+ERROR 2022-09-16 16:00:21,461 basehttp 12664 9372 "POST /api/users/logout/ HTTP/1.1" 500 95529
+ERROR 2022-09-16 16:00:42,766 log 14764 12024 Internal Server Error: /api/users/logout/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: token_blacklist_blacklistedtoken
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\users\views.py", line 37, in post
+    token = RefreshToken(refresh_token)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework_simplejwt\tokens.py", line 47, in __init__
+    self.verify()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework_simplejwt\tokens.py", line 218, in verify
+    self.check_blacklist()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework_simplejwt\tokens.py", line 229, in check_blacklist
+    if BlacklistedToken.objects.filter(token__jti=jti).exists():
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\query.py", line 1225, in exists
+    return self.query.has_results(using=self.db)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\sql\query.py", line 592, in has_results
+    return compiler.has_results()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\sql\compiler.py", line 1363, in has_results
+    return bool(self.execute_sql(SINGLE))
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\sql\compiler.py", line 1395, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: token_blacklist_blacklistedtoken
+ERROR 2022-09-16 16:00:42,780 basehttp 14764 12024 "POST /api/users/logout/ HTTP/1.1" 500 168408
+WARNING 2022-09-16 16:01:23,862 log 12020 7680 Unauthorized: /api/token/refresh/
+WARNING 2022-09-16 16:01:23,863 basehttp 12020 7680 "POST /api/token/refresh/ HTTP/1.1" 401 58
+WARNING 2022-09-16 16:20:11,914 log 11904 16032 Not Found: /api/users/êóïø³åóê/
+WARNING 2022-09-16 16:20:11,916 basehttp 11904 16032 "GET /api/users/%D0%BA%D1%83%D0%BF%D1%88%D1%96%D0%B5%D1%83%D0%BA/ HTTP/1.1" 404 15038
+WARNING 2022-09-16 16:22:23,266 log 17812 16908 Not Found: /api/users/êóïø³åóê/
+WARNING 2022-09-16 16:22:23,267 basehttp 17812 16908 "GET /api/users/%D0%BA%D1%83%D0%BF%D1%88%D1%96%D0%B5%D1%83%D0%BA/ HTTP/1.1" 404 15038
+WARNING 2022-09-16 16:22:29,228 log 17464 18524 Not Found: /api/users/êóïø³åóê/
+WARNING 2022-09-16 16:22:29,230 basehttp 17464 18524 "GET /api/users/%D0%BA%D1%83%D0%BF%D1%88%D1%96%D0%B5%D1%83%D0%BA/ HTTP/1.1" 404 5051
+WARNING 2022-09-16 16:22:36,004 log 17464 18524 Method Not Allowed: /api/users/register/
+WARNING 2022-09-16 16:22:36,005 basehttp 17464 18524 "GET /api/users/register/ HTTP/1.1" 405 13085
+WARNING 2022-09-16 16:22:43,734 log 19168 17128 Not Found: /api/users/register/
+WARNING 2022-09-16 16:22:43,735 basehttp 19168 17128 "GET /api/users/register/ HTTP/1.1" 404 14702
+WARNING 2022-09-16 16:22:48,231 log 15480 7576 Method Not Allowed: /api/users/register/
+WARNING 2022-09-16 16:22:48,232 basehttp 15480 7576 "GET /api/users/register/ HTTP/1.1" 405 13085
+WARNING 2022-09-16 16:23:11,462 log 18020 14764 Method Not Allowed: /api/users/register/
+WARNING 2022-09-16 16:23:11,463 basehttp 18020 14764 "GET /api/users/register/ HTTP/1.1" 405 13085
+ERROR 2022-09-16 16:24:41,115 log 16656 11204 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: users_user.email
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\query.py", line 671, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\contrib\auth\base_user.py", line 68, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\base.py", line 831, in save
+    self.save_base(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\base.py", line 882, in save_base
+    updated = self._save_table(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\base.py", line 1025, in _save_table
+    results = self._do_insert(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\base.py", line 1066, in _do_insert
+    return manager._insert(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\query.py", line 1790, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\sql\compiler.py", line 1657, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: users_user.email
+ERROR 2022-09-16 16:24:41,132 basehttp 16656 11204 "POST /api/users/info/?page=2 HTTP/1.1" 500 208918
+WARNING 2022-09-16 16:30:17,708 log 16840 17492 Unauthorized: /api/comments/
+WARNING 2022-09-16 16:30:17,709 basehttp 16840 17492 "GET /api/comments/?episode=Qwert HTTP/1.1" 401 10080
+WARNING 2022-09-16 16:30:30,613 log 16840 3620 Unauthorized: /api/comments/
+WARNING 2022-09-16 16:30:30,614 basehttp 16840 3620 "GET /api/comments/?episode=Qwert HTTP/1.1" 401 183
+WARNING 2022-09-16 16:35:36,125 log 19240 5324 Unauthorized: /api/token/
+WARNING 2022-09-16 16:35:36,126 basehttp 19240 5324 "POST /api/token/ HTTP/1.1" 401 63
+ERROR 2022-09-16 16:36:04,025 log 19240 15660 Internal Server Error: /api/comments/1/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 282, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 99, in get_object
+    self.check_object_permissions(self.request, obj)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 345, in check_object_permissions
+    if not permission.has_object_permission(request, self, obj):
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\permissions.py", line 13, in has_object_permission
+    return obj.author == request.user or request.user.is_superuser
+AttributeError: 'Comment' object has no attribute 'author'
+ERROR 2022-09-16 16:36:04,032 basehttp 19240 15660 "GET /api/comments/1/ HTTP/1.1" 500 111998
+ERROR 2022-09-16 16:36:14,373 log 19240 15660 Internal Server Error: /api/comments/1/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 282, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 99, in get_object
+    self.check_object_permissions(self.request, obj)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 345, in check_object_permissions
+    if not permission.has_object_permission(request, self, obj):
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\permissions.py", line 13, in has_object_permission
+    return obj.author == request.user or request.user.is_superuser
+AttributeError: 'Comment' object has no attribute 'author'
+ERROR 2022-09-16 16:36:14,380 basehttp 19240 15660 "GET /api/comments/1/ HTTP/1.1" 500 111840
+WARNING 2022-09-16 16:36:39,089 log 6844 12448 Forbidden: /api/comments/1/
+WARNING 2022-09-16 16:36:39,090 basehttp 6844 12448 "GET /api/comments/1/ HTTP/1.1" 403 63
+WARNING 2022-09-16 16:44:41,349 log 17460 17796 Unauthorized: /api/comments/1/
+WARNING 2022-09-16 16:44:41,350 basehttp 17460 17796 "GET /api/comments/1/ HTTP/1.1" 401 183
+ERROR 2022-09-16 16:44:55,627 log 17460 17796 Internal Server Error: /api/comments/1/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 332, in check_permissions
+    if not permission.has_permission(request, self):
+TypeError: has_permission() missing 1 required positional argument: 'view'
+ERROR 2022-09-16 16:44:55,633 basehttp 17460 17796 "GET /api/comments/1/ HTTP/1.1" 500 99753
+ERROR 2022-09-16 16:45:12,334 log 8024 10688 Internal Server Error: /api/comments/1/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 332, in check_permissions
+    if not permission.has_permission(request, self):
+TypeError: has_permission() missing 1 required positional argument: 'view'
+ERROR 2022-09-16 16:45:12,342 basehttp 8024 10688 "GET /api/comments/1/ HTTP/1.1" 500 99753
+ERROR 2022-09-16 16:46:50,724 log 9692 4804 Internal Server Error: /api/comments/1/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 332, in check_permissions
+    if not permission.has_permission(request, self):
+TypeError: has_permission() missing 1 required positional argument: 'view'
+ERROR 2022-09-16 16:46:50,730 basehttp 9692 4804 "PATCH /api/comments/1/ HTTP/1.1" 500 99876
+WARNING 2022-09-16 16:47:03,426 log 16396 16412 Forbidden: /api/comments/1/
+WARNING 2022-09-16 16:47:03,428 basehttp 16396 16412 "PATCH /api/comments/1/ HTTP/1.1" 403 63
+WARNING 2022-09-16 16:47:12,992 log 16396 7908 Unauthorized: /api/token/
+WARNING 2022-09-16 16:47:12,993 basehttp 16396 7908 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-16 16:47:52,417 log 16396 7908 Bad Request: /api/comments/1/
+WARNING 2022-09-16 16:47:52,417 basehttp 16396 7908 "PUT /api/comments/1/ HTTP/1.1" 400 36
+WARNING 2022-09-16 16:55:06,806 log 14724 12628 Unauthorized: /api/comments/1/
+WARNING 2022-09-16 16:55:06,807 basehttp 14724 12628 "GET /api/comments/1/ HTTP/1.1" 401 183
+WARNING 2022-09-16 17:02:04,957 log 6816 584 Method Not Allowed: /api/users/register/
+WARNING 2022-09-16 17:02:04,959 basehttp 6816 584 "GET /api/users/register/ HTTP/1.1" 405 13085
+WARNING 2022-09-16 17:02:14,737 log 6816 584 Bad Request: /api/users/register/
+WARNING 2022-09-16 17:02:14,738 basehttp 6816 584 "POST /api/users/register/ HTTP/1.1" 400 13148
+WARNING 2022-09-16 17:02:21,252 log 6816 584 Bad Request: /api/users/register/
+WARNING 2022-09-16 17:02:21,253 basehttp 6816 584 "POST /api/users/register/ HTTP/1.1" 400 13135
+WARNING 2022-09-16 17:02:29,628 log 6816 584 Bad Request: /api/users/register/
+WARNING 2022-09-16 17:02:29,629 basehttp 6816 584 "POST /api/users/register/ HTTP/1.1" 400 13034
+WARNING 2022-09-16 17:04:29,293 log 6816 14452 Bad Request: /api/users/register/
+WARNING 2022-09-16 17:04:29,294 basehttp 6816 14452 "POST /api/users/register/ HTTP/1.1" 400 178
+WARNING 2022-09-16 17:04:47,241 log 6816 14452 Bad Request: /api/users/register/
+WARNING 2022-09-16 17:04:47,242 basehttp 6816 14452 "POST /api/users/register/ HTTP/1.1" 400 59
+WARNING 2022-09-16 17:04:52,558 log 6816 14452 Bad Request: /api/users/register/
+WARNING 2022-09-16 17:04:52,559 basehttp 6816 14452 "POST /api/users/register/ HTTP/1.1" 400 2
+WARNING 2022-09-16 17:05:12,511 log 18756 18960 Bad Request: /api/users/register/
+WARNING 2022-09-16 17:05:12,512 basehttp 18756 18960 "POST /api/users/register/ HTTP/1.1" 400 105
+ERROR 2022-09-16 17:05:19,123 log 18756 18960 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2022-09-16 17:05:19,128 basehttp 18756 18960 "POST /api/users/register/ HTTP/1.1" 500 83065
+ERROR 2022-09-16 17:06:41,227 log 16800 18248 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2022-09-16 17:06:41,234 basehttp 16800 18248 "POST /api/users/register/ HTTP/1.1" 500 83065
+WARNING 2022-09-16 17:07:56,088 log 16648 18756 Bad Request: /api/users/register/
+WARNING 2022-09-16 17:07:56,089 basehttp 16648 18756 "POST /api/users/register/ HTTP/1.1" 400 105
+ERROR 2022-09-16 17:08:00,426 log 16648 18756 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2022-09-16 17:08:00,432 basehttp 16648 18756 "POST /api/users/register/ HTTP/1.1" 500 83067
+WARNING 2022-09-16 17:10:16,000 log 16004 6744 Bad Request: /api/users/register/
+WARNING 2022-09-16 17:10:16,002 basehttp 16004 6744 "POST /api/users/register/ HTTP/1.1" 400 105
+WARNING 2022-09-16 17:11:20,879 log 16004 11232 Bad Request: /api/users/register/
+WARNING 2022-09-16 17:11:20,880 basehttp 16004 11232 "POST /api/users/register/ HTTP/1.1" 400 13470
+WARNING 2022-09-16 17:11:25,526 log 16004 11232 Bad Request: /api/users/register/
+WARNING 2022-09-16 17:11:25,527 basehttp 16004 11232 "POST /api/users/register/ HTTP/1.1" 400 13148
+WARNING 2022-09-16 17:11:34,583 log 16004 11232 Bad Request: /api/users/register/
+WARNING 2022-09-16 17:11:34,584 basehttp 16004 11232 "POST /api/users/register/ HTTP/1.1" 400 13255
