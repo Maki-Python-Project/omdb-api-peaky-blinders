@@ -2,28 +2,64 @@ version: '3.8'
 services:
     omdb:
         build: .
-        command: gunicorn base.wsgi:application --bind 0.0.0.0:8081
+        command: gunicorn base.wsgi:application --bind 0.0.0.0:8443
         volumes:
             - static_volume:/home/app/web/staticfiles
         expose:
-        - 8081
+        - 8443
         depends_on:
         - db
+        - redis
+        networks:
+        - nginx_network
+        - database_network
     db:
         image: postgres
         volumes:
             - postgres_database_volume:/var/lib/postgresql/data
         env_file:
         - ./config/db/database_env
+        networks:
+        - database_network
     nginx:
         container_name: "nginx"
         build: ./config/nginx/dev_conf.d
         volumes:
             - static_volume:/home/app/web/staticfiles
         ports:
-        - 8443:8081
+        - 8443:8443
         depends_on:
         - omdb
+        networks:
+        - nginx_network
+    redis:
+        image: redis:alpine
+        networks:
+        - database_network
+        - nginx_network
+    celery:
+        restart: always
+        build:
+            context: .
+        command: celery -A base worker -l info
+        volumes:
+            - static_volume:/home/app/web/staticfiles
+        env_file:
+        - ./config/db/database_env
+        depends_on:
+        - db
+        - redis
+        - omdb
+        networks:
+        - nginx_network
+        - database_network
 volumes:
     postgres_database_volume:
     static_volume:
+
+networks:
+  nginx_network:
+    driver: bridge
+
+  database_network:
+    driver: bridge

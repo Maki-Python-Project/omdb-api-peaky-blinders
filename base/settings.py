@@ -16,6 +16,9 @@ ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(' ')
 
 CSRF_TRUSTED_ORIGINS = ['http://localhost:8443']
 
+CELERY_BROKER_URL = "redis://redis:6379"
+CELERY_RESULT_BACKEND = "redis://redis:6379"
+
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
