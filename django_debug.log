@@ -1293,3 +1293,8 @@ INFO 2022-09-19 16:36:02,407 basehttp 7696 11744 "GET /api/users/info/ HTTP/1.1"
 INFO 2022-09-19 16:36:07,248 basehttp 7696 11744 "GET /api/episodes/ HTTP/1.1" 200 54093
 INFO 2022-09-19 16:37:30,278 autoreload 7696 15880 C:\Maki\Python code\Courses\omdb-api\base\settings.py changed, reloading.
 INFO 2022-09-19 16:37:31,647 autoreload 13528 10612 Watching for file changes with StatReloader
+INFO 2022-09-19 16:44:40,474 autoreload 6608 13732 Watching for file changes with StatReloader
+INFO 2022-09-19 16:44:54,863 basehttp 6608 18988 "GET /api/episodes/ HTTP/1.1" 200 31010
+INFO 2022-09-19 16:45:07,438 basehttp 6608 18988 "GET /api/episodes/?season=1 HTTP/1.1" 200 25493
+INFO 2022-09-19 16:45:47,000 autoreload 6608 13732 C:\Maki\Python code\Courses\omdb-api\base\settings.py changed, reloading.
+INFO 2022-09-19 16:45:48,587 autoreload 9248 15884 Watching for file changes with StatReloader
