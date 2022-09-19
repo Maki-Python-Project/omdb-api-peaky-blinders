@@ -1922,3 +1922,1000 @@ WARNING 2022-09-19 20:57:48,743 log 4156 14360 Forbidden: /api/users/info/
 WARNING 2022-09-19 20:57:48,745 basehttp 4156 14360 "GET /api/users/info/ HTTP/1.1" 403 63
 WARNING 2022-09-19 20:57:52,108 log 4156 14360 Forbidden: /api/users/info/1/
 WARNING 2022-09-19 20:57:52,109 basehttp 4156 14360 "GET /api/users/info/1/ HTTP/1.1" 403 63
+WARNING 2022-09-19 21:12:12,390 log 12624 19516 Unauthorized: /api/users/info/1/
+WARNING 2022-09-19 21:12:12,391 basehttp 12624 19516 "GET /api/users/info/1/ HTTP/1.1" 401 10345
+ERROR 2022-09-19 21:12:19,019 log 12624 19516 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 63, in get_queryset
+    assert self.queryset is not None, (
+AssertionError: 'EpisodeList' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2022-09-19 21:12:19,027 basehttp 12624 19516 "GET /api/episodes/ HTTP/1.1" 500 105748
+ERROR 2022-09-19 21:13:44,520 log 1604 21044 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in get
+    return Response(context)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:13:44,526 basehttp 1604 21044 "GET /api/episodes/ HTTP/1.1" 500 99310
+ERROR 2022-09-19 21:14:08,175 log 20560 8020 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in get
+    return Response(self.context)
+AttributeError: 'EpisodeList' object has no attribute 'context'
+ERROR 2022-09-19 21:14:08,181 basehttp 20560 8020 "GET /api/episodes/ HTTP/1.1" 500 99432
+ERROR 2022-09-19 21:14:40,394 log 17168 8216 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in get
+    return Response(context)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:14:40,399 basehttp 17168 8216 "GET /api/episodes/ HTTP/1.1" 500 99310
+ERROR 2022-09-19 21:14:49,747 log 17168 8216 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in get
+    return Response()
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:14:49,753 basehttp 17168 8216 "GET /api/episodes/ HTTP/1.1" 500 99296
+ERROR 2022-09-19 21:15:02,750 log 10804 12172 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in get
+    return Response(qs)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:15:02,755 basehttp 10804 12172 "GET /api/episodes/ HTTP/1.1" 500 99300
+ERROR 2022-09-19 21:15:36,650 log 21188 9280 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in get
+    return Response(serializer)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:15:36,655 basehttp 21188 9280 "GET /api/episodes/ HTTP/1.1" 500 99900
+ERROR 2022-09-19 21:15:38,803 log 21188 9280 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in get
+    return Response(serializer)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:15:38,809 basehttp 21188 9280 "GET /api/episodes/ HTTP/1.1" 500 99900
+ERROR 2022-09-19 21:15:51,598 log 2460 7160 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in list
+    return Response(serializer)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:15:51,607 basehttp 2460 7160 "GET /api/episodes/ HTTP/1.1" 500 104070
+ERROR 2022-09-19 21:16:02,585 log 14112 16376 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in list
+    return Response(serializer)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:16:02,592 basehttp 14112 16376 "GET /api/episodes/ HTTP/1.1" 500 103743
+ERROR 2022-09-19 21:16:10,679 log 14112 16376 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:16:10,686 basehttp 14112 16376 "GET /api/episodes/ HTTP/1.1" 500 103753
+ERROR 2022-09-19 21:16:13,017 log 10508 21172 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:16:13,026 basehttp 10508 21172 "GET /api/episodes/ HTTP/1.1" 500 103753
+ERROR 2022-09-19 21:16:19,119 log 10508 21172 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:16:19,126 basehttp 10508 21172 "GET /api/episodes/ HTTP/1.1" 500 103752
+ERROR 2022-09-19 21:16:55,135 log 13848 20916 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 33, in get
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:16:55,145 basehttp 13848 20916 "GET /api/episodes/ HTTP/1.1" 500 99583
+ERROR 2022-09-19 21:17:11,961 log 21148 14728 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in get
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:17:11,967 basehttp 21148 14728 "GET /api/episodes/ HTTP/1.1" 500 99583
+ERROR 2022-09-19 21:17:20,054 log 10464 7160 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 63, in get_queryset
+    assert self.queryset is not None, (
+AssertionError: 'EpisodeList' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2022-09-19 21:17:20,062 basehttp 10464 7160 "GET /api/episodes/ HTTP/1.1" 500 105791
+ERROR 2022-09-19 21:22:41,181 log 16176 10804 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 33, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:22:41,193 basehttp 16176 10804 "GET /api/episodes/ HTTP/1.1" 500 112460
+ERROR 2022-09-19 21:23:39,158 log 16176 10804 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 33, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:23:39,165 basehttp 16176 10804 "GET /api/episodes/ HTTP/1.1" 500 112460
+ERROR 2022-09-19 21:23:56,978 log 6584 13688 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 30, in list
+    queryset = self.get_queryset()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 63, in get_queryset
+    assert self.queryset is not None, (
+AssertionError: 'EpisodeList' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2022-09-19 21:23:56,996 basehttp 6584 13688 "GET /api/episodes/ HTTP/1.1" 500 115699
+ERROR 2022-09-19 21:24:46,975 log 7488 19232 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 33, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:24:46,991 basehttp 7488 19232 "GET /api/episodes/ HTTP/1.1" 500 112460
+ERROR 2022-09-19 21:26:20,528 log 7156 21492 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 33, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:26:20,535 basehttp 7156 21492 "GET /api/episodes/ HTTP/1.1" 500 112554
+ERROR 2022-09-19 21:26:35,139 log 20896 14152 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 33, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:26:35,147 basehttp 20896 14152 "GET /api/episodes/ HTTP/1.1" 500 112554
+ERROR 2022-09-19 21:26:40,324 log 2036 10876 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 33, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:26:40,332 basehttp 2036 10876 "GET /api/episodes/ HTTP/1.1" 500 102465
+ERROR 2022-09-19 21:26:54,660 log 6488 18868 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 33, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:26:54,668 basehttp 6488 18868 "GET /api/episodes/ HTTP/1.1" 500 102465
+ERROR 2022-09-19 21:27:10,762 log 2028 8660 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 33, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:27:10,770 basehttp 2028 8660 "GET /api/episodes/ HTTP/1.1" 500 102434
+ERROR 2022-09-19 21:28:40,054 log 21468 14360 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 34, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:28:40,060 basehttp 21468 14360 "GET /api/episodes/ HTTP/1.1" 500 98821
+ERROR 2022-09-19 21:32:39,151 log 12304 21444 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 33, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:32:39,163 basehttp 12304 21444 "GET /api/episodes/ HTTP/1.1" 500 102603
+ERROR 2022-09-19 21:32:43,988 log 12304 21444 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 33, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:32:43,994 basehttp 12304 21444 "GET /api/episodes/ HTTP/1.1" 500 102603
+ERROR 2022-09-19 21:33:16,629 log 18880 21156 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+TypeError: _wrapped_view() missing 1 required positional argument: 'request'
+ERROR 2022-09-19 21:33:16,642 basehttp 18880 21156 "GET /api/episodes/ HTTP/1.1" 500 107330
+ERROR 2022-09-19 21:33:33,369 log 21216 17892 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+TypeError: _wrapped_view() missing 1 required positional argument: 'request'
+ERROR 2022-09-19 21:33:33,376 basehttp 21216 17892 "GET /api/episodes/ HTTP/1.1" 500 107330
+ERROR 2022-09-19 21:34:14,654 log 20156 12348 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 125, in _wrapped_view
+    result = middleware.process_request(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\middleware\cache.py", line 153, in process_request
+    if request.method not in ("GET", "HEAD"):
+AttributeError: 'EpisodeList' object has no attribute 'method'
+ERROR 2022-09-19 21:34:14,664 basehttp 20156 12348 "GET /api/episodes/ HTTP/1.1" 500 110645
+WARNING 2022-09-19 21:41:53,035 log 16720 9976 Unauthorized: /api/users/info/
+WARNING 2022-09-19 21:41:53,036 basehttp 16720 9976 "GET /api/users/info/ HTTP/1.1" 401 10219
+WARNING 2022-09-19 21:41:59,691 log 16720 2960 Unauthorized: /api/users/info/
+WARNING 2022-09-19 21:41:59,693 basehttp 16720 2960 "GET /api/users/info/ HTTP/1.1" 401 183
+WARNING 2022-09-19 21:42:05,906 log 16720 2960 Unauthorized: /api/token/
+WARNING 2022-09-19 21:42:05,907 basehttp 16720 2960 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-19 21:42:58,213 log 14504 18148 Unauthorized: /api/token/
+WARNING 2022-09-19 21:42:58,214 basehttp 14504 18148 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-19 21:43:25,607 log 18608 14272 Bad Request: /api/users/register/
+WARNING 2022-09-19 21:43:25,609 basehttp 18608 14272 "POST /api/users/register/ HTTP/1.1" 400 13333
+WARNING 2022-09-19 21:56:17,626 log 21252 20360 Unauthorized: /api/token/
+WARNING 2022-09-19 21:56:17,627 basehttp 21252 20360 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-19 21:56:29,411 log 21252 3212 Method Not Allowed: /api/users/register/
+WARNING 2022-09-19 21:56:29,412 basehttp 21252 3212 "GET /api/users/register/ HTTP/1.1" 405 12982
+WARNING 2022-09-19 21:56:53,264 log 21252 20360 Forbidden: /api/users/info/
+WARNING 2022-09-19 21:56:53,267 basehttp 21252 20360 "GET /api/users/info/ HTTP/1.1" 403 63
+WARNING 2022-09-19 22:03:06,792 log 21252 12100 Unauthorized: /api/comments/
+WARNING 2022-09-19 22:03:06,793 basehttp 21252 12100 "GET /api/comments/ HTTP/1.1" 401 10016
+WARNING 2022-09-19 22:04:29,809 log 8812 18864 Not Found: /api/comments/episode_title=Episode 
+WARNING 2022-09-19 22:04:29,810 basehttp 8812 18864 "GET /api/comments/episode_title=Episode%20 HTTP/1.1" 404 3652
+WARNING 2022-09-19 22:09:05,638 log 8812 21028 Unauthorized: /api/comments/
+WARNING 2022-09-19 22:09:05,639 basehttp 8812 21028 "POST /api/comments/ HTTP/1.1" 401 183
+WARNING 2022-09-19 22:09:11,253 log 8812 14484 Bad Request: /api/token/
+WARNING 2022-09-19 22:09:11,253 basehttp 8812 14484 "POST /api/token/ HTTP/1.1" 400 45
+WARNING 2022-09-19 22:09:30,013 log 8812 21028 Bad Request: /api/comments/
+WARNING 2022-09-19 22:09:30,014 basehttp 8812 21028 "POST /api/comments/ HTTP/1.1" 400 64
+ERROR 2022-09-19 22:27:14,154 log 19860 16176 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "episodes_actor" does not exist
+LINE 1: ...es_actor"."name", "episodes_actor"."surname" FROM "episodes_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\query.py", line 394, in __iter__
+    self._fetch_all()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\sql\compiler.py", line 1395, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "episodes_actor" does not exist
+LINE 1: ...es_actor"."name", "episodes_actor"."surname" FROM "episodes_...
+                                                             ^
+
+ERROR 2022-09-19 22:27:14,171 basehttp 19860 16176 "GET /api/episodes/?id=1 HTTP/1.1" 500 201481
+ERROR 2022-09-19 22:30:51,704 log 20044 21132 Internal Server Error: /api/comments/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column episodes_comment.published does not exist
+LINE 1: ..."."customer_id", "episodes_comment"."episode_id", "episodes_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\query.py", line 394, in __iter__
+    self._fetch_all()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\sql\compiler.py", line 1395, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column episodes_comment.published does not exist
+LINE 1: ..."."customer_id", "episodes_comment"."episode_id", "episodes_...
+                                                             ^
+
+ERROR 2022-09-19 22:30:51,716 basehttp 20044 21132 "GET /api/comments/?episode=Qwerty HTTP/1.1" 500 171048
+ERROR 2022-09-19 22:30:54,756 log 20044 21132 Internal Server Error: /api/comments/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column episodes_comment.published does not exist
+LINE 1: ..."."customer_id", "episodes_comment"."episode_id", "episodes_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\query.py", line 394, in __iter__
+    self._fetch_all()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\sql\compiler.py", line 1395, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column episodes_comment.published does not exist
+LINE 1: ..."."customer_id", "episodes_comment"."episode_id", "episodes_...
+                                                             ^
+
+ERROR 2022-09-19 22:30:54,767 basehttp 20044 21132 "GET /api/comments/?episode=Qwerty HTTP/1.1" 500 171048
+WARNING 2022-09-19 22:37:27,696 log 19180 14988 Unauthorized: /api/comments/
+WARNING 2022-09-19 22:37:27,697 basehttp 19180 14988 "POST /api/comments/ HTTP/1.1" 401 183
+WARNING 2022-09-19 22:37:34,225 log 19180 3236 Unauthorized: /api/token/
+WARNING 2022-09-19 22:37:34,227 basehttp 19180 3236 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-19 22:42:33,726 log 15236 8472 Unauthorized: /api/comments/
+WARNING 2022-09-19 22:42:33,728 basehttp 15236 8472 "GET /api/comments/?episode=Episode%20%231.4 HTTP/1.1" 401 10120

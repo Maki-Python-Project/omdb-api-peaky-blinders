@@ -1,5 +1,7 @@
-from rest_framework import generics, filters, permissions
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
 from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import generics, filters, permissions
 from rest_framework.permissions import IsAuthenticated
 
 from .models import Episode, Comment
@@ -11,7 +13,6 @@ from .tasks import parse_data
 
 
 class EpisodeList(generics.ListCreateAPIView):
-    queryset = Episode.objects.all()
     serializer_class = EpisodeSerializer
     pagination_class = StandardResultsSetPagination
     filter_backends = [
@@ -22,6 +23,13 @@ class EpisodeList(generics.ListCreateAPIView):
     ]
     search_fields = ['title_episode', 'number_episode', 'season']
     ordering_fields = ['id', 'number_episode', 'season']
+
+    def get_queryset(self):
+        return Episode.objects.all()
+
+    @method_decorator(cache_page(60*60*3))
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
 
 
 class EpisodeDetail(generics.RetrieveUpdateDestroyAPIView):

@@ -32,7 +32,7 @@ class UserViewSet(viewsets.ModelViewSet):
     def get_serializer_class(self):
         return UserSerializer
 
-    @method_decorator(cache_page(60*2))
+    @method_decorator(cache_page(60*5))
     @method_decorator(vary_on_cookie)
     def list(self, request):
         queryset = self.get_queryset()
