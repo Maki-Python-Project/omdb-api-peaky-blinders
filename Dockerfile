@@ -20,7 +20,6 @@ RUN apk update \
 RUN pip install --upgrade pip
 RUN pip install flake8==3.9.2
 COPY . .
-# RUN flake8 --ignore=E501,F401 .
 
 # install dependencies
 COPY ./requirements.txt .
@@ -53,7 +52,7 @@ COPY --from=builder /app/wheels /wheels
 COPY --from=builder /app/requirements.txt .
 RUN pip install --no-cache /wheels/*
 
-# copy start.sh
+
 COPY scripts/start.sh .
 RUN sed -i 's/\r$//g'  $APP_HOME/start.sh
 RUN chmod +x  $APP_HOME/start.sh
@@ -67,5 +66,5 @@ RUN chown -R app:app $APP_HOME
 # change to the app user
 USER app
 
-# run start.sh
+# run start.prod.sh
 ENTRYPOINT ["/home/app/web/start.sh"]

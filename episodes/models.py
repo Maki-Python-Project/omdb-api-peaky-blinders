@@ -9,8 +9,8 @@ class Genre(models.Model):
     name = models.CharField(max_length=255)
 
     class Meta:
-        verbose_name = "Genre"
-        verbose_name_plural = "Genres"
+        verbose_name = 'Genre'
+        verbose_name_plural = 'Genres'
 
     def __str__(self) -> str:
         return self.name
@@ -28,8 +28,8 @@ class Episode(models.Model):
     language = models.CharField(max_length=50, default='English')
 
     class Meta:
-        verbose_name = "Episode"
-        verbose_name_plural = "Episodes"
+        verbose_name = 'Episode'
+        verbose_name_plural = 'Episodes'
 
     def __str__(self) -> str:
         return self.title_episode
@@ -44,8 +44,8 @@ class Comment(models.Model):
     published = models.DateField(auto_now_add=True)
 
     class Meta:
-        verbose_name = "Comment"
-        verbose_name_plural = "Comments"
+        verbose_name = 'Comment'
+        verbose_name_plural = 'Comments'
 
     def __str__(self) -> str:
         return f'{self.text}; author: {self.customer}'
