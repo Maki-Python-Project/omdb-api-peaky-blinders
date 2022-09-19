@@ -4,7 +4,7 @@ from rest_framework.permissions import IsAuthenticated
 
 from .models import Episode, Comment
 from .serializers import EpisodeSerializer, CommentSerializer
-from .filters import CommentFilter
+from .filters import CommentFilter, ImdbFilter
 from .permissions import AdminOrAccountOwnerPermission
 from .pagination import StandardResultsSetPagination
 
@@ -48,3 +48,9 @@ class CommentDetail(generics.RetrieveUpdateDestroyAPIView):
         if self.request.method not in permissions.SAFE_METHODS:
             return [AdminOrAccountOwnerPermission(), IsAuthenticated()]
         return [IsAuthenticated()]
+
+
+class EpisodeImdb(generics.ListCreateAPIView):
+    queryset = Episode.objects.filter(imdb_rating__gte=8.8)
+    serializer_class = EpisodeSerializer
+    filterset_class = ImdbFilter

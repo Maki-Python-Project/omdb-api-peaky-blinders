@@ -1298,3 +1298,10 @@ INFO 2022-09-19 16:44:54,863 basehttp 6608 18988 "GET /api/episodes/ HTTP/1.1" 2
 INFO 2022-09-19 16:45:07,438 basehttp 6608 18988 "GET /api/episodes/?season=1 HTTP/1.1" 200 25493
 INFO 2022-09-19 16:45:47,000 autoreload 6608 13732 C:\Maki\Python code\Courses\omdb-api\base\settings.py changed, reloading.
 INFO 2022-09-19 16:45:48,587 autoreload 9248 15884 Watching for file changes with StatReloader
+INFO 2022-09-19 16:51:40,232 autoreload 17880 7784 Watching for file changes with StatReloader
+INFO 2022-09-19 16:51:43,839 basehttp 17880 17340 "GET /api/episodes/?season=1 HTTP/1.1" 200 25493
+WARNING 2022-09-19 16:51:47,877 log 17880 17340 Not Found: /api/episodes/imbd
+WARNING 2022-09-19 16:51:47,878 basehttp 17880 17340 "GET /api/episodes/imbd HTTP/1.1" 404 3594
+INFO 2022-09-19 16:51:53,197 basehttp 17880 17340 "GET /api/episodes/imdb HTTP/1.1" 301 0
+INFO 2022-09-19 16:51:53,253 basehttp 17880 17340 "GET /api/episodes/imdb/ HTTP/1.1" 200 29899
+INFO 2022-09-19 16:52:15,317 basehttp 17880 17340 "GET /api/episodes/imdb/?season=1 HTTP/1.1" 200 18747
