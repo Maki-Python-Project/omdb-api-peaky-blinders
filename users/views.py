@@ -12,10 +12,12 @@ from .pagination import StandardResultsSetPagination
 from .models import User
 
 
-class UserViewSet(viewsets.GenericViewSet):
+class UserViewSet(viewsets.ModelViewSet):
     pagination_class = StandardResultsSetPagination
     permission_classes_by_action = {
-        'list': [IsAuthenticated, IsAdminUser]
+        'list': [IsAuthenticated, IsAdminUser],
+        'retrieve': [IsAuthenticated, IsAdminUser],
+        'destroy': [IsAuthenticated, IsAdminUser],
     }
 
     def get_queryset(self):
@@ -27,7 +29,10 @@ class UserViewSet(viewsets.GenericViewSet):
         except KeyError:
             return [permission() for permission in self.permission_classes]
 
-    @method_decorator(cache_page(60))
+    def get_serializer_class(self):
+        return UserSerializer
+
+    @method_decorator(cache_page(60*2))
     @method_decorator(vary_on_cookie)
     def list(self, request):
         queryset = self.get_queryset()
