@@ -886,3 +886,603 @@ AssertionError: The field 'genres' was declared on serializer EpisodeSerializer,
 ERROR 2022-09-19 15:27:44,931 basehttp 13600 11084 "GET /api/episodes/ HTTP/1.1" 500 151025
 WARNING 2022-09-19 16:51:47,877 log 17880 17340 Not Found: /api/episodes/imbd
 WARNING 2022-09-19 16:51:47,878 basehttp 17880 17340 "GET /api/episodes/imbd HTTP/1.1" 404 3594
+ERROR 2022-09-19 18:59:46,411 log 8260 1116 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+TypeError: _wrapped_view() missing 1 required positional argument: 'request'
+ERROR 2022-09-19 18:59:46,421 basehttp 8260 1116 "GET /api/users/info/ HTTP/1.1" 500 103691
+ERROR 2022-09-19 18:59:57,826 log 8260 1116 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+TypeError: _wrapped_view() missing 1 required positional argument: 'request'
+ERROR 2022-09-19 18:59:57,833 basehttp 8260 1116 "GET /api/users/info/ HTTP/1.1" 500 103691
+ERROR 2022-09-19 19:01:05,781 log 10508 2172 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+TypeError: _wrapped_view() missing 1 required positional argument: 'request'
+ERROR 2022-09-19 19:01:05,793 basehttp 10508 2172 "GET /api/users/info/ HTTP/1.1" 500 103691
+ERROR 2022-09-19 19:01:55,665 log 16884 8768 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 125, in _wrapped_view
+    result = middleware.process_request(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\middleware\cache.py", line 153, in process_request
+    if request.method not in ("GET", "HEAD"):
+AttributeError: 'UserViewSet' object has no attribute 'method'
+ERROR 2022-09-19 19:01:55,682 basehttp 16884 8768 "GET /api/users/info/ HTTP/1.1" 500 106782
+ERROR 2022-09-19 19:03:35,713 log 11132 19432 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 125, in _wrapped_view
+    result = middleware.process_request(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\middleware\cache.py", line 153, in process_request
+    if request.method not in ("GET", "HEAD"):
+AttributeError: 'UserViewSet' object has no attribute 'method'
+ERROR 2022-09-19 19:03:35,725 basehttp 11132 19432 "GET /api/users/info/ HTTP/1.1" 500 106787
+ERROR 2022-09-19 19:03:42,748 log 3920 17572 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 125, in _wrapped_view
+    result = middleware.process_request(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\middleware\cache.py", line 153, in process_request
+    if request.method not in ("GET", "HEAD"):
+AttributeError: 'UserViewSet' object has no attribute 'method'
+ERROR 2022-09-19 19:03:42,755 basehttp 3920 17572 "GET /api/users/info/ HTTP/1.1" 500 106782
+ERROR 2022-09-19 19:03:58,927 log 3920 17572 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 125, in _wrapped_view
+    result = middleware.process_request(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\middleware\cache.py", line 153, in process_request
+    if request.method not in ("GET", "HEAD"):
+AttributeError: 'UserViewSet' object has no attribute 'method'
+ERROR 2022-09-19 19:03:58,934 basehttp 3920 17572 "GET /api/users/info/ HTTP/1.1" 500 106782
+ERROR 2022-09-19 19:06:42,750 log 3920 14696 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 125, in _wrapped_view
+    result = middleware.process_request(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\middleware\cache.py", line 153, in process_request
+    if request.method not in ("GET", "HEAD"):
+AttributeError: 'UserViewSet' object has no attribute 'method'
+ERROR 2022-09-19 19:06:42,758 basehttp 3920 14696 "GET /api/users/info/ HTTP/1.1" 500 106782
+ERROR 2022-09-19 19:06:56,421 log 10172 19132 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 125, in _wrapped_view
+    result = middleware.process_request(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\middleware\cache.py", line 153, in process_request
+    if request.method not in ("GET", "HEAD"):
+AttributeError: 'UserViewSet' object has no attribute 'method'
+ERROR 2022-09-19 19:06:56,430 basehttp 10172 19132 "GET /api/users/info/ HTTP/1.1" 500 106782
+ERROR 2022-09-19 19:09:24,408 log 8572 18892 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\renderers.py", line 724, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\renderers.py", line 655, in get_context
+    raw_data_post_form = self.get_raw_data_form(data, view, 'POST', request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\renderers.py", line 554, in get_raw_data_form
+    serializer = view.get_serializer()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 108, in get_serializer
+    serializer_class = self.get_serializer_class()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 122, in get_serializer_class
+    assert self.serializer_class is not None, (
+AssertionError: 'UserViewSet' should either include a `serializer_class` attribute, or override the `get_serializer_class()` method.
+ERROR 2022-09-19 19:09:24,416 basehttp 8572 18892 "GET /api/users/info/ HTTP/1.1" 500 100224
+WARNING 2022-09-19 19:10:35,621 log 8216 12192 Not Found: /api/users/info/
+WARNING 2022-09-19 19:10:35,623 basehttp 8216 12192 "GET /api/users/info/ HTTP/1.1" 404 3994
+WARNING 2022-09-19 19:13:44,670 log 10324 20360 Method Not Allowed: /api/users/register/
+WARNING 2022-09-19 19:13:44,671 basehttp 10324 20360 "GET /api/users/register/ HTTP/1.1" 405 12982
+WARNING 2022-09-19 19:13:57,967 log 10324 20360 Method Not Allowed: /api/users/register/
+WARNING 2022-09-19 19:13:57,968 basehttp 10324 20360 "GET /api/users/register/ HTTP/1.1" 405 12982
+ERROR 2022-09-19 19:16:31,531 log 7912 14152 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\users\views.py", line 23, in list
+    page = self.paginate_queryset(queryset)
+AttributeError: 'UserViewSet' object has no attribute 'paginate_queryset'
+ERROR 2022-09-19 19:16:31,540 basehttp 7912 14152 "GET /api/users/info/ HTTP/1.1" 500 98275
+ERROR 2022-09-19 19:18:14,858 log 13660 15412 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\users\views.py", line 25, in list
+    serializer = UserViewSet(page, many=True)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 19:18:14,872 basehttp 13660 15412 "GET /api/users/info/ HTTP/1.1" 500 98245
+WARNING 2022-09-19 19:22:13,497 log 14536 19896 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:22:13,498 basehttp 14536 19896 "GET /api/users/info/ HTTP/1.1" 401 9974
+WARNING 2022-09-19 19:23:02,876 log 18492 11192 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:23:02,877 basehttp 18492 11192 "GET /api/users/info/ HTTP/1.1" 401 9974
+WARNING 2022-09-19 19:23:05,499 log 18492 11192 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:23:05,501 basehttp 18492 11192 "GET /api/users/info/ HTTP/1.1" 401 9974
+WARNING 2022-09-19 19:24:21,500 log 7876 9528 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:24:21,501 basehttp 7876 9528 "GET /api/users/info/ HTTP/1.1" 401 58
+WARNING 2022-09-19 19:24:51,161 log 7876 9528 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:24:51,163 basehttp 7876 9528 "GET /api/users/info/ HTTP/1.1" 401 58
+WARNING 2022-09-19 19:25:13,068 log 7876 9528 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:25:13,069 basehttp 7876 9528 "GET /api/users/info/ HTTP/1.1" 401 58
+WARNING 2022-09-19 19:25:14,874 log 7876 9528 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:25:14,876 basehttp 7876 9528 "GET /api/users/info/ HTTP/1.1" 401 58
+WARNING 2022-09-19 19:27:52,776 log 7876 9528 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:27:52,777 basehttp 7876 9528 "GET /api/users/info/ HTTP/1.1" 401 58
+ERROR 2022-09-19 19:28:14,006 log 4520 8400 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 332, in check_permissions
+    if not permission.has_permission(request, self):
+  File "C:\Maki\Python code\Courses\omdb-api\users\permissions.py", line 7, in has_permission
+    if user and user.is_authenticated():
+TypeError: 'bool' object is not callable
+ERROR 2022-09-19 19:28:14,013 basehttp 4520 8400 "GET /api/users/info/ HTTP/1.1" 500 103370
+ERROR 2022-09-19 19:29:16,058 log 10440 1352 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 332, in check_permissions
+    if not permission.has_permission(request, self):
+  File "C:\Maki\Python code\Courses\omdb-api\users\permissions.py", line 7, in has_permission
+    if user and user.is_authenticated():
+TypeError: 'bool' object is not callable
+ERROR 2022-09-19 19:29:16,065 basehttp 10440 1352 "GET /api/users/info/ HTTP/1.1" 500 106004
+ERROR 2022-09-19 19:31:04,638 log 7672 8924 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 332, in check_permissions
+    if not permission.has_permission(request, self):
+  File "C:\Maki\Python code\Courses\omdb-api\users\permissions.py", line 7, in has_permission
+    if user and user.is_authenticated():
+TypeError: 'bool' object is not callable
+ERROR 2022-09-19 19:31:04,647 basehttp 7672 8924 "GET /api/users/info/ HTTP/1.1" 500 103372
+ERROR 2022-09-19 19:31:06,570 log 7672 8924 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 332, in check_permissions
+    if not permission.has_permission(request, self):
+  File "C:\Maki\Python code\Courses\omdb-api\users\permissions.py", line 7, in has_permission
+    if user and user.is_authenticated():
+TypeError: 'bool' object is not callable
+ERROR 2022-09-19 19:31:06,579 basehttp 7672 8924 "GET /api/users/info/ HTTP/1.1" 500 103372
+ERROR 2022-09-19 19:31:25,243 log 7656 3696 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 332, in check_permissions
+    if not permission.has_permission(request, self):
+  File "C:\Maki\Python code\Courses\omdb-api\users\permissions.py", line 7, in has_permission
+    if user and user.is_authenticated():
+TypeError: 'bool' object is not callable
+ERROR 2022-09-19 19:31:25,251 basehttp 7656 3696 "GET /api/users/info/ HTTP/1.1" 500 103359
+ERROR 2022-09-19 19:31:53,497 log 792 6024 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 332, in check_permissions
+    if not permission.has_permission(request, self):
+  File "C:\Maki\Python code\Courses\omdb-api\users\permissions.py", line 7, in has_permission
+    if user and user.is_authenticated():
+TypeError: 'bool' object is not callable
+ERROR 2022-09-19 19:31:53,503 basehttp 792 6024 "GET /api/users/info/ HTTP/1.1" 500 106014
+ERROR 2022-09-19 19:31:57,668 log 792 6024 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 332, in check_permissions
+    if not permission.has_permission(request, self):
+  File "C:\Maki\Python code\Courses\omdb-api\users\permissions.py", line 7, in has_permission
+    if user and user.is_authenticated():
+TypeError: 'bool' object is not callable
+ERROR 2022-09-19 19:31:57,675 basehttp 792 6024 "GET /api/users/info/ HTTP/1.1" 500 106001
+ERROR 2022-09-19 19:32:00,114 log 8348 7908 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 332, in check_permissions
+    if not permission.has_permission(request, self):
+  File "C:\Maki\Python code\Courses\omdb-api\users\permissions.py", line 7, in has_permission
+    if user and user.is_authenticated():
+TypeError: 'bool' object is not callable
+ERROR 2022-09-19 19:32:00,121 basehttp 8348 7908 "GET /api/users/info/ HTTP/1.1" 500 106001
+ERROR 2022-09-19 19:36:35,422 log 10068 3056 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 331, in check_permissions
+    for permission in self.get_permissions():
+TypeError: 'BasePermissionMetaclass' object is not iterable
+ERROR 2022-09-19 19:36:35,434 basehttp 10068 3056 "GET /api/users/info/ HTTP/1.1" 500 102513
+ERROR 2022-09-19 19:36:48,036 log 7412 5932 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 331, in check_permissions
+    for permission in self.get_permissions():
+TypeError: 'BasePermissionMetaclass' object is not iterable
+ERROR 2022-09-19 19:36:48,044 basehttp 7412 5932 "GET /api/users/info/ HTTP/1.1" 500 102513
+WARNING 2022-09-19 19:38:15,729 log 16204 12148 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:38:15,730 basehttp 16204 12148 "GET /api/users/info/ HTTP/1.1" 401 10219
+WARNING 2022-09-19 19:38:36,281 log 3728 15920 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:38:36,283 basehttp 3728 15920 "GET /api/users/info/ HTTP/1.1" 401 10219
+WARNING 2022-09-19 19:38:40,922 log 3728 13476 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:38:40,923 basehttp 3728 13476 "GET /api/users/info/ HTTP/1.1" 401 58
+WARNING 2022-09-19 19:39:27,309 log 3728 13476 Forbidden: /api/users/info/
+WARNING 2022-09-19 19:39:27,310 basehttp 3728 13476 "GET /api/users/info/ HTTP/1.1" 403 63
+WARNING 2022-09-19 19:40:47,343 log 15636 8272 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:40:47,345 basehttp 15636 8272 "GET /api/users/info/ HTTP/1.1" 401 10219
+WARNING 2022-09-19 19:40:48,456 log 15636 8272 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:40:48,458 basehttp 15636 8272 "GET /api/users/info/ HTTP/1.1" 401 10219
+WARNING 2022-09-19 19:40:52,231 log 15636 6488 Forbidden: /api/users/info/
+WARNING 2022-09-19 19:40:52,232 basehttp 15636 6488 "GET /api/users/info/ HTTP/1.1" 403 63
+WARNING 2022-09-19 19:41:39,253 log 8888 18220 Method Not Allowed: /api/users/register/
+WARNING 2022-09-19 19:41:39,254 basehttp 8888 18220 "GET /api/users/register/ HTTP/1.1" 405 12982
+WARNING 2022-09-19 19:41:46,606 log 8888 18220 Bad Request: /api/users/register/
+WARNING 2022-09-19 19:41:46,608 basehttp 8888 18220 "POST /api/users/register/ HTTP/1.1" 400 13142
+WARNING 2022-09-19 19:43:35,931 log 8888 17600 Not Found: /api/users/info/3
+WARNING 2022-09-19 19:43:35,932 basehttp 8888 17600 "GET /api/users/info/3 HTTP/1.1" 404 3993
+WARNING 2022-09-19 19:43:42,329 log 8888 17600 Not Found: /api/users/info/1
+WARNING 2022-09-19 19:43:42,330 basehttp 8888 17600 "GET /api/users/info/1 HTTP/1.1" 404 3993
+WARNING 2022-09-19 19:46:22,882 log 13548 1016 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:46:22,884 basehttp 13548 1016 "GET /api/users/info/ HTTP/1.1" 401 183
+WARNING 2022-09-19 19:49:29,917 log 13548 1016 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:49:29,918 basehttp 13548 1016 "GET /api/users/info/?page=2 HTTP/1.1" 401 58
+WARNING 2022-09-19 19:54:38,928 log 6300 14536 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:54:38,930 basehttp 6300 14536 "GET /api/users/info/ HTTP/1.1" 401 183

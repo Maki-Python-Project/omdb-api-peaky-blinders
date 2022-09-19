@@ -67,5 +67,5 @@ RUN chown -R app:app $APP_HOME
 # change to the app user
 USER app
 
-# run start.prod.sh
+# run start.sh
 ENTRYPOINT ["/home/app/web/start.sh"]

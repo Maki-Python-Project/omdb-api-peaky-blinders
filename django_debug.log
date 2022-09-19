@@ -1327,3 +1327,923 @@ INFO 2022-09-19 17:43:53,394 autoreload 13416 10884 Watching for file changes wi
 INFO 2022-09-19 17:44:05,987 basehttp 13416 13336 "GET /api/episodes/imdb/?season=1 HTTP/1.1" 200 18747
 INFO 2022-09-19 17:44:19,021 basehttp 13416 13336 "GET /api/episodes/imdb/?season=1&number_episode=4 HTTP/1.1" 200 18894
 INFO 2022-09-19 17:44:28,487 basehttp 13416 13336 "GET /api/episodes/?season=1&number_episode=4 HTTP/1.1" 200 20046
+INFO 2022-09-19 18:58:01,195 autoreload 19080 18100 Watching for file changes with StatReloader
+INFO 2022-09-19 18:58:11,322 basehttp 19080 7084 "GET /api/episodes/?season=1&number_episode=4 HTTP/1.1" 200 20046
+INFO 2022-09-19 18:58:17,904 basehttp 19080 7084 "GET /api/users/info/ HTTP/1.1" 200 13266
+INFO 2022-09-19 18:58:21,762 basehttp 19080 7084 "GET /api/users/info/ HTTP/1.1" 200 13266
+INFO 2022-09-19 18:58:54,574 autoreload 19080 18100 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 18:58:56,489 autoreload 7984 11200 Watching for file changes with StatReloader
+INFO 2022-09-19 18:58:57,142 basehttp 7984 14476 "GET /api/users/info/ HTTP/1.1" 200 13266
+INFO 2022-09-19 18:59:22,256 autoreload 7984 11200 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 18:59:23,836 autoreload 20100 6868 Watching for file changes with StatReloader
+INFO 2022-09-19 18:59:31,254 autoreload 20100 6868 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 18:59:33,012 autoreload 5996 15844 Watching for file changes with StatReloader
+INFO 2022-09-19 18:59:39,281 autoreload 5996 15844 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 18:59:40,935 autoreload 8260 2424 Watching for file changes with StatReloader
+ERROR 2022-09-19 18:59:46,411 log 8260 1116 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+TypeError: _wrapped_view() missing 1 required positional argument: 'request'
+ERROR 2022-09-19 18:59:46,421 basehttp 8260 1116 "GET /api/users/info/ HTTP/1.1" 500 103691
+ERROR 2022-09-19 18:59:57,826 log 8260 1116 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+TypeError: _wrapped_view() missing 1 required positional argument: 'request'
+ERROR 2022-09-19 18:59:57,833 basehttp 8260 1116 "GET /api/users/info/ HTTP/1.1" 500 103691
+INFO 2022-09-19 18:59:57,966 autoreload 8260 2424 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:00:00,237 autoreload 10508 18672 Watching for file changes with StatReloader
+ERROR 2022-09-19 19:01:05,781 log 10508 2172 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+TypeError: _wrapped_view() missing 1 required positional argument: 'request'
+ERROR 2022-09-19 19:01:05,793 basehttp 10508 2172 "GET /api/users/info/ HTTP/1.1" 500 103691
+INFO 2022-09-19 19:01:08,672 basehttp 10508 2172 "GET /admin/users/user/ HTTP/1.1" 302 0
+INFO 2022-09-19 19:01:08,726 basehttp 10508 2172 "GET /admin/login/?next=/admin/users/user/ HTTP/1.1" 200 2240
+INFO 2022-09-19 19:01:08,899 basehttp 10508 2172 "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2022-09-19 19:01:50,193 autoreload 10508 18672 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:01:52,854 autoreload 16884 5312 Watching for file changes with StatReloader
+ERROR 2022-09-19 19:01:55,665 log 16884 8768 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 125, in _wrapped_view
+    result = middleware.process_request(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\middleware\cache.py", line 153, in process_request
+    if request.method not in ("GET", "HEAD"):
+AttributeError: 'UserViewSet' object has no attribute 'method'
+ERROR 2022-09-19 19:01:55,682 basehttp 16884 8768 "GET /api/users/info/ HTTP/1.1" 500 106782
+INFO 2022-09-19 19:03:31,425 autoreload 16884 5312 C:\Maki\Python code\Courses\omdb-api\users\urls.py changed, reloading.
+INFO 2022-09-19 19:03:33,582 autoreload 11132 16312 Watching for file changes with StatReloader
+ERROR 2022-09-19 19:03:35,713 log 11132 19432 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 125, in _wrapped_view
+    result = middleware.process_request(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\middleware\cache.py", line 153, in process_request
+    if request.method not in ("GET", "HEAD"):
+AttributeError: 'UserViewSet' object has no attribute 'method'
+ERROR 2022-09-19 19:03:35,725 basehttp 11132 19432 "GET /api/users/info/ HTTP/1.1" 500 106787
+INFO 2022-09-19 19:03:38,499 autoreload 11132 16312 C:\Maki\Python code\Courses\omdb-api\users\urls.py changed, reloading.
+INFO 2022-09-19 19:03:40,206 autoreload 3920 3272 Watching for file changes with StatReloader
+ERROR 2022-09-19 19:03:42,748 log 3920 17572 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 125, in _wrapped_view
+    result = middleware.process_request(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\middleware\cache.py", line 153, in process_request
+    if request.method not in ("GET", "HEAD"):
+AttributeError: 'UserViewSet' object has no attribute 'method'
+ERROR 2022-09-19 19:03:42,755 basehttp 3920 17572 "GET /api/users/info/ HTTP/1.1" 500 106782
+ERROR 2022-09-19 19:03:58,927 log 3920 17572 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 125, in _wrapped_view
+    result = middleware.process_request(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\middleware\cache.py", line 153, in process_request
+    if request.method not in ("GET", "HEAD"):
+AttributeError: 'UserViewSet' object has no attribute 'method'
+ERROR 2022-09-19 19:03:58,934 basehttp 3920 17572 "GET /api/users/info/ HTTP/1.1" 500 106782
+INFO 2022-09-19 19:03:59,006 autoreload 3920 3272 C:\Maki\Python code\Courses\omdb-api\users\urls.py changed, reloading.
+INFO 2022-09-19 19:04:01,187 autoreload 2188 13680 Watching for file changes with StatReloader
+INFO 2022-09-19 19:04:09,710 autoreload 2188 13680 C:\Maki\Python code\Courses\omdb-api\users\urls.py changed, reloading.
+INFO 2022-09-19 19:04:11,293 autoreload 11244 7488 Watching for file changes with StatReloader
+INFO 2022-09-19 19:05:31,558 autoreload 11244 7488 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:05:33,285 autoreload 2968 18284 Watching for file changes with StatReloader
+INFO 2022-09-19 19:05:49,262 autoreload 2968 18284 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:05:51,185 autoreload 18608 3700 Watching for file changes with StatReloader
+INFO 2022-09-19 19:06:40,839 autoreload 3920 9644 Watching for file changes with StatReloader
+ERROR 2022-09-19 19:06:42,750 log 3920 14696 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 125, in _wrapped_view
+    result = middleware.process_request(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\middleware\cache.py", line 153, in process_request
+    if request.method not in ("GET", "HEAD"):
+AttributeError: 'UserViewSet' object has no attribute 'method'
+ERROR 2022-09-19 19:06:42,758 basehttp 3920 14696 "GET /api/users/info/ HTTP/1.1" 500 106782
+INFO 2022-09-19 19:06:53,981 autoreload 3920 9644 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:06:55,842 autoreload 10172 5688 Watching for file changes with StatReloader
+ERROR 2022-09-19 19:06:56,421 log 10172 19132 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 125, in _wrapped_view
+    result = middleware.process_request(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\middleware\cache.py", line 153, in process_request
+    if request.method not in ("GET", "HEAD"):
+AttributeError: 'UserViewSet' object has no attribute 'method'
+ERROR 2022-09-19 19:06:56,430 basehttp 10172 19132 "GET /api/users/info/ HTTP/1.1" 500 106782
+INFO 2022-09-19 19:09:12,965 autoreload 10172 5688 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:09:14,533 autoreload 19224 20232 Watching for file changes with StatReloader
+INFO 2022-09-19 19:09:17,507 autoreload 19224 20232 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:09:19,837 autoreload 8572 4068 Watching for file changes with StatReloader
+ERROR 2022-09-19 19:09:24,408 log 8572 18892 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\renderers.py", line 724, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\renderers.py", line 655, in get_context
+    raw_data_post_form = self.get_raw_data_form(data, view, 'POST', request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\renderers.py", line 554, in get_raw_data_form
+    serializer = view.get_serializer()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 108, in get_serializer
+    serializer_class = self.get_serializer_class()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 122, in get_serializer_class
+    assert self.serializer_class is not None, (
+AssertionError: 'UserViewSet' should either include a `serializer_class` attribute, or override the `get_serializer_class()` method.
+ERROR 2022-09-19 19:09:24,416 basehttp 8572 18892 "GET /api/users/info/ HTTP/1.1" 500 100224
+INFO 2022-09-19 19:09:34,881 autoreload 8572 4068 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:09:36,690 autoreload 3996 19080 Watching for file changes with StatReloader
+INFO 2022-09-19 19:09:37,241 basehttp 3996 17560 "GET /api/users/info/ HTTP/1.1" 200 10192
+INFO 2022-09-19 19:10:18,292 autoreload 3996 19080 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:10:19,997 autoreload 17688 20076 Watching for file changes with StatReloader
+INFO 2022-09-19 19:10:32,910 autoreload 17688 20076 C:\Maki\Python code\Courses\omdb-api\users\urls.py changed, reloading.
+INFO 2022-09-19 19:10:34,944 autoreload 8216 14056 Watching for file changes with StatReloader
+WARNING 2022-09-19 19:10:35,621 log 8216 12192 Not Found: /api/users/info/
+WARNING 2022-09-19 19:10:35,623 basehttp 8216 12192 "GET /api/users/info/ HTTP/1.1" 404 3994
+INFO 2022-09-19 19:10:41,814 autoreload 8216 14056 C:\Maki\Python code\Courses\omdb-api\users\urls.py changed, reloading.
+INFO 2022-09-19 19:10:43,369 autoreload 8812 7236 Watching for file changes with StatReloader
+INFO 2022-09-19 19:10:43,876 basehttp 8812 5800 "GET /api/users/info/ HTTP/1.1" 200 10054
+INFO 2022-09-19 19:11:15,149 autoreload 8812 7236 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:11:17,009 autoreload 14600 11152 Watching for file changes with StatReloader
+INFO 2022-09-19 19:11:17,519 basehttp 14600 18616 "GET /api/users/info/ HTTP/1.1" 200 10054
+INFO 2022-09-19 19:11:24,242 basehttp 14600 18616 "GET /api/users/info/ HTTP/1.1" 200 10054
+INFO 2022-09-19 19:11:33,547 basehttp 14600 18616 "POST /admin/login/?next=/admin/users/user/ HTTP/1.1" 200 2400
+INFO 2022-09-19 19:12:46,618 autoreload 11512 13200 Watching for file changes with StatReloader
+INFO 2022-09-19 19:12:47,157 basehttp 11512 8408 "GET /admin/ HTTP/1.1" 302 0
+INFO 2022-09-19 19:12:47,204 basehttp 11512 8408 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2218
+INFO 2022-09-19 19:12:50,357 basehttp 11512 8408 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2022-09-19 19:12:50,406 basehttp 11512 8408 "GET /admin/ HTTP/1.1" 200 6928
+INFO 2022-09-19 19:12:50,598 basehttp 11512 8408 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 380
+INFO 2022-09-19 19:12:50,641 basehttp 11512 8408 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2022-09-19 19:12:52,663 basehttp 11512 8408 "GET /admin/users/user/ HTTP/1.1" 200 8741
+INFO 2022-09-19 19:12:52,849 basehttp 11512 8408 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2022-09-19 19:12:57,365 basehttp 11512 8408 "GET /api/users/info/ HTTP/1.1" 200 10258
+INFO 2022-09-19 19:13:40,973 autoreload 11512 13200 C:\Maki\Python code\Courses\omdb-api\users\pagination.py changed, reloading.
+INFO 2022-09-19 19:13:42,744 autoreload 10324 19524 Watching for file changes with StatReloader
+WARNING 2022-09-19 19:13:44,670 log 10324 20360 Method Not Allowed: /api/users/register/
+WARNING 2022-09-19 19:13:44,671 basehttp 10324 20360 "GET /api/users/register/ HTTP/1.1" 405 12982
+INFO 2022-09-19 19:13:54,919 basehttp 10324 20360 "POST /api/users/register/ HTTP/1.1" 200 13112
+WARNING 2022-09-19 19:13:57,967 log 10324 20360 Method Not Allowed: /api/users/register/
+WARNING 2022-09-19 19:13:57,968 basehttp 10324 20360 "GET /api/users/register/ HTTP/1.1" 405 12982
+INFO 2022-09-19 19:13:59,463 basehttp 10324 20360 "GET /api/users/info/ HTTP/1.1" 200 10460
+INFO 2022-09-19 19:14:00,822 basehttp 10324 20360 "GET /api/users/info/ HTTP/1.1" 200 10460
+INFO 2022-09-19 19:14:02,656 autoreload 10324 19524 C:\Maki\Python code\Courses\omdb-api\users\pagination.py changed, reloading.
+INFO 2022-09-19 19:14:04,340 autoreload 3700 15580 Watching for file changes with StatReloader
+INFO 2022-09-19 19:14:06,048 basehttp 3700 5980 "GET /api/users/info/ HTTP/1.1" 200 10460
+INFO 2022-09-19 19:14:20,876 autoreload 3700 15580 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:14:22,540 autoreload 11232 8360 Watching for file changes with StatReloader
+INFO 2022-09-19 19:14:23,144 basehttp 11232 1808 "GET /api/users/info/ HTTP/1.1" 200 10460
+INFO 2022-09-19 19:14:25,915 autoreload 11232 8360 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:14:27,939 autoreload 784 14288 Watching for file changes with StatReloader
+INFO 2022-09-19 19:16:17,719 autoreload 784 14288 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:16:19,361 autoreload 5928 15836 Watching for file changes with StatReloader
+INFO 2022-09-19 19:16:22,109 autoreload 5928 15836 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:16:24,023 autoreload 18100 7216 Watching for file changes with StatReloader
+INFO 2022-09-19 19:16:27,207 autoreload 18100 7216 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:16:28,766 autoreload 7912 11668 Watching for file changes with StatReloader
+ERROR 2022-09-19 19:16:31,531 log 7912 14152 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\users\views.py", line 23, in list
+    page = self.paginate_queryset(queryset)
+AttributeError: 'UserViewSet' object has no attribute 'paginate_queryset'
+ERROR 2022-09-19 19:16:31,540 basehttp 7912 14152 "GET /api/users/info/ HTTP/1.1" 500 98275
+INFO 2022-09-19 19:18:10,608 autoreload 7912 11668 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:18:12,559 autoreload 13660 8572 Watching for file changes with StatReloader
+ERROR 2022-09-19 19:18:14,858 log 13660 15412 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\users\views.py", line 25, in list
+    serializer = UserViewSet(page, many=True)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 19:18:14,872 basehttp 13660 15412 "GET /api/users/info/ HTTP/1.1" 500 98245
+INFO 2022-09-19 19:19:11,654 autoreload 13660 8572 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:19:13,455 autoreload 4640 13032 Watching for file changes with StatReloader
+INFO 2022-09-19 19:19:16,826 autoreload 4640 13032 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:19:18,383 autoreload 13808 2856 Watching for file changes with StatReloader
+INFO 2022-09-19 19:20:03,475 autoreload 13808 2856 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:20:05,572 autoreload 15428 14048 Watching for file changes with StatReloader
+INFO 2022-09-19 19:20:06,668 basehttp 15428 15564 "GET /api/users/info/ HTTP/1.1" 200 11251
+INFO 2022-09-19 19:20:08,761 basehttp 15428 15564 "GET /api/users/info/?page=2 HTTP/1.1" 200 11271
+INFO 2022-09-19 19:20:10,354 basehttp 15428 15564 "GET /api/users/info/ HTTP/1.1" 200 11251
+INFO 2022-09-19 19:20:57,348 autoreload 15428 14048 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:20:59,630 autoreload 8380 4172 Watching for file changes with StatReloader
+INFO 2022-09-19 19:21:06,472 autoreload 8380 4172 C:\Maki\Python code\Courses\omdb-api\users\pagination.py changed, reloading.
+INFO 2022-09-19 19:21:08,113 autoreload 18080 3700 Watching for file changes with StatReloader
+INFO 2022-09-19 19:21:08,770 basehttp 18080 9260 "GET /api/users/info/ HTTP/1.1" 200 10619
+INFO 2022-09-19 19:21:29,932 autoreload 18080 3700 C:\Maki\Python code\Courses\omdb-api\users\pagination.py changed, reloading.
+INFO 2022-09-19 19:21:31,929 autoreload 17980 8532 Watching for file changes with StatReloader
+INFO 2022-09-19 19:21:32,539 basehttp 17980 15364 "GET /api/users/info/ HTTP/1.1" 200 10460
+INFO 2022-09-19 19:21:34,378 basehttp 17980 15364 "GET /api/users/info/ HTTP/1.1" 200 10460
+INFO 2022-09-19 19:21:35,996 autoreload 17980 8532 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:21:37,782 autoreload 18168 1920 Watching for file changes with StatReloader
+INFO 2022-09-19 19:21:38,390 basehttp 18168 5020 "GET /api/users/info/ HTTP/1.1" 200 11251
+INFO 2022-09-19 19:21:56,465 autoreload 18168 1920 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:21:58,131 autoreload 13808 14596 Watching for file changes with StatReloader
+INFO 2022-09-19 19:22:11,025 autoreload 13808 14596 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:22:13,008 autoreload 14536 10008 Watching for file changes with StatReloader
+WARNING 2022-09-19 19:22:13,497 log 14536 19896 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:22:13,498 basehttp 14536 19896 "GET /api/users/info/ HTTP/1.1" 401 9974
+INFO 2022-09-19 19:22:41,497 autoreload 14536 10008 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:22:43,309 autoreload 17432 9368 Watching for file changes with StatReloader
+INFO 2022-09-19 19:23:00,602 autoreload 17432 9368 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:23:02,354 autoreload 18492 9444 Watching for file changes with StatReloader
+WARNING 2022-09-19 19:23:02,876 log 18492 11192 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:23:02,877 basehttp 18492 11192 "GET /api/users/info/ HTTP/1.1" 401 9974
+WARNING 2022-09-19 19:23:05,499 log 18492 11192 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:23:05,501 basehttp 18492 11192 "GET /api/users/info/ HTTP/1.1" 401 9974
+INFO 2022-09-19 19:23:07,841 autoreload 18492 9444 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:23:09,467 autoreload 3156 2716 Watching for file changes with StatReloader
+INFO 2022-09-19 19:23:10,172 basehttp 3156 19952 "GET /api/users/info/ HTTP/1.1" 200 11251
+INFO 2022-09-19 19:24:07,450 basehttp 3156 15028 "GET /api/users/info/ HTTP/1.1" 200 158
+INFO 2022-09-19 19:24:16,203 autoreload 3156 2716 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:24:18,355 autoreload 7876 13680 Watching for file changes with StatReloader
+WARNING 2022-09-19 19:24:21,500 log 7876 9528 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:24:21,501 basehttp 7876 9528 "GET /api/users/info/ HTTP/1.1" 401 58
+INFO 2022-09-19 19:24:41,610 basehttp 7876 9528 "POST /api/token/ HTTP/1.1" 200 483
+WARNING 2022-09-19 19:24:51,161 log 7876 9528 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:24:51,163 basehttp 7876 9528 "GET /api/users/info/ HTTP/1.1" 401 58
+INFO 2022-09-19 19:25:00,619 basehttp 7876 9528 "POST /api/token/ HTTP/1.1" 200 483
+WARNING 2022-09-19 19:25:13,068 log 7876 9528 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:25:13,069 basehttp 7876 9528 "GET /api/users/info/ HTTP/1.1" 401 58
+WARNING 2022-09-19 19:25:14,874 log 7876 9528 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:25:14,876 basehttp 7876 9528 "GET /api/users/info/ HTTP/1.1" 401 58
+INFO 2022-09-19 19:25:29,567 basehttp 7876 9528 "POST /api/token/ HTTP/1.1" 200 483
+WARNING 2022-09-19 19:27:52,776 log 7876 9528 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:27:52,777 basehttp 7876 9528 "GET /api/users/info/ HTTP/1.1" 401 58
+INFO 2022-09-19 19:28:01,321 autoreload 7876 13680 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:28:03,156 autoreload 13900 76 Watching for file changes with StatReloader
+INFO 2022-09-19 19:28:11,310 autoreload 13900 76 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:28:12,989 autoreload 4520 5800 Watching for file changes with StatReloader
+ERROR 2022-09-19 19:28:14,006 log 4520 8400 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 332, in check_permissions
+    if not permission.has_permission(request, self):
+  File "C:\Maki\Python code\Courses\omdb-api\users\permissions.py", line 7, in has_permission
+    if user and user.is_authenticated():
+TypeError: 'bool' object is not callable
+ERROR 2022-09-19 19:28:14,013 basehttp 4520 8400 "GET /api/users/info/ HTTP/1.1" 500 103370
+INFO 2022-09-19 19:29:13,739 autoreload 4520 5800 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:29:15,418 autoreload 10440 16800 Watching for file changes with StatReloader
+ERROR 2022-09-19 19:29:16,058 log 10440 1352 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 332, in check_permissions
+    if not permission.has_permission(request, self):
+  File "C:\Maki\Python code\Courses\omdb-api\users\permissions.py", line 7, in has_permission
+    if user and user.is_authenticated():
+TypeError: 'bool' object is not callable
+ERROR 2022-09-19 19:29:16,065 basehttp 10440 1352 "GET /api/users/info/ HTTP/1.1" 500 106004
+INFO 2022-09-19 19:31:00,080 autoreload 10440 16800 C:\Maki\Python code\Courses\omdb-api\users\permissions.py changed, reloading.
+INFO 2022-09-19 19:31:01,816 autoreload 7672 11512 Watching for file changes with StatReloader
+ERROR 2022-09-19 19:31:04,638 log 7672 8924 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 332, in check_permissions
+    if not permission.has_permission(request, self):
+  File "C:\Maki\Python code\Courses\omdb-api\users\permissions.py", line 7, in has_permission
+    if user and user.is_authenticated():
+TypeError: 'bool' object is not callable
+ERROR 2022-09-19 19:31:04,647 basehttp 7672 8924 "GET /api/users/info/ HTTP/1.1" 500 103372
+ERROR 2022-09-19 19:31:06,570 log 7672 8924 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 332, in check_permissions
+    if not permission.has_permission(request, self):
+  File "C:\Maki\Python code\Courses\omdb-api\users\permissions.py", line 7, in has_permission
+    if user and user.is_authenticated():
+TypeError: 'bool' object is not callable
+ERROR 2022-09-19 19:31:06,579 basehttp 7672 8924 "GET /api/users/info/ HTTP/1.1" 500 103372
+INFO 2022-09-19 19:31:13,455 autoreload 7672 11512 C:\Maki\Python code\Courses\omdb-api\users\permissions.py changed, reloading.
+INFO 2022-09-19 19:31:15,269 autoreload 16204 8552 Watching for file changes with StatReloader
+INFO 2022-09-19 19:31:22,756 autoreload 16204 8552 C:\Maki\Python code\Courses\omdb-api\users\permissions.py changed, reloading.
+INFO 2022-09-19 19:31:24,575 autoreload 7656 18108 Watching for file changes with StatReloader
+ERROR 2022-09-19 19:31:25,243 log 7656 3696 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 332, in check_permissions
+    if not permission.has_permission(request, self):
+  File "C:\Maki\Python code\Courses\omdb-api\users\permissions.py", line 7, in has_permission
+    if user and user.is_authenticated():
+TypeError: 'bool' object is not callable
+ERROR 2022-09-19 19:31:25,251 basehttp 7656 3696 "GET /api/users/info/ HTTP/1.1" 500 103359
+INFO 2022-09-19 19:31:32,373 autoreload 7656 18108 C:\Maki\Python code\Courses\omdb-api\users\permissions.py changed, reloading.
+INFO 2022-09-19 19:31:34,849 autoreload 7236 15000 Watching for file changes with StatReloader
+INFO 2022-09-19 19:31:49,675 autoreload 7236 15000 C:\Maki\Python code\Courses\omdb-api\users\permissions.py changed, reloading.
+INFO 2022-09-19 19:31:51,966 autoreload 792 17204 Watching for file changes with StatReloader
+ERROR 2022-09-19 19:31:53,497 log 792 6024 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 332, in check_permissions
+    if not permission.has_permission(request, self):
+  File "C:\Maki\Python code\Courses\omdb-api\users\permissions.py", line 7, in has_permission
+    if user and user.is_authenticated():
+TypeError: 'bool' object is not callable
+ERROR 2022-09-19 19:31:53,503 basehttp 792 6024 "GET /api/users/info/ HTTP/1.1" 500 106014
+ERROR 2022-09-19 19:31:57,668 log 792 6024 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 332, in check_permissions
+    if not permission.has_permission(request, self):
+  File "C:\Maki\Python code\Courses\omdb-api\users\permissions.py", line 7, in has_permission
+    if user and user.is_authenticated():
+TypeError: 'bool' object is not callable
+ERROR 2022-09-19 19:31:57,675 basehttp 792 6024 "GET /api/users/info/ HTTP/1.1" 500 106001
+INFO 2022-09-19 19:31:57,773 autoreload 792 17204 C:\Maki\Python code\Courses\omdb-api\users\permissions.py changed, reloading.
+INFO 2022-09-19 19:31:59,530 autoreload 8348 3188 Watching for file changes with StatReloader
+ERROR 2022-09-19 19:32:00,114 log 8348 7908 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 332, in check_permissions
+    if not permission.has_permission(request, self):
+  File "C:\Maki\Python code\Courses\omdb-api\users\permissions.py", line 7, in has_permission
+    if user and user.is_authenticated():
+TypeError: 'bool' object is not callable
+ERROR 2022-09-19 19:32:00,121 basehttp 8348 7908 "GET /api/users/info/ HTTP/1.1" 500 106001
+INFO 2022-09-19 19:32:27,122 autoreload 8348 3188 C:\Maki\Python code\Courses\omdb-api\users\permissions.py changed, reloading.
+INFO 2022-09-19 19:32:28,774 autoreload 17600 10140 Watching for file changes with StatReloader
+INFO 2022-09-19 19:32:31,820 autoreload 17600 10140 C:\Maki\Python code\Courses\omdb-api\users\permissions.py changed, reloading.
+INFO 2022-09-19 19:32:34,421 autoreload 15552 19168 Watching for file changes with StatReloader
+INFO 2022-09-19 19:32:36,798 autoreload 15552 19168 C:\Maki\Python code\Courses\omdb-api\users\permissions.py changed, reloading.
+INFO 2022-09-19 19:32:38,469 autoreload 17596 17728 Watching for file changes with StatReloader
+INFO 2022-09-19 19:32:40,816 basehttp 17596 13848 "GET /api/users/info/ HTTP/1.1" 200 11251
+INFO 2022-09-19 19:32:43,891 basehttp 17596 13848 "GET /api/users/info/ HTTP/1.1" 200 11251
+INFO 2022-09-19 19:32:46,602 basehttp 17596 19916 "GET /api/users/info/ HTTP/1.1" 200 158
+INFO 2022-09-19 19:34:14,527 basehttp 17596 13848 "GET /api/users/info/ HTTP/1.1" 200 11251
+INFO 2022-09-19 19:34:17,393 basehttp 17596 13848 "GET /api/users/info/ HTTP/1.1" 200 11251
+INFO 2022-09-19 19:36:27,643 autoreload 17596 17728 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:36:29,351 autoreload 10024 16204 Watching for file changes with StatReloader
+INFO 2022-09-19 19:36:31,269 autoreload 10024 16204 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:36:32,858 autoreload 10068 6448 Watching for file changes with StatReloader
+ERROR 2022-09-19 19:36:35,422 log 10068 3056 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 331, in check_permissions
+    for permission in self.get_permissions():
+TypeError: 'BasePermissionMetaclass' object is not iterable
+ERROR 2022-09-19 19:36:35,434 basehttp 10068 3056 "GET /api/users/info/ HTTP/1.1" 500 102513
+INFO 2022-09-19 19:36:45,764 autoreload 10068 6448 C:\Maki\Python code\Courses\omdb-api\users\permissions.py changed, reloading.
+INFO 2022-09-19 19:36:47,557 autoreload 7412 8216 Watching for file changes with StatReloader
+ERROR 2022-09-19 19:36:48,036 log 7412 5932 Internal Server Error: /api/users/info/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 331, in check_permissions
+    for permission in self.get_permissions():
+TypeError: 'BasePermissionMetaclass' object is not iterable
+ERROR 2022-09-19 19:36:48,044 basehttp 7412 5932 "GET /api/users/info/ HTTP/1.1" 500 102513
+INFO 2022-09-19 19:37:59,539 autoreload 7412 8216 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:38:01,449 autoreload 17236 16176 Watching for file changes with StatReloader
+INFO 2022-09-19 19:38:03,534 autoreload 17236 16176 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:38:05,226 autoreload 8668 8684 Watching for file changes with StatReloader
+INFO 2022-09-19 19:38:12,763 autoreload 8668 8684 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:38:14,912 autoreload 16204 20356 Watching for file changes with StatReloader
+WARNING 2022-09-19 19:38:15,729 log 16204 12148 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:38:15,730 basehttp 16204 12148 "GET /api/users/info/ HTTP/1.1" 401 10219
+INFO 2022-09-19 19:38:33,857 autoreload 16204 20356 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:38:35,601 autoreload 3728 9300 Watching for file changes with StatReloader
+WARNING 2022-09-19 19:38:36,281 log 3728 15920 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:38:36,283 basehttp 3728 15920 "GET /api/users/info/ HTTP/1.1" 401 10219
+WARNING 2022-09-19 19:38:40,922 log 3728 13476 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:38:40,923 basehttp 3728 13476 "GET /api/users/info/ HTTP/1.1" 401 58
+INFO 2022-09-19 19:38:45,811 basehttp 3728 13476 "POST /api/token/ HTTP/1.1" 200 483
+INFO 2022-09-19 19:39:02,888 basehttp 3728 13476 "GET /api/users/info/ HTTP/1.1" 200 158
+INFO 2022-09-19 19:39:16,169 basehttp 3728 13476 "POST /api/token/ HTTP/1.1" 200 483
+WARNING 2022-09-19 19:39:27,309 log 3728 13476 Forbidden: /api/users/info/
+WARNING 2022-09-19 19:39:27,310 basehttp 3728 13476 "GET /api/users/info/ HTTP/1.1" 403 63
+INFO 2022-09-19 19:39:33,156 autoreload 3728 9300 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:39:35,467 autoreload 11104 1808 Watching for file changes with StatReloader
+INFO 2022-09-19 19:39:37,524 autoreload 11104 1808 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:39:39,259 autoreload 13660 9812 Watching for file changes with StatReloader
+INFO 2022-09-19 19:40:42,688 autoreload 13660 9812 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:40:44,720 autoreload 15636 20416 Watching for file changes with StatReloader
+WARNING 2022-09-19 19:40:47,343 log 15636 8272 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:40:47,345 basehttp 15636 8272 "GET /api/users/info/ HTTP/1.1" 401 10219
+WARNING 2022-09-19 19:40:48,456 log 15636 8272 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:40:48,458 basehttp 15636 8272 "GET /api/users/info/ HTTP/1.1" 401 10219
+WARNING 2022-09-19 19:40:52,231 log 15636 6488 Forbidden: /api/users/info/
+WARNING 2022-09-19 19:40:52,232 basehttp 15636 6488 "GET /api/users/info/ HTTP/1.1" 403 63
+INFO 2022-09-19 19:41:04,650 basehttp 15636 6488 "POST /api/token/ HTTP/1.1" 200 483
+INFO 2022-09-19 19:41:13,919 basehttp 15636 6488 "GET /api/users/info/ HTTP/1.1" 200 158
+INFO 2022-09-19 19:41:18,201 basehttp 15636 6488 "GET /api/users/info/ HTTP/1.1" 200 158
+INFO 2022-09-19 19:41:27,363 autoreload 15636 20416 C:\Maki\Python code\Courses\omdb-api\users\pagination.py changed, reloading.
+INFO 2022-09-19 19:41:29,299 autoreload 8888 952 Watching for file changes with StatReloader
+INFO 2022-09-19 19:41:30,501 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+WARNING 2022-09-19 19:41:39,253 log 8888 18220 Method Not Allowed: /api/users/register/
+WARNING 2022-09-19 19:41:39,254 basehttp 8888 18220 "GET /api/users/register/ HTTP/1.1" 405 12982
+WARNING 2022-09-19 19:41:46,606 log 8888 18220 Bad Request: /api/users/register/
+WARNING 2022-09-19 19:41:46,608 basehttp 8888 18220 "POST /api/users/register/ HTTP/1.1" 400 13142
+INFO 2022-09-19 19:41:49,655 basehttp 8888 18220 "POST /api/users/register/ HTTP/1.1" 200 13112
+INFO 2022-09-19 19:41:53,342 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:41:54,688 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:41:55,829 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:41:56,786 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:41:57,682 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:41:58,706 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:41:59,678 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:00,502 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:02,541 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:03,441 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:04,475 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:07,560 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:08,371 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:10,226 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:11,120 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:12,071 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:12,871 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:13,829 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:14,799 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:15,704 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:16,511 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:17,272 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:18,023 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:18,807 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:19,668 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:20,366 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:21,242 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:21,949 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:22,752 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:23,520 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:24,405 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:25,088 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:25,876 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:26,792 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:27,533 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:28,240 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:28,974 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:29,809 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:30,517 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:31,176 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:31,825 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:32,542 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:33,256 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:34,062 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:34,753 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:35,415 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:36,125 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:36,890 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:37,612 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:38,394 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:39,093 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:39,784 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:40,587 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:41,309 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:42,134 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:42,870 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:43,546 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:44,346 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:45,091 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:45,884 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:46,559 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:47,340 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:48,063 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:48,843 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:49,547 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:50,191 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:50,885 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:51,623 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:52,367 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:53,236 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:54,116 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:54,887 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:42:55,729 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:43:06,260 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:43:07,120 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:43:08,213 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:43:09,730 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:43:18,616 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:43:19,487 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:43:20,652 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:43:21,613 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:43:22,462 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:43:23,450 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:43:32,790 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+WARNING 2022-09-19 19:43:35,931 log 8888 17600 Not Found: /api/users/info/3
+WARNING 2022-09-19 19:43:35,932 basehttp 8888 17600 "GET /api/users/info/3 HTTP/1.1" 404 3993
+WARNING 2022-09-19 19:43:42,329 log 8888 17600 Not Found: /api/users/info/1
+WARNING 2022-09-19 19:43:42,330 basehttp 8888 17600 "GET /api/users/info/1 HTTP/1.1" 404 3993
+INFO 2022-09-19 19:43:49,208 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:43:57,932 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:44:38,401 basehttp 8888 17600 "GET /api/users/info/ HTTP/1.1" 200 181
+INFO 2022-09-19 19:44:44,941 autoreload 8888 952 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:44:47,157 autoreload 4368 18732 Watching for file changes with StatReloader
+INFO 2022-09-19 19:44:49,198 basehttp 4368 18616 "GET /api/users/info/ HTTP/1.1" 200 245
+INFO 2022-09-19 19:45:02,270 basehttp 4368 18616 "GET /api/users/info/ HTTP/1.1" 200 245
+INFO 2022-09-19 19:45:17,252 basehttp 4368 11104 "POST /api/users/register/ HTTP/1.1" 200 13117
+INFO 2022-09-19 19:45:19,782 basehttp 4368 18616 "GET /api/users/info/ HTTP/1.1" 200 317
+INFO 2022-09-19 19:45:30,007 autoreload 4368 18732 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:45:32,250 autoreload 20004 12368 Watching for file changes with StatReloader
+INFO 2022-09-19 19:46:18,885 autoreload 20004 12368 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:46:21,034 autoreload 13548 19312 Watching for file changes with StatReloader
+WARNING 2022-09-19 19:46:22,882 log 13548 1016 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:46:22,884 basehttp 13548 1016 "GET /api/users/info/ HTTP/1.1" 401 183
+INFO 2022-09-19 19:46:27,509 basehttp 13548 1016 "POST /api/token/ HTTP/1.1" 200 483
+INFO 2022-09-19 19:46:36,813 basehttp 13548 1016 "GET /api/users/info/ HTTP/1.1" 200 317
+INFO 2022-09-19 19:46:53,282 basehttp 13548 8852 "POST /api/users/register/ HTTP/1.1" 200 13124
+INFO 2022-09-19 19:46:55,736 basehttp 13548 1016 "GET /api/users/info/ HTTP/1.1" 200 317
+INFO 2022-09-19 19:46:57,330 basehttp 13548 1016 "GET /api/users/info/ HTTP/1.1" 200 317
+INFO 2022-09-19 19:47:06,933 basehttp 13548 1016 "GET /api/users/info/ HTTP/1.1" 200 317
+INFO 2022-09-19 19:47:28,217 basehttp 13548 1016 "GET /api/users/info/ HTTP/1.1" 200 317
+INFO 2022-09-19 19:47:48,564 basehttp 13548 1016 "GET /api/users/info/ HTTP/1.1" 200 387
+INFO 2022-09-19 19:47:53,078 basehttp 13548 1016 "GET /api/users/info/ HTTP/1.1" 200 387
+INFO 2022-09-19 19:48:21,542 basehttp 13548 8852 "POST /api/users/register/ HTTP/1.1" 200 13108
+INFO 2022-09-19 19:48:23,721 basehttp 13548 1016 "GET /api/users/info/ HTTP/1.1" 200 387
+INFO 2022-09-19 19:48:28,752 basehttp 13548 1016 "GET /api/users/info/ HTTP/1.1" 200 387
+INFO 2022-09-19 19:48:36,243 basehttp 13548 1016 "GET /api/users/info/ HTTP/1.1" 200 387
+INFO 2022-09-19 19:48:42,661 basehttp 13548 1016 "GET /api/users/info/ HTTP/1.1" 200 387
+INFO 2022-09-19 19:48:43,562 basehttp 13548 1016 "GET /api/users/info/ HTTP/1.1" 200 387
+INFO 2022-09-19 19:48:47,879 basehttp 13548 1016 "GET /api/users/info/ HTTP/1.1" 200 387
+INFO 2022-09-19 19:48:55,967 basehttp 13548 1016 "GET /api/users/info/ HTTP/1.1" 200 429
+INFO 2022-09-19 19:49:21,727 basehttp 13548 1016 "GET /api/users/info/ HTTP/1.1" 200 429
+WARNING 2022-09-19 19:49:29,917 log 13548 1016 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:49:29,918 basehttp 13548 1016 "GET /api/users/info/?page=2 HTTP/1.1" 401 58
+INFO 2022-09-19 19:49:38,894 basehttp 13548 1016 "GET /api/users/info/?page=2 HTTP/1.1" 200 150
+INFO 2022-09-19 19:53:08,095 autoreload 13548 19312 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:53:10,027 autoreload 21448 21452 Watching for file changes with StatReloader
+INFO 2022-09-19 19:53:19,252 autoreload 21448 21452 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:53:21,029 autoreload 21020 21056 Watching for file changes with StatReloader
+INFO 2022-09-19 19:53:25,325 autoreload 21020 21056 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:53:27,126 autoreload 13660 20996 Watching for file changes with StatReloader
+INFO 2022-09-19 19:53:30,178 autoreload 13660 20996 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:53:32,118 autoreload 21016 21080 Watching for file changes with StatReloader
+INFO 2022-09-19 19:53:34,061 autoreload 21016 21080 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:53:35,768 autoreload 17424 12196 Watching for file changes with StatReloader
+INFO 2022-09-19 19:53:39,631 autoreload 17424 12196 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:53:41,272 autoreload 6300 5508 Watching for file changes with StatReloader
+WARNING 2022-09-19 19:54:38,928 log 6300 14536 Unauthorized: /api/users/info/
+WARNING 2022-09-19 19:54:38,930 basehttp 6300 14536 "GET /api/users/info/ HTTP/1.1" 401 183
+INFO 2022-09-19 19:54:45,385 basehttp 6300 14536 "POST /api/token/ HTTP/1.1" 200 483
+INFO 2022-09-19 19:54:54,940 basehttp 6300 14536 "GET /api/users/info/ HTTP/1.1" 200 429
+INFO 2022-09-19 19:55:21,594 autoreload 6300 5508 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 19:55:23,337 autoreload 9676 20928 Watching for file changes with StatReloader
+INFO 2022-09-19 19:55:29,645 autoreload 9676 20928 C:\Maki\Python code\Courses\omdb-api\users\urls.py changed, reloading.
+INFO 2022-09-19 19:55:31,375 autoreload 7160 18644 Watching for file changes with StatReloader
+INFO 2022-09-19 19:55:33,315 autoreload 7160 18644 C:\Maki\Python code\Courses\omdb-api\users\urls.py changed, reloading.
+INFO 2022-09-19 19:55:35,126 autoreload 21404 18848 Watching for file changes with StatReloader
+INFO 2022-09-19 19:55:39,439 autoreload 21404 18848 C:\Maki\Python code\Courses\omdb-api\users\urls.py changed, reloading.
+INFO 2022-09-19 19:55:41,598 autoreload 1128 17032 Watching for file changes with StatReloader
