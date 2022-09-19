@@ -1,21 +1,42 @@
-from django.contrib.auth import get_user_model
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
 from rest_framework import generics, status
 from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework import viewsets
 from rest_framework_simplejwt.tokens import RefreshToken
+from django.views.decorators.vary import vary_on_cookie
 
 from .serializers import RegisterSerializer, UserSerializer
 from .pagination import StandardResultsSetPagination
+from .models import User
 
 
-User = get_user_model()
-
-
-class UserViewSet(viewsets.ModelViewSet):
-    serializer_class = UserSerializer
-    queryset = User.objects.all()
+class UserViewSet(viewsets.GenericViewSet):
     pagination_class = StandardResultsSetPagination
+    permission_classes_by_action = {
+        'list': [IsAuthenticated, IsAdminUser]
+    }
+
+    def get_queryset(self):
+        return User.objects.all()
+
+    def get_permissions(self):
+        try:
+            return [permission() for permission in self.permission_classes_by_action[self.action]]
+        except KeyError:
+            return [permission() for permission in self.permission_classes]
+
+    @method_decorator(cache_page(60))
+    @method_decorator(vary_on_cookie)
+    def list(self, request):
+        queryset = self.get_queryset()
+        page = self.paginate_queryset(queryset)
+        if page is not None:
+            serializer = UserSerializer(page, many=True)
+            return self.get_paginated_response(serializer.data)
+        serializer = UserSerializer(queryset, many=True)
+        return Response(serializer.data)
 
 
 class RegisterApi(generics.GenericAPIView):
