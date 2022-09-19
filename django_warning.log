@@ -884,3 +884,5 @@ Traceback (most recent call last):
     assert field_name in fields, (
 AssertionError: The field 'genres' was declared on serializer EpisodeSerializer, but has not been included in the 'fields' option.
 ERROR 2022-09-19 15:27:44,931 basehttp 13600 11084 "GET /api/episodes/ HTTP/1.1" 500 151025
+WARNING 2022-09-19 16:51:47,877 log 17880 17340 Not Found: /api/episodes/imbd
+WARNING 2022-09-19 16:51:47,878 basehttp 17880 17340 "GET /api/episodes/imbd HTTP/1.1" 404 3594
