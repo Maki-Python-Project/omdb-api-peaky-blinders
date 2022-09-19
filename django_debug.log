@@ -3119,3 +3119,1262 @@ WARNING 2022-09-19 20:57:52,109 basehttp 4156 14360 "GET /api/users/info/1/ HTTP
 INFO 2022-09-19 20:58:08,358 autoreload 4156 20752 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
 INFO 2022-09-19 20:58:10,134 autoreload 20996 18100 Watching for file changes with StatReloader
 INFO 2022-09-19 20:58:58,059 autoreload 20996 18100 C:\Maki\Python code\Courses\omdb-api\base\settings.py changed, reloading.
+INFO 2022-09-19 21:11:53,849 autoreload 20396 5648 Watching for file changes with StatReloader
+INFO 2022-09-19 21:12:01,601 autoreload 20396 5648 C:\Maki\Python code\Courses\omdb-api\base\settings.py changed, reloading.
+INFO 2022-09-19 21:12:06,676 autoreload 12624 21368 Watching for file changes with StatReloader
+WARNING 2022-09-19 21:12:12,390 log 12624 19516 Unauthorized: /api/users/info/1/
+WARNING 2022-09-19 21:12:12,391 basehttp 12624 19516 "GET /api/users/info/1/ HTTP/1.1" 401 10345
+ERROR 2022-09-19 21:12:19,019 log 12624 19516 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 63, in get_queryset
+    assert self.queryset is not None, (
+AssertionError: 'EpisodeList' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2022-09-19 21:12:19,027 basehttp 12624 19516 "GET /api/episodes/ HTTP/1.1" 500 105748
+INFO 2022-09-19 21:13:19,388 autoreload 12624 21368 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:13:21,287 autoreload 15736 2600 Watching for file changes with StatReloader
+INFO 2022-09-19 21:13:36,601 autoreload 15736 2600 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:13:38,271 autoreload 16732 17688 Watching for file changes with StatReloader
+INFO 2022-09-19 21:13:41,252 autoreload 16732 17688 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:13:43,674 autoreload 1604 21364 Watching for file changes with StatReloader
+ERROR 2022-09-19 21:13:44,520 log 1604 21044 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in get
+    return Response(context)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:13:44,526 basehttp 1604 21044 "GET /api/episodes/ HTTP/1.1" 500 99310
+INFO 2022-09-19 21:14:05,648 autoreload 1604 21364 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:14:07,548 autoreload 20560 880 Watching for file changes with StatReloader
+ERROR 2022-09-19 21:14:08,175 log 20560 8020 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in get
+    return Response(self.context)
+AttributeError: 'EpisodeList' object has no attribute 'context'
+ERROR 2022-09-19 21:14:08,181 basehttp 20560 8020 "GET /api/episodes/ HTTP/1.1" 500 99432
+INFO 2022-09-19 21:14:38,173 autoreload 20560 880 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:14:39,747 autoreload 17168 15328 Watching for file changes with StatReloader
+ERROR 2022-09-19 21:14:40,394 log 17168 8216 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in get
+    return Response(context)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:14:40,399 basehttp 17168 8216 "GET /api/episodes/ HTTP/1.1" 500 99310
+ERROR 2022-09-19 21:14:49,747 log 17168 8216 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in get
+    return Response()
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:14:49,753 basehttp 17168 8216 "GET /api/episodes/ HTTP/1.1" 500 99296
+INFO 2022-09-19 21:14:49,772 autoreload 17168 15328 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:14:51,925 autoreload 8112 20224 Watching for file changes with StatReloader
+INFO 2022-09-19 21:14:54,271 autoreload 8112 20224 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:14:56,117 autoreload 19232 18852 Watching for file changes with StatReloader
+INFO 2022-09-19 21:15:00,236 autoreload 19232 18852 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:15:01,945 autoreload 10804 20764 Watching for file changes with StatReloader
+ERROR 2022-09-19 21:15:02,750 log 10804 12172 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in get
+    return Response(qs)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:15:02,755 basehttp 10804 12172 "GET /api/episodes/ HTTP/1.1" 500 99300
+INFO 2022-09-19 21:15:32,954 autoreload 10804 20764 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:15:35,080 autoreload 21188 21284 Watching for file changes with StatReloader
+ERROR 2022-09-19 21:15:36,650 log 21188 9280 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in get
+    return Response(serializer)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:15:36,655 basehttp 21188 9280 "GET /api/episodes/ HTTP/1.1" 500 99900
+ERROR 2022-09-19 21:15:38,803 log 21188 9280 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in get
+    return Response(serializer)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:15:38,809 basehttp 21188 9280 "GET /api/episodes/ HTTP/1.1" 500 99900
+INFO 2022-09-19 21:15:48,701 autoreload 21188 21284 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:15:50,876 autoreload 2460 18368 Watching for file changes with StatReloader
+ERROR 2022-09-19 21:15:51,598 log 2460 7160 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in list
+    return Response(serializer)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:15:51,607 basehttp 2460 7160 "GET /api/episodes/ HTTP/1.1" 500 104070
+INFO 2022-09-19 21:16:00,074 autoreload 2460 18368 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:16:01,911 autoreload 14112 272 Watching for file changes with StatReloader
+ERROR 2022-09-19 21:16:02,585 log 14112 16376 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in list
+    return Response(serializer)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:16:02,592 basehttp 14112 16376 "GET /api/episodes/ HTTP/1.1" 500 103743
+ERROR 2022-09-19 21:16:10,679 log 14112 16376 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:16:10,686 basehttp 14112 16376 "GET /api/episodes/ HTTP/1.1" 500 103753
+INFO 2022-09-19 21:16:10,759 autoreload 14112 272 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:16:12,422 autoreload 10508 9148 Watching for file changes with StatReloader
+ERROR 2022-09-19 21:16:13,017 log 10508 21172 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:16:13,026 basehttp 10508 21172 "GET /api/episodes/ HTTP/1.1" 500 103753
+ERROR 2022-09-19 21:16:19,119 log 10508 21172 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:16:19,126 basehttp 10508 21172 "GET /api/episodes/ HTTP/1.1" 500 103752
+INFO 2022-09-19 21:16:19,162 autoreload 10508 9148 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:16:21,313 autoreload 7116 15884 Watching for file changes with StatReloader
+INFO 2022-09-19 21:16:51,876 autoreload 7116 15884 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:16:54,342 autoreload 13848 13336 Watching for file changes with StatReloader
+ERROR 2022-09-19 21:16:55,135 log 13848 20916 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 33, in get
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:16:55,145 basehttp 13848 20916 "GET /api/episodes/ HTTP/1.1" 500 99583
+INFO 2022-09-19 21:17:03,525 autoreload 13848 13336 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:17:05,321 autoreload 7832 2128 Watching for file changes with StatReloader
+INFO 2022-09-19 21:17:09,356 autoreload 7832 2128 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:17:11,229 autoreload 21148 17060 Watching for file changes with StatReloader
+ERROR 2022-09-19 21:17:11,961 log 21148 14728 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in get
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:17:11,967 basehttp 21148 14728 "GET /api/episodes/ HTTP/1.1" 500 99583
+INFO 2022-09-19 21:17:17,698 autoreload 21148 17060 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:17:19,530 autoreload 10464 20572 Watching for file changes with StatReloader
+ERROR 2022-09-19 21:17:20,054 log 10464 7160 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 63, in get_queryset
+    assert self.queryset is not None, (
+AssertionError: 'EpisodeList' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2022-09-19 21:17:20,062 basehttp 10464 7160 "GET /api/episodes/ HTTP/1.1" 500 105791
+INFO 2022-09-19 21:17:24,389 autoreload 10464 20572 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:17:26,238 autoreload 10968 5004 Watching for file changes with StatReloader
+INFO 2022-09-19 21:17:26,814 basehttp 10968 20856 "GET /api/episodes/ HTTP/1.1" 200 25723
+INFO 2022-09-19 21:18:04,757 autoreload 10968 5004 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:18:06,473 autoreload 8564 20868 Watching for file changes with StatReloader
+INFO 2022-09-19 21:18:11,808 autoreload 8564 20868 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:18:13,570 autoreload 9976 20848 Watching for file changes with StatReloader
+INFO 2022-09-19 21:18:20,543 basehttp 9976 2240 "GET /api/episodes/ HTTP/1.1" 200 25723
+INFO 2022-09-19 21:18:21,855 basehttp 9976 2240 "GET /api/episodes/ HTTP/1.1" 200 25723
+INFO 2022-09-19 21:18:45,298 autoreload 12204 4240 Watching for file changes with StatReloader
+INFO 2022-09-19 21:18:48,699 basehttp 12204 7416 "GET /api/episodes/ HTTP/1.1" 200 13167
+INFO 2022-09-19 21:19:08,554 autoreload 16688 11284 Watching for file changes with StatReloader
+INFO 2022-09-19 21:19:10,181 basehttp 16688 13040 "GET /api/episodes/ HTTP/1.1" 200 25723
+INFO 2022-09-19 21:19:11,625 basehttp 16688 13040 "GET /api/episodes/ HTTP/1.1" 200 25723
+INFO 2022-09-19 21:19:21,583 autoreload 16688 11284 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:19:23,265 autoreload 12116 13108 Watching for file changes with StatReloader
+INFO 2022-09-19 21:22:13,955 autoreload 12116 13108 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:22:15,683 autoreload 12960 20720 Watching for file changes with StatReloader
+INFO 2022-09-19 21:22:22,172 autoreload 12960 20720 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:22:40,348 autoreload 16176 15788 Watching for file changes with StatReloader
+ERROR 2022-09-19 21:22:41,181 log 16176 10804 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 33, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:22:41,193 basehttp 16176 10804 "GET /api/episodes/ HTTP/1.1" 500 112460
+ERROR 2022-09-19 21:23:39,158 log 16176 10804 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 33, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:23:39,165 basehttp 16176 10804 "GET /api/episodes/ HTTP/1.1" 500 112460
+INFO 2022-09-19 21:23:53,995 autoreload 16176 15788 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:23:56,138 autoreload 6584 17892 Watching for file changes with StatReloader
+ERROR 2022-09-19 21:23:56,978 log 6584 13688 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 30, in list
+    queryset = self.get_queryset()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 63, in get_queryset
+    assert self.queryset is not None, (
+AssertionError: 'EpisodeList' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2022-09-19 21:23:56,996 basehttp 6584 13688 "GET /api/episodes/ HTTP/1.1" 500 115699
+INFO 2022-09-19 21:24:13,096 autoreload 6584 17892 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:24:15,283 autoreload 7488 13044 Watching for file changes with StatReloader
+ERROR 2022-09-19 21:24:46,975 log 7488 19232 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 33, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:24:46,991 basehttp 7488 19232 "GET /api/episodes/ HTTP/1.1" 500 112460
+INFO 2022-09-19 21:25:47,666 autoreload 7488 13044 C:\Maki\Python code\Courses\omdb-api\episodes\urls.py changed, reloading.
+INFO 2022-09-19 21:25:49,653 autoreload 17768 18368 Watching for file changes with StatReloader
+INFO 2022-09-19 21:26:03,835 autoreload 17768 18368 C:\Maki\Python code\Courses\omdb-api\episodes\urls.py changed, reloading.
+INFO 2022-09-19 21:26:05,891 autoreload 4172 7584 Watching for file changes with StatReloader
+INFO 2022-09-19 21:26:17,869 autoreload 4172 7584 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:26:19,843 autoreload 7156 12304 Watching for file changes with StatReloader
+ERROR 2022-09-19 21:26:20,528 log 7156 21492 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 33, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:26:20,535 basehttp 7156 21492 "GET /api/episodes/ HTTP/1.1" 500 112554
+INFO 2022-09-19 21:26:32,413 autoreload 20896 20824 Watching for file changes with StatReloader
+ERROR 2022-09-19 21:26:35,139 log 20896 14152 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 33, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:26:35,147 basehttp 20896 14152 "GET /api/episodes/ HTTP/1.1" 500 112554
+INFO 2022-09-19 21:26:37,909 autoreload 20896 20824 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:26:39,755 autoreload 2036 14604 Watching for file changes with StatReloader
+ERROR 2022-09-19 21:26:40,324 log 2036 10876 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 33, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:26:40,332 basehttp 2036 10876 "GET /api/episodes/ HTTP/1.1" 500 102465
+INFO 2022-09-19 21:26:45,490 autoreload 2036 14604 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:26:47,346 autoreload 14112 19916 Watching for file changes with StatReloader
+INFO 2022-09-19 21:26:48,014 basehttp 14112 20488 "GET /api/episodes/ HTTP/1.1" 200 18454
+INFO 2022-09-19 21:26:52,548 autoreload 14112 19916 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:26:54,107 autoreload 6488 1116 Watching for file changes with StatReloader
+ERROR 2022-09-19 21:26:54,660 log 6488 18868 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 33, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:26:54,668 basehttp 6488 18868 "GET /api/episodes/ HTTP/1.1" 500 102465
+INFO 2022-09-19 21:27:08,425 autoreload 6488 1116 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:27:10,120 autoreload 2028 5616 Watching for file changes with StatReloader
+ERROR 2022-09-19 21:27:10,762 log 2028 8660 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 33, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:27:10,770 basehttp 2028 8660 "GET /api/episodes/ HTTP/1.1" 500 102434
+INFO 2022-09-19 21:27:13,507 autoreload 2028 5616 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:27:15,480 autoreload 14668 20940 Watching for file changes with StatReloader
+INFO 2022-09-19 21:27:38,231 autoreload 14668 20940 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:27:40,598 autoreload 21228 14000 Watching for file changes with StatReloader
+INFO 2022-09-19 21:27:56,605 autoreload 21228 14000 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:27:59,058 autoreload 6712 19108 Watching for file changes with StatReloader
+INFO 2022-09-19 21:28:11,946 autoreload 6712 19108 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:28:13,714 autoreload 16580 21244 Watching for file changes with StatReloader
+INFO 2022-09-19 21:28:38,819 autoreload 21468 14928 Watching for file changes with StatReloader
+ERROR 2022-09-19 21:28:40,054 log 21468 14360 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 34, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:28:40,060 basehttp 21468 14360 "GET /api/episodes/ HTTP/1.1" 500 98821
+INFO 2022-09-19 21:28:43,583 autoreload 21468 14928 C:\Maki\Python code\Courses\omdb-api\episodes\urls.py changed, reloading.
+INFO 2022-09-19 21:28:45,237 autoreload 19168 20832 Watching for file changes with StatReloader
+INFO 2022-09-19 21:28:57,869 autoreload 19168 20832 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:28:59,679 autoreload 15812 19736 Watching for file changes with StatReloader
+INFO 2022-09-19 21:31:31,692 autoreload 15812 19736 C:\Maki\Python code\Courses\omdb-api\episodes\urls.py changed, reloading.
+INFO 2022-09-19 21:31:33,399 autoreload 19768 18696 Watching for file changes with StatReloader
+INFO 2022-09-19 21:32:17,648 autoreload 19768 18696 C:\Maki\Python code\Courses\omdb-api\episodes\urls.py changed, reloading.
+INFO 2022-09-19 21:32:19,371 autoreload 18756 20596 Watching for file changes with StatReloader
+INFO 2022-09-19 21:32:34,067 autoreload 18756 20596 C:\Maki\Python code\Courses\omdb-api\episodes\urls.py changed, reloading.
+INFO 2022-09-19 21:32:35,777 autoreload 12304 15276 Watching for file changes with StatReloader
+ERROR 2022-09-19 21:32:39,151 log 12304 21444 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 33, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:32:39,163 basehttp 12304 21444 "GET /api/episodes/ HTTP/1.1" 500 102603
+ERROR 2022-09-19 21:32:43,988 log 12304 21444 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 33, in list
+    return Response(serializer.data)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2022-09-19 21:32:43,994 basehttp 12304 21444 "GET /api/episodes/ HTTP/1.1" 500 102603
+INFO 2022-09-19 21:33:12,902 autoreload 12304 15276 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:33:14,700 autoreload 18880 13188 Watching for file changes with StatReloader
+ERROR 2022-09-19 21:33:16,629 log 18880 21156 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+TypeError: _wrapped_view() missing 1 required positional argument: 'request'
+ERROR 2022-09-19 21:33:16,642 basehttp 18880 21156 "GET /api/episodes/ HTTP/1.1" 500 107330
+INFO 2022-09-19 21:33:24,990 autoreload 18880 13188 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:33:26,762 autoreload 18316 7084 Watching for file changes with StatReloader
+INFO 2022-09-19 21:33:27,367 basehttp 18316 11936 "GET /api/episodes/ HTTP/1.1" 200 18454
+INFO 2022-09-19 21:33:30,957 basehttp 18316 11936 "GET /api/episodes/ HTTP/1.1" 200 18454
+INFO 2022-09-19 21:33:31,258 autoreload 18316 7084 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:33:32,875 autoreload 21216 16800 Watching for file changes with StatReloader
+ERROR 2022-09-19 21:33:33,369 log 21216 17892 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+TypeError: _wrapped_view() missing 1 required positional argument: 'request'
+ERROR 2022-09-19 21:33:33,376 basehttp 21216 17892 "GET /api/episodes/ HTTP/1.1" 500 107330
+INFO 2022-09-19 21:34:10,463 autoreload 21216 16800 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:34:12,705 autoreload 20156 5616 Watching for file changes with StatReloader
+ERROR 2022-09-19 21:34:14,654 log 20156 12348 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 125, in _wrapped_view
+    result = middleware.process_request(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\middleware\cache.py", line 153, in process_request
+    if request.method not in ("GET", "HEAD"):
+AttributeError: 'EpisodeList' object has no attribute 'method'
+ERROR 2022-09-19 21:34:14,664 basehttp 20156 12348 "GET /api/episodes/ HTTP/1.1" 500 110645
+INFO 2022-09-19 21:36:22,840 autoreload 20156 5616 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:36:24,395 autoreload 12132 11196 Watching for file changes with StatReloader
+INFO 2022-09-19 21:36:31,788 autoreload 12132 11196 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:36:34,043 autoreload 1808 5544 Watching for file changes with StatReloader
+INFO 2022-09-19 21:36:34,990 basehttp 1808 21016 "GET /api/episodes/ HTTP/1.1" 200 18454
+INFO 2022-09-19 21:36:56,591 autoreload 1524 7412 Watching for file changes with StatReloader
+INFO 2022-09-19 21:36:59,846 basehttp 1524 11936 "GET /api/episodes/ HTTP/1.1" 200 31010
+INFO 2022-09-19 21:37:01,071 basehttp 1524 11936 "GET /api/episodes/ HTTP/1.1" 200 31010
+INFO 2022-09-19 21:37:14,183 autoreload 11068 9172 Watching for file changes with StatReloader
+INFO 2022-09-19 21:37:15,573 basehttp 11068 7780 "GET /api/episodes/ HTTP/1.1" 200 18454
+INFO 2022-09-19 21:37:16,210 basehttp 11068 7780 "GET /api/episodes/ HTTP/1.1" 200 18454
+INFO 2022-09-19 21:40:42,812 autoreload 11068 9172 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:40:44,639 autoreload 12540 18548 Watching for file changes with StatReloader
+INFO 2022-09-19 21:41:00,919 autoreload 12540 18548 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:41:02,731 autoreload 16488 14504 Watching for file changes with StatReloader
+INFO 2022-09-19 21:41:08,914 basehttp 16488 5508 "GET /api/episodes/ HTTP/1.1" 200 18454
+INFO 2022-09-19 21:41:22,464 autoreload 17728 16376 Watching for file changes with StatReloader
+INFO 2022-09-19 21:41:24,108 basehttp 17728 15780 "GET /api/episodes/ HTTP/1.1" 200 31010
+INFO 2022-09-19 21:41:37,747 autoreload 16720 8956 Watching for file changes with StatReloader
+INFO 2022-09-19 21:41:39,047 basehttp 16720 9976 "GET /api/episodes/ HTTP/1.1" 200 18454
+WARNING 2022-09-19 21:41:53,035 log 16720 9976 Unauthorized: /api/users/info/
+WARNING 2022-09-19 21:41:53,036 basehttp 16720 9976 "GET /api/users/info/ HTTP/1.1" 401 10219
+WARNING 2022-09-19 21:41:59,691 log 16720 2960 Unauthorized: /api/users/info/
+WARNING 2022-09-19 21:41:59,693 basehttp 16720 2960 "GET /api/users/info/ HTTP/1.1" 401 183
+WARNING 2022-09-19 21:42:05,906 log 16720 2960 Unauthorized: /api/token/
+WARNING 2022-09-19 21:42:05,907 basehttp 16720 2960 "POST /api/token/ HTTP/1.1" 401 63
+INFO 2022-09-19 21:42:50,999 autoreload 14504 13156 Watching for file changes with StatReloader
+WARNING 2022-09-19 21:42:58,213 log 14504 18148 Unauthorized: /api/token/
+WARNING 2022-09-19 21:42:58,214 basehttp 14504 18148 "POST /api/token/ HTTP/1.1" 401 63
+INFO 2022-09-19 21:43:07,583 autoreload 14504 13156 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 21:43:09,628 autoreload 18608 17160 Watching for file changes with StatReloader
+INFO 2022-09-19 21:43:10,792 basehttp 18608 14272 "POST /api/users/register/ HTTP/1.1" 200 13088
+INFO 2022-09-19 21:43:11,509 basehttp 18608 14272 "GET /api/users/info/ HTTP/1.1" 200 10603
+INFO 2022-09-19 21:43:20,898 basehttp 18608 14272 "GET /api/users/info/ HTTP/1.1" 200 10603
+WARNING 2022-09-19 21:43:25,607 log 18608 14272 Bad Request: /api/users/register/
+WARNING 2022-09-19 21:43:25,609 basehttp 18608 14272 "POST /api/users/register/ HTTP/1.1" 400 13333
+INFO 2022-09-19 21:43:29,087 basehttp 18608 14272 "POST /api/users/register/ HTTP/1.1" 200 13091
+INFO 2022-09-19 21:43:30,240 basehttp 18608 14272 "GET /api/users/info/ HTTP/1.1" 200 10603
+INFO 2022-09-19 21:43:31,220 basehttp 18608 14272 "GET /api/users/info/ HTTP/1.1" 200 10603
+INFO 2022-09-19 21:43:31,827 basehttp 18608 14272 "GET /api/users/info/ HTTP/1.1" 200 10603
+INFO 2022-09-19 21:43:51,469 autoreload 10688 6548 Watching for file changes with StatReloader
+INFO 2022-09-19 21:43:52,906 basehttp 10688 19644 "GET /api/users/info/ HTTP/1.1" 200 10177
+INFO 2022-09-19 21:44:15,538 autoreload 10688 6548 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 21:44:17,290 autoreload 20676 21200 Watching for file changes with StatReloader
+INFO 2022-09-19 21:44:18,093 basehttp 20676 17188 "GET /api/users/info/ HTTP/1.1" 200 10177
+INFO 2022-09-19 21:44:24,704 basehttp 20676 17188 "GET /api/users/info/ HTTP/1.1" 200 10177
+INFO 2022-09-19 21:44:27,688 basehttp 20676 17188 "GET /admin/users/user/ HTTP/1.1" 302 0
+INFO 2022-09-19 21:44:27,714 basehttp 20676 17188 "GET /admin/login/?next=/admin/users/user/ HTTP/1.1" 200 2240
+INFO 2022-09-19 21:44:30,543 basehttp 20676 17188 "POST /admin/login/?next=/admin/users/user/ HTTP/1.1" 200 2400
+INFO 2022-09-19 21:45:02,761 autoreload 18392 7656 Watching for file changes with StatReloader
+INFO 2022-09-19 21:45:03,386 basehttp 18392 2672 "POST /admin/login/?next=/admin/users/user/ HTTP/1.1" 302 0
+INFO 2022-09-19 21:45:03,482 basehttp 18392 2672 "GET /admin/users/user/ HTTP/1.1" 200 8727
+INFO 2022-09-19 21:45:03,651 basehttp 18392 2672 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2022-09-19 21:45:08,552 basehttp 18392 2672 "GET /admin/episodes/episode/ HTTP/1.1" 200 8569
+INFO 2022-09-19 21:45:08,724 basehttp 18392 2672 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2022-09-19 21:45:10,696 basehttp 18392 2672 "GET /admin/episodes/episode/add/ HTTP/1.1" 200 13537
+INFO 2022-09-19 21:45:10,872 basehttp 18392 2672 "GET /static/admin/css/forms.css HTTP/1.1" 200 8944
+INFO 2022-09-19 21:45:10,873 basehttp 18392 14396 "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+INFO 2022-09-19 21:45:10,874 basehttp 18392 20664 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19379
+INFO 2022-09-19 21:45:10,885 basehttp 18392 2672 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2022-09-19 21:45:10,886 basehttp 18392 20664 "GET /static/admin/css/widgets.css HTTP/1.1" 200 11297
+INFO 2022-09-19 21:45:10,895 basehttp 18392 20664 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2022-09-19 21:45:10,896 basehttp 18392 2672 "GET /static/admin/js/change_form.js HTTP/1.1" 200 1043
+INFO 2022-09-19 21:45:10,967 basehttp 18392 2672 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+INFO 2022-09-19 21:45:23,008 basehttp 18392 2672 "GET /api/episodes/ HTTP/1.1" 200 18454
+INFO 2022-09-19 21:45:31,042 basehttp 18392 2672 "GET /admin/episodes/genre/add/?_to_field=id&_popup=1 HTTP/1.1" 200 2920
+INFO 2022-09-19 21:45:31,241 basehttp 18392 2672 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2022-09-19 21:45:33,053 basehttp 18392 2672 "POST /admin/episodes/genre/add/?_to_field=id&_popup=1 HTTP/1.1" 200 321
+INFO 2022-09-19 21:45:33,220 basehttp 18392 2672 "GET /static/admin/js/popup_response.js HTTP/1.1" 200 551
+INFO 2022-09-19 21:45:34,720 basehttp 18392 2672 "GET /admin/episodes/actor/add/?_to_field=id&_popup=1 HTTP/1.1" 200 3408
+INFO 2022-09-19 21:45:34,895 basehttp 18392 2672 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2022-09-19 21:45:36,579 basehttp 18392 2672 "POST /admin/episodes/actor/add/?_to_field=id&_popup=1 HTTP/1.1" 200 323
+INFO 2022-09-19 21:45:38,839 basehttp 18392 2672 "POST /admin/episodes/episode/add/ HTTP/1.1" 302 0
+INFO 2022-09-19 21:45:38,873 basehttp 18392 2672 "GET /admin/episodes/episode/ HTTP/1.1" 200 10963
+INFO 2022-09-19 21:45:39,061 basehttp 18392 2672 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2022-09-19 21:45:41,424 basehttp 18392 2672 "GET /api/episodes/ HTTP/1.1" 200 18454
+INFO 2022-09-19 21:45:42,415 basehttp 18392 2672 "GET /api/episodes/ HTTP/1.1" 200 18454
+INFO 2022-09-19 21:45:45,542 basehttp 18392 2672 "GET /api/episodes/ HTTP/1.1" 200 18454
+INFO 2022-09-19 21:46:00,105 basehttp 18392 2672 "GET /api/episodes/ HTTP/1.1" 200 18454
+INFO 2022-09-19 21:47:52,829 basehttp 18392 2672 "GET /api/episodes/ HTTP/1.1" 200 18454
+INFO 2022-09-19 21:49:24,599 basehttp 18392 2672 "GET /api/episodes/ HTTP/1.1" 200 19125
+INFO 2022-09-19 21:49:33,414 autoreload 18392 7656 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:49:35,037 autoreload 21348 20688 Watching for file changes with StatReloader
+INFO 2022-09-19 21:50:22,935 autoreload 21348 20688 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-19 21:50:24,816 autoreload 8748 21232 Watching for file changes with StatReloader
+INFO 2022-09-19 21:50:41,063 autoreload 8748 21232 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:50:42,863 autoreload 8324 19556 Watching for file changes with StatReloader
+INFO 2022-09-19 21:52:37,170 autoreload 8324 19556 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 21:52:38,796 autoreload 1096 14952 Watching for file changes with StatReloader
+INFO 2022-09-19 21:52:45,936 basehttp 1096 152 "GET /api/episodes/ HTTP/1.1" 200 19125
+INFO 2022-09-19 21:55:08,279 autoreload 19968 1180 Watching for file changes with StatReloader
+INFO 2022-09-19 21:55:08,925 basehttp 19968 4240 "GET /api/episodes/ HTTP/1.1" 200 31010
+INFO 2022-09-19 21:56:15,103 autoreload 21252 11732 Watching for file changes with StatReloader
+WARNING 2022-09-19 21:56:17,626 log 21252 20360 Unauthorized: /api/token/
+WARNING 2022-09-19 21:56:17,627 basehttp 21252 20360 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-19 21:56:29,411 log 21252 3212 Method Not Allowed: /api/users/register/
+WARNING 2022-09-19 21:56:29,412 basehttp 21252 3212 "GET /api/users/register/ HTTP/1.1" 405 12982
+INFO 2022-09-19 21:56:39,586 basehttp 21252 3212 "POST /api/users/register/ HTTP/1.1" 200 13126
+INFO 2022-09-19 21:56:42,223 basehttp 21252 20360 "POST /api/token/ HTTP/1.1" 200 483
+WARNING 2022-09-19 21:56:53,264 log 21252 20360 Forbidden: /api/users/info/
+WARNING 2022-09-19 21:56:53,267 basehttp 21252 20360 "GET /api/users/info/ HTTP/1.1" 403 63
+INFO 2022-09-19 21:57:01,374 basehttp 21252 20360 "POST /api/token/ HTTP/1.1" 200 483
+INFO 2022-09-19 21:57:12,481 basehttp 21252 20360 "GET /api/users/info/ HTTP/1.1" 200 177
+INFO 2022-09-19 21:57:16,644 basehttp 21252 20360 "GET /api/users/info/1 HTTP/1.1" 301 0
+INFO 2022-09-19 21:57:16,656 basehttp 21252 20360 "GET /api/users/info/1/ HTTP/1.1" 200 53
+INFO 2022-09-19 22:01:33,871 basehttp 21252 20240 "POST /api/comments/ HTTP/1.1" 201 77
+WARNING 2022-09-19 22:03:06,792 log 21252 12100 Unauthorized: /api/comments/
+WARNING 2022-09-19 22:03:06,793 basehttp 21252 12100 "GET /api/comments/ HTTP/1.1" 401 10016
+INFO 2022-09-19 22:03:25,223 autoreload 21252 11732 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 22:03:27,694 autoreload 8812 17652 Watching for file changes with StatReloader
+INFO 2022-09-19 22:03:28,572 basehttp 8812 18864 "GET /api/comments/ HTTP/1.1" 200 18116
+INFO 2022-09-19 22:03:38,559 basehttp 8812 18864 "GET /api/comments/?episode=Qwert HTTP/1.1" 200 18018
+WARNING 2022-09-19 22:04:29,809 log 8812 18864 Not Found: /api/comments/episode_title=Episode 
+WARNING 2022-09-19 22:04:29,810 basehttp 8812 18864 "GET /api/comments/episode_title=Episode%20 HTTP/1.1" 404 3652
+INFO 2022-09-19 22:04:37,234 basehttp 8812 18864 "GET /api/comments/?episode_title=Episode%20 HTTP/1.1" 200 18295
+INFO 2022-09-19 22:05:03,475 basehttp 8812 18864 "GET /api/comments/?episode=Episode%20 HTTP/1.1" 200 18052
+INFO 2022-09-19 22:05:09,661 basehttp 8812 18864 "GET /api/comments/?episode=Episode%20 HTTP/1.1" 200 18052
+INFO 2022-09-19 22:05:27,210 basehttp 8812 18864 "GET /api/comments/?episode=1 HTTP/1.1" 200 17986
+INFO 2022-09-19 22:05:30,394 basehttp 8812 18864 "GET /api/comments/?episode=2 HTTP/1.1" 200 17986
+INFO 2022-09-19 22:05:35,333 basehttp 8812 18864 "GET /api/comments/ HTTP/1.1" 200 18116
+INFO 2022-09-19 22:05:39,429 basehttp 8812 18864 "GET /api/comments/?episode=Qwert HTTP/1.1" 200 18018
+INFO 2022-09-19 22:05:41,629 basehttp 8812 18864 "GET /api/comments/?episode=1 HTTP/1.1" 200 17986
+INFO 2022-09-19 22:05:43,763 basehttp 8812 18864 "GET /api/comments/?episode=2 HTTP/1.1" 200 17986
+INFO 2022-09-19 22:08:25,370 basehttp 8812 18864 "GET /api/comments/?episode=2 HTTP/1.1" 200 17986
+INFO 2022-09-19 22:08:31,646 basehttp 8812 18864 "GET /api/comments/?episode_title=2 HTTP/1.1" 200 18236
+WARNING 2022-09-19 22:09:05,638 log 8812 21028 Unauthorized: /api/comments/
+WARNING 2022-09-19 22:09:05,639 basehttp 8812 21028 "POST /api/comments/ HTTP/1.1" 401 183
+WARNING 2022-09-19 22:09:11,253 log 8812 14484 Bad Request: /api/token/
+WARNING 2022-09-19 22:09:11,253 basehttp 8812 14484 "POST /api/token/ HTTP/1.1" 400 45
+INFO 2022-09-19 22:09:16,823 basehttp 8812 14484 "POST /api/token/ HTTP/1.1" 200 483
+WARNING 2022-09-19 22:09:30,013 log 8812 21028 Bad Request: /api/comments/
+WARNING 2022-09-19 22:09:30,014 basehttp 8812 21028 "POST /api/comments/ HTTP/1.1" 400 64
+INFO 2022-09-19 22:09:39,859 basehttp 8812 21028 "POST /api/comments/ HTTP/1.1" 201 77
+INFO 2022-09-19 22:09:46,803 basehttp 8812 18864 "GET /api/episodes/?id=1 HTTP/1.1" 200 19711
+INFO 2022-09-19 22:09:58,757 basehttp 8812 18864 "GET /api/comments/?episode_title=2 HTTP/1.1" 200 18454
+INFO 2022-09-19 22:10:06,704 basehttp 8812 18864 "GET /api/comments/?episode_title=2 HTTP/1.1" 200 18454
+INFO 2022-09-19 22:10:11,572 basehttp 8812 18864 "GET /api/comments/?episode=2 HTTP/1.1" 200 17986
+INFO 2022-09-19 22:10:16,144 basehttp 8812 18864 "GET /api/comments/?episode=Episode HTTP/1.1" 200 18034
+INFO 2022-09-19 22:10:23,901 basehttp 8812 18864 "GET /api/comments/?episode=Episode%20 HTTP/1.1" 200 18052
+INFO 2022-09-19 22:10:43,091 basehttp 8812 18864 "GET /api/comments/ HTTP/1.1" 200 18334
+INFO 2022-09-19 22:13:11,203 basehttp 8812 18864 "GET /api/comments/?author=Maki HTTP/1.1" 200 18439
+INFO 2022-09-19 22:13:14,685 basehttp 8812 18864 "GET /api/comments/?author=Senpai HTTP/1.1" 200 18019
+INFO 2022-09-19 22:13:19,316 basehttp 8812 18864 "GET /api/comments/?author=Maki HTTP/1.1" 200 18439
+INFO 2022-09-19 22:13:27,181 basehttp 8812 18864 "GET /api/comments/?episode=1 HTTP/1.1" 200 17986
+INFO 2022-09-19 22:13:41,576 autoreload 8812 17652 C:\Maki\Python code\Courses\omdb-api\episodes\filters.py changed, reloading.
+INFO 2022-09-19 22:13:43,283 autoreload 2672 5616 Watching for file changes with StatReloader
+INFO 2022-09-19 22:13:43,822 basehttp 2672 17828 "GET /api/comments/?author=Maki HTTP/1.1" 200 18428
+INFO 2022-09-19 22:13:44,969 basehttp 2672 17828 "GET /api/comments/?episode=1 HTTP/1.1" 200 18193
+INFO 2022-09-19 22:13:48,602 basehttp 2672 17828 "GET /api/comments/?episode=2 HTTP/1.1" 200 18193
+INFO 2022-09-19 22:17:09,506 autoreload 2672 5616 C:\Maki\Python code\Courses\omdb-api\episodes\filters.py changed, reloading.
+INFO 2022-09-19 22:17:11,343 autoreload 3700 10964 Watching for file changes with StatReloader
+INFO 2022-09-19 22:17:25,491 autoreload 3700 10964 C:\Maki\Python code\Courses\omdb-api\episodes\filters.py changed, reloading.
+INFO 2022-09-19 22:17:27,031 autoreload 9776 20396 Watching for file changes with StatReloader
+INFO 2022-09-19 22:17:49,161 basehttp 9776 4368 "GET /api/comments/?episode=2 HTTP/1.1" 200 17986
+INFO 2022-09-19 22:17:59,069 basehttp 9776 4368 "GET /api/comments/?episode=Episode HTTP/1.1" 200 18034
+INFO 2022-09-19 22:26:16,993 autoreload 9776 20396 C:\Maki\Python code\Courses\omdb-api\base\settings.py changed, reloading.
+INFO 2022-09-19 22:26:19,172 autoreload 19860 19728 Watching for file changes with StatReloader
+ERROR 2022-09-19 22:27:14,154 log 19860 16176 Internal Server Error: /api/episodes/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "episodes_actor" does not exist
+LINE 1: ...es_actor"."name", "episodes_actor"."surname" FROM "episodes_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\episodes\views.py", line 32, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\query.py", line 394, in __iter__
+    self._fetch_all()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\sql\compiler.py", line 1395, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "episodes_actor" does not exist
+LINE 1: ...es_actor"."name", "episodes_actor"."surname" FROM "episodes_...
+                                                             ^
+
+ERROR 2022-09-19 22:27:14,171 basehttp 19860 16176 "GET /api/episodes/?id=1 HTTP/1.1" 500 201481
+INFO 2022-09-19 22:30:50,891 autoreload 20044 6944 Watching for file changes with StatReloader
+ERROR 2022-09-19 22:30:51,704 log 20044 21132 Internal Server Error: /api/comments/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column episodes_comment.published does not exist
+LINE 1: ..."."customer_id", "episodes_comment"."episode_id", "episodes_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\query.py", line 394, in __iter__
+    self._fetch_all()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\sql\compiler.py", line 1395, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column episodes_comment.published does not exist
+LINE 1: ..."."customer_id", "episodes_comment"."episode_id", "episodes_...
+                                                             ^
+
+ERROR 2022-09-19 22:30:51,716 basehttp 20044 21132 "GET /api/comments/?episode=Qwerty HTTP/1.1" 500 171048
+ERROR 2022-09-19 22:30:54,756 log 20044 21132 Internal Server Error: /api/comments/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column episodes_comment.published does not exist
+LINE 1: ..."."customer_id", "episodes_comment"."episode_id", "episodes_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 239, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\query.py", line 394, in __iter__
+    self._fetch_all()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\sql\compiler.py", line 1395, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column episodes_comment.published does not exist
+LINE 1: ..."."customer_id", "episodes_comment"."episode_id", "episodes_...
+                                                             ^
+
+ERROR 2022-09-19 22:30:54,767 basehttp 20044 21132 "GET /api/comments/?episode=Qwerty HTTP/1.1" 500 171048
+INFO 2022-09-19 22:33:23,406 autoreload 21076 16720 Watching for file changes with StatReloader
+INFO 2022-09-19 22:35:31,774 autoreload 19428 21400 Watching for file changes with StatReloader
+INFO 2022-09-19 22:35:41,366 basehttp 19428 9156 "GET /api/comments/?episode=Qwerty HTTP/1.1" 200 15137
+INFO 2022-09-19 22:35:44,800 basehttp 19428 9156 "GET /api/comments/ HTTP/1.1" 200 15009
+INFO 2022-09-19 22:36:55,418 autoreload 19180 7756 Watching for file changes with StatReloader
+WARNING 2022-09-19 22:37:27,696 log 19180 14988 Unauthorized: /api/comments/
+WARNING 2022-09-19 22:37:27,697 basehttp 19180 14988 "POST /api/comments/ HTTP/1.1" 401 183
+WARNING 2022-09-19 22:37:34,225 log 19180 3236 Unauthorized: /api/token/
+WARNING 2022-09-19 22:37:34,227 basehttp 19180 3236 "POST /api/token/ HTTP/1.1" 401 63
+INFO 2022-09-19 22:37:59,417 autoreload 1144 20980 Watching for file changes with StatReloader
+INFO 2022-09-19 22:38:01,348 basehttp 1144 7716 "POST /api/token/ HTTP/1.1" 200 483
+INFO 2022-09-19 22:38:12,225 basehttp 1144 18108 "POST /api/comments/ HTTP/1.1" 201 77
+INFO 2022-09-19 22:38:20,331 basehttp 1144 18080 "GET /api/comments/ HTTP/1.1" 200 18116
+INFO 2022-09-19 22:38:29,921 basehttp 1144 18080 "GET /api/comments/?episode=Strategy HTTP/1.1" 200 18260
+INFO 2022-09-19 22:38:33,122 basehttp 1144 18080 "GET /api/comments/?episode=Strateg1y HTTP/1.1" 200 18050
+INFO 2022-09-19 22:38:37,520 basehttp 1144 18080 "GET /api/comments/?episode=Strategy HTTP/1.1" 200 18260
+INFO 2022-09-19 22:38:55,580 basehttp 1144 18108 "POST /api/comments/ HTTP/1.1" 201 79
+INFO 2022-09-19 22:39:04,375 basehttp 1144 18080 "GET /api/comments/?episode=The%20Duel HTTP/1.1" 200 18272
+INFO 2022-09-19 22:39:07,033 basehttp 1144 18080 "GET /api/comments/?episode=The%20Duel1 HTTP/1.1" 200 18060
+INFO 2022-09-19 22:39:09,365 basehttp 1144 18080 "GET /api/comments/?episode=The%20Duel HTTP/1.1" 200 18272
+INFO 2022-09-19 22:39:18,934 basehttp 1144 18080 "GET /api/comments/?episode=TheDuel HTTP/1.1" 200 18034
+INFO 2022-09-19 22:39:22,054 basehttp 1144 18080 "GET /api/comments/?episode=The%20Duel HTTP/1.1" 200 18272
+INFO 2022-09-19 22:39:43,256 basehttp 1144 18108 "POST /api/comments/ HTTP/1.1" 201 76
+INFO 2022-09-19 22:39:51,824 basehttp 1144 18080 "GET /api/comments/?episode=Episode%20 HTTP/1.1" 200 18052
+INFO 2022-09-19 22:39:57,947 basehttp 1144 18080 "GET /api/comments/?episode=Episode%201.4 HTTP/1.1" 200 18076
+INFO 2022-09-19 22:40:58,921 basehttp 1144 18080 "GET /api/comments/?episode=Episode%20%231.4 HTTP/1.1" 200 18315
+INFO 2022-09-19 22:42:30,874 autoreload 1144 20980 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 22:42:33,103 autoreload 15236 19080 Watching for file changes with StatReloader
+WARNING 2022-09-19 22:42:33,726 log 15236 8472 Unauthorized: /api/comments/
+WARNING 2022-09-19 22:42:33,728 basehttp 15236 8472 "GET /api/comments/?episode=Episode%20%231.4 HTTP/1.1" 401 10120
