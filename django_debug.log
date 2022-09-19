@@ -4378,3 +4378,24 @@ INFO 2022-09-19 22:42:30,874 autoreload 1144 20980 C:\Maki\Python code\Courses\o
 INFO 2022-09-19 22:42:33,103 autoreload 15236 19080 Watching for file changes with StatReloader
 WARNING 2022-09-19 22:42:33,726 log 15236 8472 Unauthorized: /api/comments/
 WARNING 2022-09-19 22:42:33,728 basehttp 15236 8472 "GET /api/comments/?episode=Episode%20%231.4 HTTP/1.1" 401 10120
+INFO 2022-09-19 22:50:29,971 autoreload 1016 19984 Watching for file changes with StatReloader
+WARNING 2022-09-19 22:50:35,262 log 1016 20656 Unauthorized: /api/comments/
+WARNING 2022-09-19 22:50:35,263 basehttp 1016 20656 "GET /api/comments/?episode=Episode%20%231.4 HTTP/1.1" 401 10120
+INFO 2022-09-19 22:50:52,572 autoreload 1016 19984 C:\Maki\Python code\Courses\omdb-api\episodes\urls.py changed, reloading.
+INFO 2022-09-19 22:50:54,243 autoreload 3232 13288 Watching for file changes with StatReloader
+INFO 2022-09-19 22:51:17,077 autoreload 3232 13288 C:\Maki\Python code\Courses\omdb-api\base\settings.py changed, reloading.
+INFO 2022-09-19 22:51:19,127 autoreload 5316 13688 Watching for file changes with StatReloader
+INFO 2022-09-19 22:51:30,312 autoreload 18308 9120 Watching for file changes with StatReloader
+INFO 2022-09-19 22:51:31,243 basehttp 18308 10864 "GET /api/episodes/ HTTP/1.1" 200 31010
+INFO 2022-09-19 22:51:32,957 basehttp 18308 10864 "GET /api/episodes/ HTTP/1.1" 200 31010
+INFO 2022-09-19 22:51:34,540 basehttp 18308 10864 "GET /api/episodes/ HTTP/1.1" 200 31010
+INFO 2022-09-19 22:52:27,100 basehttp 18308 10864 "GET /api/episodes/ HTTP/1.1" 200 31010
+INFO 2022-09-19 22:52:35,594 autoreload 18308 9120 C:\Maki\Python code\Courses\omdb-api\base\settings.py changed, reloading.
+INFO 2022-09-19 22:52:37,457 autoreload 14472 9280 Watching for file changes with StatReloader
+INFO 2022-09-19 22:53:07,649 autoreload 14472 9280 C:\Maki\Python code\Courses\omdb-api\episodes\urls.py changed, reloading.
+INFO 2022-09-19 22:53:09,502 autoreload 16936 20784 Watching for file changes with StatReloader
+INFO 2022-09-19 22:53:12,497 autoreload 16936 20784 C:\Maki\Python code\Courses\omdb-api\episodes\urls.py changed, reloading.
+INFO 2022-09-19 22:53:14,284 autoreload 13516 8396 Watching for file changes with StatReloader
+INFO 2022-09-19 22:57:45,162 autoreload 13516 8396 C:\Maki\Python code\Courses\omdb-api\base\settings.py changed, reloading.
+INFO 2022-09-19 22:57:46,843 autoreload 21252 13060 Watching for file changes with StatReloader
+INFO 2022-09-19 22:57:51,103 autoreload 21252 13060 C:\Maki\Python code\Courses\omdb-api\base\settings.py changed, reloading.
