@@ -7,6 +7,7 @@ from .serializers import EpisodeSerializer, CommentSerializer
 from .filters import CommentFilter, ImdbFilter
 from .permissions import AdminOrAccountOwnerPermission
 from .pagination import StandardResultsSetPagination
+from .tasks import parse_data
 
 
 class EpisodeList(generics.ListCreateAPIView):

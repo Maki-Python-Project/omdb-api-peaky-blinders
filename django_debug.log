@@ -1305,3 +1305,25 @@ WARNING 2022-09-19 16:51:47,878 basehttp 17880 17340 "GET /api/episodes/imbd HTT
 INFO 2022-09-19 16:51:53,197 basehttp 17880 17340 "GET /api/episodes/imdb HTTP/1.1" 301 0
 INFO 2022-09-19 16:51:53,253 basehttp 17880 17340 "GET /api/episodes/imdb/ HTTP/1.1" 200 29899
 INFO 2022-09-19 16:52:15,317 basehttp 17880 17340 "GET /api/episodes/imdb/?season=1 HTTP/1.1" 200 18747
+INFO 2022-09-19 17:04:44,279 autoreload 9496 20284 Watching for file changes with StatReloader
+INFO 2022-09-19 17:05:22,588 autoreload 12228 6556 Watching for file changes with StatReloader
+INFO 2022-09-19 17:09:09,265 autoreload 1500 9768 Watching for file changes with StatReloader
+INFO 2022-09-19 17:09:23,192 autoreload 1500 9768 C:\Maki\Python code\Courses\omdb-api\episodes\tasks.py changed, reloading.
+INFO 2022-09-19 17:09:24,872 autoreload 5916 13284 Watching for file changes with StatReloader
+INFO 2022-09-19 17:09:56,413 autoreload 5916 13284 C:\Maki\Python code\Courses\omdb-api\episodes\tasks.py changed, reloading.
+INFO 2022-09-19 17:09:58,240 autoreload 4328 2944 Watching for file changes with StatReloader
+INFO 2022-09-19 17:10:27,126 autoreload 17240 18948 Watching for file changes with StatReloader
+INFO 2022-09-19 17:10:41,374 autoreload 9260 10324 Watching for file changes with StatReloader
+INFO 2022-09-19 17:10:54,965 basehttp 9260 16200 "GET /api/episodes/imdb/?season=1 HTTP/1.1" 200 18747
+INFO 2022-09-19 17:11:13,700 basehttp 9260 16200 "GET /api/episodes/imdb/?season=1&id=5 HTTP/1.1" 200 18810
+INFO 2022-09-19 17:11:21,418 basehttp 9260 16200 "GET /api/episodes/imdb/?season=1 HTTP/1.1" 200 18747
+INFO 2022-09-19 17:14:59,944 autoreload 9260 10324 C:\Maki\Python code\Courses\omdb-api\episodes\views.py changed, reloading.
+INFO 2022-09-19 17:15:01,909 autoreload 15060 6036 Watching for file changes with StatReloader
+INFO 2022-09-19 17:15:09,255 autoreload 18816 12500 Watching for file changes with StatReloader
+INFO 2022-09-19 17:30:30,247 autoreload 10216 9044 Watching for file changes with StatReloader
+INFO 2022-09-19 17:34:41,070 autoreload 19896 15876 Watching for file changes with StatReloader
+INFO 2022-09-19 17:41:30,401 autoreload 8132 7040 Watching for file changes with StatReloader
+INFO 2022-09-19 17:43:53,394 autoreload 13416 10884 Watching for file changes with StatReloader
+INFO 2022-09-19 17:44:05,987 basehttp 13416 13336 "GET /api/episodes/imdb/?season=1 HTTP/1.1" 200 18747
+INFO 2022-09-19 17:44:19,021 basehttp 13416 13336 "GET /api/episodes/imdb/?season=1&number_episode=4 HTTP/1.1" 200 18894
+INFO 2022-09-19 17:44:28,487 basehttp 13416 13336 "GET /api/episodes/?season=1&number_episode=4 HTTP/1.1" 200 20046
