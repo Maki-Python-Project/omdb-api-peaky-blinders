@@ -18,7 +18,7 @@ services:
         environment:
         - POSTGRES_USER=postgres
         - POSTGRES_PASSWORD=admin
-        - POSTGRES_DB=post
+        - POSTGRES_DB=episode
     nginx:
       container_name: "nginx"
       build: ./config/nginx/dev_conf.d
