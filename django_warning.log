@@ -1486,3 +1486,439 @@ WARNING 2022-09-19 19:49:29,917 log 13548 1016 Unauthorized: /api/users/info/
 WARNING 2022-09-19 19:49:29,918 basehttp 13548 1016 "GET /api/users/info/?page=2 HTTP/1.1" 401 58
 WARNING 2022-09-19 19:54:38,928 log 6300 14536 Unauthorized: /api/users/info/
 WARNING 2022-09-19 19:54:38,930 basehttp 6300 14536 "GET /api/users/info/ HTTP/1.1" 401 183
+WARNING 2022-09-19 19:59:34,350 log 15884 4684 Not Found: /api/users/info/1
+WARNING 2022-09-19 19:59:34,352 basehttp 15884 4684 "GET /api/users/info/1 HTTP/1.1" 404 3993
+WARNING 2022-09-19 20:02:41,477 log 14152 12328 Not Found: /api/users/info/1
+WARNING 2022-09-19 20:02:41,478 basehttp 14152 12328 "GET /api/users/info/1 HTTP/1.1" 404 4165
+ERROR 2022-09-19 20:03:24,101 log 14048 7968 Internal Server Error: /api/users/info/1/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'UserViewSet' object has no attribute 'retrieve'
+ERROR 2022-09-19 20:03:24,104 basehttp 14048 7968 "GET /api/users/info/1/ HTTP/1.1" 500 74454
+ERROR 2022-09-19 20:04:38,176 log 14048 7968 Internal Server Error: /api/users/info/1/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'UserViewSet' object has no attribute 'retrieve'
+ERROR 2022-09-19 20:04:38,182 basehttp 14048 7968 "GET /api/users/info/1/ HTTP/1.1" 500 74454
+ERROR 2022-09-19 20:04:59,626 log 4028 18848 Internal Server Error: /api/users/info/1/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'UserViewSet' object has no attribute 'retrieve'
+ERROR 2022-09-19 20:04:59,632 basehttp 4028 18848 "GET /api/users/info/1/ HTTP/1.1" 500 74454
+ERROR 2022-09-19 20:05:01,561 log 4028 18848 Internal Server Error: /api/users/info/1/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'UserViewSet' object has no attribute 'retrieve'
+ERROR 2022-09-19 20:05:01,566 basehttp 4028 18848 "GET /api/users/info/1/ HTTP/1.1" 500 74454
+ERROR 2022-09-19 20:05:30,432 log 16928 9172 Internal Server Error: /api/users/info/1/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'UserViewSet' object has no attribute 'retrieve'
+ERROR 2022-09-19 20:05:30,436 basehttp 16928 9172 "GET /api/users/info/1/ HTTP/1.1" 500 74454
+ERROR 2022-09-19 20:06:21,962 log 10164 18800 Internal Server Error: /api/users/info/1/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'UserViewSet' object has no attribute 'update'
+ERROR 2022-09-19 20:06:21,968 basehttp 10164 18800 "GET /api/users/info/1/ HTTP/1.1" 500 74361
+ERROR 2022-09-19 20:09:08,162 log 21120 8256 Internal Server Error: /api/users/info/1/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'UserViewSet' object has no attribute 'update'
+ERROR 2022-09-19 20:09:08,168 basehttp 21120 8256 "GET /api/users/info/1/ HTTP/1.1" 500 74692
+WARNING 2022-09-19 20:12:17,739 log 1352 18284 Unauthorized: /api/users/info/1/
+WARNING 2022-09-19 20:12:17,740 basehttp 1352 18284 "GET /api/users/info/1/ HTTP/1.1" 401 183
+ERROR 2022-09-19 20:12:31,298 log 1352 18284 Internal Server Error: /api/users/info/1/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\vary.py", line 42, in inner_func
+    response = func(*args, **kwargs)
+TypeError: list() got an unexpected keyword argument 'pk'
+ERROR 2022-09-19 20:12:31,306 basehttp 1352 18284 "GET /api/users/info/1/ HTTP/1.1" 500 111297
+ERROR 2022-09-19 20:13:10,176 log 21348 12260 Internal Server Error: /api/users/info/1/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\vary.py", line 42, in inner_func
+    response = func(*args, **kwargs)
+TypeError: list() got an unexpected keyword argument 'pk'
+ERROR 2022-09-19 20:13:10,187 basehttp 21348 12260 "GET /api/users/info/1/ HTTP/1.1" 500 111297
+WARNING 2022-09-19 20:13:53,217 log 21348 12260 Forbidden: /api/users/info/
+WARNING 2022-09-19 20:13:53,218 basehttp 21348 12260 "GET /api/users/info/ HTTP/1.1" 403 63
+WARNING 2022-09-19 20:15:08,855 log 18980 12420 Bad Request: /api/users/register/
+WARNING 2022-09-19 20:15:08,857 basehttp 18980 12420 "POST /api/users/register/ HTTP/1.1" 400 13346
+WARNING 2022-09-19 20:16:10,993 log 18980 19572 Unauthorized: /api/users/info/
+WARNING 2022-09-19 20:16:10,994 basehttp 18980 19572 "GET /api/users/info/?page=2 HTTP/1.1" 401 58
+ERROR 2022-09-19 20:17:53,876 log 18888 6548 Internal Server Error: /api/users/info/1/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'UserViewSet' object has no attribute 'retrive'
+ERROR 2022-09-19 20:17:53,880 basehttp 18888 6548 "GET /api/users/info/1/ HTTP/1.1" 500 74359
+ERROR 2022-09-19 20:18:09,801 log 19316 11196 Internal Server Error: /api/users/info/1/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'UserViewSet' object has no attribute 'retrive'
+ERROR 2022-09-19 20:18:09,806 basehttp 19316 11196 "GET /api/users/info/1/ HTTP/1.1" 500 74359
+ERROR 2022-09-19 20:20:04,586 log 21172 12680 Internal Server Error: /api/users/info/1/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'UserViewSet' object has no attribute 'retrive'
+ERROR 2022-09-19 20:20:04,592 basehttp 21172 12680 "GET /api/users/info/1/ HTTP/1.1" 500 74359
+ERROR 2022-09-19 20:20:17,636 log 21172 12680 Internal Server Error: /api/users/info/1/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'UserViewSet' object has no attribute 'retrive'
+ERROR 2022-09-19 20:20:17,639 basehttp 21172 12680 "GET /api/users/info/1/ HTTP/1.1" 500 74199
+ERROR 2022-09-19 20:20:23,052 log 21172 12680 Internal Server Error: /api/users/info/2/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'UserViewSet' object has no attribute 'retrive'
+ERROR 2022-09-19 20:20:23,055 basehttp 21172 12680 "GET /api/users/info/2/ HTTP/1.1" 500 74199
+ERROR 2022-09-19 20:21:36,829 log 4068 12180 Internal Server Error: /api/users/info/2/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'UserViewSet' object has no attribute 'retrive'
+ERROR 2022-09-19 20:21:36,833 basehttp 4068 12180 "GET /api/users/info/2/ HTTP/1.1" 500 74199
+ERROR 2022-09-19 20:21:38,472 log 4068 12180 Internal Server Error: /api/users/info/2/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'UserViewSet' object has no attribute 'retrive'
+ERROR 2022-09-19 20:21:38,477 basehttp 4068 12180 "GET /api/users/info/2/ HTTP/1.1" 500 74199
+ERROR 2022-09-19 20:22:56,938 log 21064 21196 Internal Server Error: /api/users/info/2/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'UserViewSet' object has no attribute 'retrive'
+ERROR 2022-09-19 20:22:56,942 basehttp 21064 21196 "GET /api/users/info/2/ HTTP/1.1" 500 74199
+ERROR 2022-09-19 20:22:57,994 log 21064 21196 Internal Server Error: /api/users/info/2/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'UserViewSet' object has no attribute 'retrive'
+ERROR 2022-09-19 20:22:57,999 basehttp 21064 21196 "GET /api/users/info/2/ HTTP/1.1" 500 74199
+ERROR 2022-09-19 20:22:59,003 log 21064 21196 Internal Server Error: /api/users/info/2/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'UserViewSet' object has no attribute 'retrive'
+ERROR 2022-09-19 20:22:59,005 basehttp 21064 21196 "GET /api/users/info/2/ HTTP/1.1" 500 74199
+ERROR 2022-09-19 20:23:09,022 log 20764 10440 Internal Server Error: /api/users/info/2/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'UserViewSet' object has no attribute 'retrive'
+ERROR 2022-09-19 20:23:09,031 basehttp 20764 10440 "GET /api/users/info/2/ HTTP/1.1" 500 74199
+ERROR 2022-09-19 20:23:10,364 log 20764 10440 Internal Server Error: /api/users/info/2/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'UserViewSet' object has no attribute 'retrive'
+ERROR 2022-09-19 20:23:10,368 basehttp 20764 10440 "GET /api/users/info/2/ HTTP/1.1" 500 74199
+ERROR 2022-09-19 20:23:27,874 log 10244 20756 Internal Server Error: /api/users/info/2/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'UserViewSet' object has no attribute 'retrive'
+ERROR 2022-09-19 20:23:27,881 basehttp 10244 20756 "GET /api/users/info/2/ HTTP/1.1" 500 74199
+ERROR 2022-09-19 20:23:29,303 log 10244 20756 Internal Server Error: /api/users/info/2/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'UserViewSet' object has no attribute 'retrive'
+ERROR 2022-09-19 20:23:29,306 basehttp 10244 20756 "GET /api/users/info/2/ HTTP/1.1" 500 74199
+ERROR 2022-09-19 20:24:05,864 log 8816 18156 Internal Server Error: /api/users/info/2/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'UserViewSet' object has no attribute 'retrive'
+ERROR 2022-09-19 20:24:05,868 basehttp 8816 18156 "GET /api/users/info/2/ HTTP/1.1" 500 74170
+WARNING 2022-09-19 20:25:11,762 log 21492 13256 Unauthorized: /api/users/info/2/
+WARNING 2022-09-19 20:25:11,766 basehttp 21492 13256 "GET /api/users/info/2/ HTTP/1.1" 401 183
+ERROR 2022-09-19 20:25:25,674 log 21492 13256 Internal Server Error: /api/users/info/2/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 42, in list
+    serializer = self.get_serializer(page, many=True)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 110, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: 'NoneType' object is not callable
+ERROR 2022-09-19 20:25:25,681 basehttp 21492 13256 "GET /api/users/info/2/ HTTP/1.1" 500 101455
+ERROR 2022-09-19 20:25:44,266 log 8400 16204 Internal Server Error: /api/users/info/2/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'UserViewSet' object has no attribute 'retrive'
+ERROR 2022-09-19 20:25:44,269 basehttp 8400 16204 "GET /api/users/info/2/ HTTP/1.1" 500 74158
+ERROR 2022-09-19 20:29:18,941 log 19680 16004 Internal Server Error: /api/users/info/2/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'UserViewSet' object has no attribute 'retrive'
+ERROR 2022-09-19 20:29:18,946 basehttp 19680 16004 "GET /api/users/info/2/ HTTP/1.1" 500 74199
+ERROR 2022-09-19 20:29:33,827 log 19144 1352 Internal Server Error: /api/users/info/2/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 117, in view
+    handler = getattr(self, action)
+AttributeError: 'UserViewSet' object has no attribute 'retrive'
+ERROR 2022-09-19 20:29:33,833 basehttp 19144 1352 "GET /api/users/info/2/ HTTP/1.1" 500 74199
+WARNING 2022-09-19 20:31:42,147 log 14712 15596 Unauthorized: /api/users/info/2/
+WARNING 2022-09-19 20:31:42,148 basehttp 14712 15596 "GET /api/users/info/2/ HTTP/1.1" 401 183
+WARNING 2022-09-19 20:34:16,202 log 12540 5312 Unauthorized: /api/users/info/
+WARNING 2022-09-19 20:34:16,203 basehttp 12540 5312 "GET /api/users/info/ HTTP/1.1" 401 10219
+WARNING 2022-09-19 20:34:43,804 log 9740 16024 Bad Request: /api/users/register/
+WARNING 2022-09-19 20:34:43,805 basehttp 9740 16024 "POST /api/users/register/ HTTP/1.1" 400 13348
+WARNING 2022-09-19 20:36:15,225 log 14360 13184 Bad Request: /api/users/register/
+WARNING 2022-09-19 20:36:15,227 basehttp 14360 13184 "POST /api/users/register/ HTTP/1.1" 400 13350
+WARNING 2022-09-19 20:36:35,414 log 14360 13184 Bad Request: /api/users/register/
+WARNING 2022-09-19 20:36:35,415 basehttp 14360 13184 "POST /api/users/register/ HTTP/1.1" 400 13352
+WARNING 2022-09-19 20:36:45,258 log 14360 19112 Unauthorized: /api/users/info/
+WARNING 2022-09-19 20:36:45,259 basehttp 14360 19112 "GET /api/users/info/ HTTP/1.1" 401 185
+WARNING 2022-09-19 20:36:45,893 log 14360 19112 Unauthorized: /api/users/info/
+WARNING 2022-09-19 20:36:45,894 basehttp 14360 19112 "GET /api/users/info/ HTTP/1.1" 401 185
+WARNING 2022-09-19 20:42:54,462 log 16004 10940 Not Found: /api/users/info/1
+WARNING 2022-09-19 20:42:54,463 basehttp 16004 10940 "GET /api/users/info/1 HTTP/1.1" 404 3993
+WARNING 2022-09-19 20:44:33,692 log 21408 7032 Unauthorized: /api/users/info/1/
+WARNING 2022-09-19 20:44:33,693 basehttp 21408 7032 "GET /api/users/info/1/ HTTP/1.1" 401 183
+WARNING 2022-09-19 20:44:56,977 log 21408 7032 Unauthorized: /api/users/info/1/
+WARNING 2022-09-19 20:44:56,978 basehttp 21408 7032 "GET /api/users/info/1/ HTTP/1.1" 401 183
+WARNING 2022-09-19 20:44:58,241 log 21408 7032 Unauthorized: /api/users/info/1/
+WARNING 2022-09-19 20:44:58,242 basehttp 21408 7032 "GET /api/users/info/1/ HTTP/1.1" 401 183
+WARNING 2022-09-19 20:47:14,129 log 15844 10864 Unauthorized: /api/users/info/
+WARNING 2022-09-19 20:47:14,131 basehttp 15844 10864 "GET /api/users/info/ HTTP/1.1" 401 10219
+WARNING 2022-09-19 20:49:23,906 log 21444 21032 Unauthorized: /api/users/info/
+WARNING 2022-09-19 20:49:23,907 basehttp 21444 21032 "GET /api/users/info/ HTTP/1.1" 401 10219
+WARNING 2022-09-19 20:49:28,875 log 21444 21032 Unauthorized: /api/users/info/
+WARNING 2022-09-19 20:49:28,878 basehttp 21444 21032 "GET /api/users/info/ HTTP/1.1" 401 10219
+WARNING 2022-09-19 20:49:36,109 log 10288 20820 Unauthorized: /api/users/info/
+WARNING 2022-09-19 20:49:36,110 basehttp 10288 20820 "GET /api/users/info/ HTTP/1.1" 401 10219
+WARNING 2022-09-19 20:51:48,656 log 4156 880 Unauthorized: /api/users/info/1/
+WARNING 2022-09-19 20:51:48,658 basehttp 4156 880 "GET /api/users/info/1/ HTTP/1.1" 401 10345
+WARNING 2022-09-19 20:52:06,532 log 4156 14360 Unauthorized: /api/users/info/2/
+WARNING 2022-09-19 20:52:06,534 basehttp 4156 14360 "GET /api/users/info/2/ HTTP/1.1" 401 183
+WARNING 2022-09-19 20:52:30,231 log 4156 880 Bad Request: /api/users/register/
+WARNING 2022-09-19 20:52:30,232 basehttp 4156 880 "POST /api/users/register/ HTTP/1.1" 400 13354
+WARNING 2022-09-19 20:53:55,391 log 4156 14360 Unauthorized: /api/users/info/
+WARNING 2022-09-19 20:53:55,393 basehttp 4156 14360 "GET /api/users/info/?page=2 HTTP/1.1" 401 58
+WARNING 2022-09-19 20:57:48,743 log 4156 14360 Forbidden: /api/users/info/
+WARNING 2022-09-19 20:57:48,745 basehttp 4156 14360 "GET /api/users/info/ HTTP/1.1" 403 63
+WARNING 2022-09-19 20:57:52,108 log 4156 14360 Forbidden: /api/users/info/1/
+WARNING 2022-09-19 20:57:52,109 basehttp 4156 14360 "GET /api/users/info/1/ HTTP/1.1" 403 63
