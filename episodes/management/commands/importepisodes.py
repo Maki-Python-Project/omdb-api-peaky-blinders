@@ -22,32 +22,27 @@ class Command(BaseCommand):
         seasons_count = int(series['totalSeasons'])
 
         language = series['Language']
+        actors = []
+        for name_surname in series['Actors'].split(', '):
+            name_surname = name_surname.split()
+            actors.append({
+                'name': name_surname[0],
+                'surname': name_surname[1],
+            })
         if not Actor.objects.exists():
-            actors_data = []
-            for name_surname in series['Actors'].split(', '):
-                name_surname = name_surname.split()
-                actors_data.append({
-                    'name': name_surname[0],
-                    'surname': name_surname[1],
-                })
-            actors = ActorsSerializer(data=actors_data, many=True)
-        else:
-            actors = []
-            for name_surname in series['Actors'].split(', '):
-                name_surname = name_surname.split()
-                actors.append(Actor.objects.get(name=name_surname[0], surname=name_surname[1]))
+            actors_serializer = ActorsSerializer(data=actors, many=True)
+            if actors_serializer.is_valid():
+                actors_serializer.save()
 
+        genres= []
+        for genre in series['Genre'].split(', '):
+            genres.append({
+                'name': genre,
+            })
         if not Genre.objects.exists():
-            genres_data = []
-            for genre in series['Genre'].split(', '):
-                genres_data.append({
-                    'name': genre,
-                })
-            genres = GenreSerializer(data=genres_data, many=True)
-        else:
-            genres = []
-            for genre in series['Genre'].split(', '):
-                genres.append(Genre.objects.get(name=genre))
+            genres_serializer = GenreSerializer(data=genres, many=True)
+            if genres_serializer.is_valid():
+                genres_serializer.save()
 
         if not Episode.objects.exists():
             for i in range(1, seasons_count + 1):
@@ -84,7 +79,7 @@ class Command(BaseCommand):
                 'released': episode['Released'],
                 'number_episode': episode['Episode'],
                 'imdb_rating': episode['imdbRating'],
-                'genres': genres,
+                'genre': genres,
                 'actors': actors,
                 'language': language
             }
