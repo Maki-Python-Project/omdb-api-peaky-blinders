@@ -6,11 +6,13 @@ from .models import Episode, Comment
 from .serializers import EpisodeSerializer, CommentSerializer
 from .filters import CommentFilter
 from .permissions import AdminOrAccountOwnerPermission
+from .pagination import StandardResultsSetPagination
 
 
 class EpisodeList(generics.ListCreateAPIView):
     queryset = Episode.objects.all()
     serializer_class = EpisodeSerializer
+    pagination_class = StandardResultsSetPagination
     filter_backends = [
         DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter
     ]
