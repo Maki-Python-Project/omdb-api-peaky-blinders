@@ -19,7 +19,6 @@ class UserViewSet(viewsets.ModelViewSet):
         'list': [IsAuthenticated, IsAdminUser],
         'retrieve': [IsAuthenticated, IsAdminUser],
         'destroy': [IsAuthenticated, IsAdminUser],
-        'update': [IsAuthenticated],
     }
 
     def get_queryset(self):
