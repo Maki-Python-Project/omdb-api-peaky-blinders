@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Episode, Comment, Genre
+from .models import Actor, Episode, Comment, Genre
 
 
 class ArticleAdmin(admin.ModelAdmin):
@@ -15,3 +15,4 @@ class ArticleAdmin(admin.ModelAdmin):
 admin.site.register(Episode, ArticleAdmin)
 admin.site.register(Comment)
 admin.site.register(Genre)
+admin.site.register(Actor)

@@ -35,7 +35,7 @@ class EpisodeSerializer(serializers.ModelSerializer):
             'actors',
             'language'
         ]
-    
+
     def create(self, validated_data):
         genres = validated_data.pop('genre')
         actors = validated_data.pop('actors')
@@ -50,9 +50,16 @@ class EpisodeSerializer(serializers.ModelSerializer):
         episode.actors.set(actor_objects)
         return episode
 
+
 class CommentSerializer(serializers.ModelSerializer):
     customer = serializers.ReadOnlyField(source='customer.username')
 
     class Meta:
         model = Comment
-        fields = ['id', 'text', 'episode', 'customer', 'published']
+        fields = [
+            'id',
+            'text',
+            'episode',
+            'customer',
+            'published'
+        ]
