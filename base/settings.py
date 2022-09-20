@@ -11,14 +11,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = int(os.getenv('DEBUG', default=0))
+DEBUG = True
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(' ')
-
-CSRF_TRUSTED_ORIGINS = ['http://localhost:8443']
-
-CELERY_BROKER_URL = "redis://redis:6379"
-CELERY_RESULT_BACKEND = "redis://redis:6379"
+ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -35,7 +30,7 @@ INSTALLED_APPS = [
     'django_filters',
 
     # local apps
-    'episodes.apps.EpisodesConfig',
+    'episodes',
     'users',
 ]
 
@@ -69,24 +64,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "base.wsgi.application"
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.postgresql_psycopg2",
-#         'HOST': 'host.docker.internal',
-#         'PORT': 6666,
-#         'USER': 'postgres',
-#         'PASSWORD': 'admin',
-#         "NAME": "episode",
-#     }
-# }
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
         'HOST': 'host.docker.internal',
-        'PORT': 5434,
+        'PORT': 6666,
         'USER': 'postgres',
-        'PASSWORD': '517484',
-        "NAME": "episods",
+        'PASSWORD': 'admin',
+        "NAME": "episode",
     }
 }
 

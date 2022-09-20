@@ -4,8 +4,7 @@ from rest_framework.permissions import IsAuthenticated
 
 from .models import Episode, Comment
 from .serializers import EpisodeSerializer, CommentSerializer
-from .filters import CommentFilter, ImdbFilter
-from .tasks import parse_data
+from .filters import CommentFilter
 from .permissions import AdminOrAccountOwnerPermission
 
 
@@ -47,13 +46,3 @@ class CommentDetail(generics.RetrieveUpdateDestroyAPIView):
         if self.request.method not in permissions.SAFE_METHODS:
             return [AdminOrAccountOwnerPermission(), IsAuthenticated()]
         return [IsAuthenticated()]
-
-
-class EpisodeImdb(generics.ListCreateAPIView):
-    queryset = Episode.objects.filter(imdb_rating__gte=8.8)
-    serializer_class = EpisodeSerializer
-    filterset_class = ImdbFilter
-
-
-class CeleryData(generics.ListCreateAPIView):
-    queryset = parse_data.delay()
