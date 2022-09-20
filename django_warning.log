@@ -2921,3 +2921,1132 @@ WARNING 2022-09-19 22:42:33,726 log 15236 8472 Unauthorized: /api/comments/
 WARNING 2022-09-19 22:42:33,728 basehttp 15236 8472 "GET /api/comments/?episode=Episode%20%231.4 HTTP/1.1" 401 10120
 WARNING 2022-09-19 22:50:35,262 log 1016 20656 Unauthorized: /api/comments/
 WARNING 2022-09-19 22:50:35,263 basehttp 1016 20656 "GET /api/comments/?episode=Episode%20%231.4 HTTP/1.1" 401 10120
+WARNING 2022-09-20 14:21:48,769 log 7292 14408 Not Found: /favicon.ico
+WARNING 2022-09-20 14:21:48,770 basehttp 7292 14408 "GET /favicon.ico HTTP/1.1" 404 2845
+WARNING 2022-09-20 14:21:52,580 log 7292 14408 Not Found: /api/users/
+WARNING 2022-09-20 14:21:52,581 basehttp 7292 14408 "GET /api/users/ HTTP/1.1" 404 4152
+WARNING 2022-09-20 14:21:56,130 log 7292 14408 Unauthorized: /api/users/info/
+WARNING 2022-09-20 14:21:56,131 basehttp 7292 14408 "GET /api/users/info/ HTTP/1.1" 401 10219
+WARNING 2022-09-20 14:23:08,934 log 7292 12836 Method Not Allowed: /api/users/info/1/
+WARNING 2022-09-20 14:23:08,935 basehttp 7292 12836 "PUT /api/users/info/1/?password1=qwer HTTP/1.1" 405 40
+WARNING 2022-09-20 14:23:47,576 log 7292 12836 Method Not Allowed: /api/users/info/1/
+WARNING 2022-09-20 14:23:47,577 basehttp 7292 12836 "PATCH /api/users/info/1/?password1=qwer HTTP/1.1" 405 42
+WARNING 2022-09-20 14:23:52,264 log 7292 12836 Method Not Allowed: /api/users/info/1/
+WARNING 2022-09-20 14:23:52,265 basehttp 7292 12836 "PUT /api/users/info/1/?password1=qwer HTTP/1.1" 405 40
+WARNING 2022-09-20 14:24:23,700 log 4480 8960 Method Not Allowed: /api/users/info/1/
+WARNING 2022-09-20 14:24:23,701 basehttp 4480 8960 "PUT /api/users/info/1/?password1=qwer HTTP/1.1" 405 40
+WARNING 2022-09-20 14:24:28,420 log 4480 8960 Method Not Allowed: /api/users/info/1/
+WARNING 2022-09-20 14:24:28,421 basehttp 4480 8960 "PUT /api/users/info/1/?password1=qwer HTTP/1.1" 405 40
+WARNING 2022-09-20 14:24:31,692 log 4480 8960 Method Not Allowed: /api/users/info/1/
+WARNING 2022-09-20 14:24:31,693 basehttp 4480 8960 "PATCH /api/users/info/1/?password1=qwer HTTP/1.1" 405 42
+WARNING 2022-09-20 14:24:35,409 log 4480 8960 Method Not Allowed: /api/users/info/1/
+WARNING 2022-09-20 14:24:35,410 basehttp 4480 8960 "PUT /api/users/info/1/?password1=qwer HTTP/1.1" 405 40
+ERROR 2022-09-20 14:26:40,341 log 12784 13600 Internal Server Error: /api/users/info/1/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: users_user.email
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Maki\Python code\Courses\omdb-api\users\serializers.py", line 65, in save
+    user.save()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\contrib\auth\base_user.py", line 68, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\base.py", line 831, in save
+    self.save_base(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\base.py", line 882, in save_base
+    updated = self._save_table(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\base.py", line 1025, in _save_table
+    results = self._do_insert(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\base.py", line 1066, in _do_insert
+    return manager._insert(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\query.py", line 1790, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\sql\compiler.py", line 1657, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: users_user.email
+ERROR 2022-09-20 14:26:40,373 basehttp 12784 13600 "PUT /api/users/info/1/?password1=qwer HTTP/1.1" 500 189272
+WARNING 2022-09-20 14:27:46,035 log 12784 13600 Unauthorized: /api/users/info/1/
+WARNING 2022-09-20 14:27:46,036 basehttp 12784 13600 "PUT /api/users/info/1/?password1=qwer&email=qwerty@gmail.com HTTP/1.1" 401 183
+ERROR 2022-09-20 14:28:08,930 log 12784 13600 Internal Server Error: /api/users/info/1/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: users_user.email
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Maki\Python code\Courses\omdb-api\users\serializers.py", line 65, in save
+    user.save()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\contrib\auth\base_user.py", line 68, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\base.py", line 831, in save
+    self.save_base(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\base.py", line 882, in save_base
+    updated = self._save_table(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\base.py", line 1025, in _save_table
+    results = self._do_insert(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\base.py", line 1066, in _do_insert
+    return manager._insert(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\query.py", line 1790, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\sql\compiler.py", line 1657, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: users_user.email
+ERROR 2022-09-20 14:28:08,946 basehttp 12784 13600 "PUT /api/users/info/1/?email=qwerty@gmail.com&password1=qwer HTTP/1.1" 500 189818
+ERROR 2022-09-20 14:28:23,495 log 12784 13600 Internal Server Error: /api/users/info/1/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: users_user.email
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Maki\Python code\Courses\omdb-api\users\serializers.py", line 65, in save
+    user.save()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\contrib\auth\base_user.py", line 68, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\base.py", line 831, in save
+    self.save_base(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\base.py", line 882, in save_base
+    updated = self._save_table(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\base.py", line 1025, in _save_table
+    results = self._do_insert(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\base.py", line 1066, in _do_insert
+    return manager._insert(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\query.py", line 1790, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\models\sql\compiler.py", line 1657, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: users_user.email
+ERROR 2022-09-20 14:28:23,507 basehttp 12784 13600 "PUT /api/users/info/1/?email=qwerty@gmail.com&password1=qwer HTTP/1.1" 500 189818
+WARNING 2022-09-20 14:29:41,553 log 16844 15328 Unauthorized: /api/token/
+WARNING 2022-09-20 14:29:41,554 basehttp 16844 15328 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 14:30:03,318 log 16844 15328 Unauthorized: /api/token/
+WARNING 2022-09-20 14:30:03,319 basehttp 16844 15328 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 14:30:43,368 log 17172 2908 Unauthorized: /api/token/
+WARNING 2022-09-20 14:30:43,370 basehttp 17172 2908 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 14:30:54,291 log 12860 13476 Unauthorized: /api/token/
+WARNING 2022-09-20 14:30:54,293 basehttp 12860 13476 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 14:48:37,133 log 5140 7376 Method Not Allowed: /api/users/register/
+WARNING 2022-09-20 14:48:37,135 basehttp 5140 7376 "GET /api/users/register/ HTTP/1.1" 405 12982
+WARNING 2022-09-20 14:48:38,813 log 5140 7376 Bad Request: /api/users/register/
+WARNING 2022-09-20 14:48:38,815 basehttp 5140 7376 "POST /api/users/register/ HTTP/1.1" 400 13624
+WARNING 2022-09-20 14:48:47,383 log 5140 7376 Bad Request: /api/users/register/
+WARNING 2022-09-20 14:48:47,384 basehttp 5140 7376 "POST /api/users/register/ HTTP/1.1" 400 13155
+WARNING 2022-09-20 14:48:59,343 log 5140 7376 Bad Request: /api/users/register/
+WARNING 2022-09-20 14:48:59,344 basehttp 5140 7376 "POST /api/users/register/ HTTP/1.1" 400 13041
+WARNING 2022-09-20 14:49:06,717 log 5140 7376 Bad Request: /api/users/register/
+WARNING 2022-09-20 14:49:06,718 basehttp 5140 7376 "POST /api/users/register/ HTTP/1.1" 400 13377
+ERROR 2022-09-20 14:49:22,720 log 5140 7376 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\users\views.py", line 53, in post
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 430, in run_validation
+    assert value is not None, '.validate() should return the validated data'
+AssertionError: .validate() should return the validated data
+ERROR 2022-09-20 14:49:22,728 basehttp 5140 7376 "POST /api/users/register/ HTTP/1.1" 500 109795
+ERROR 2022-09-20 14:49:27,940 log 5140 7376 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\users\views.py", line 53, in post
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 430, in run_validation
+    assert value is not None, '.validate() should return the validated data'
+AssertionError: .validate() should return the validated data
+ERROR 2022-09-20 14:49:27,946 basehttp 5140 7376 "POST /api/users/register/ HTTP/1.1" 500 109805
+ERROR 2022-09-20 14:49:57,688 log 14600 12280 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\users\views.py", line 53, in post
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 430, in run_validation
+    assert value is not None, '.validate() should return the validated data'
+AssertionError: .validate() should return the validated data
+ERROR 2022-09-20 14:49:57,701 basehttp 14600 12280 "POST /api/users/register/ HTTP/1.1" 500 109805
+ERROR 2022-09-20 14:50:11,210 log 14600 12280 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\users\views.py", line 53, in post
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 430, in run_validation
+    assert value is not None, '.validate() should return the validated data'
+AssertionError: .validate() should return the validated data
+ERROR 2022-09-20 14:50:11,215 basehttp 14600 12280 "POST /api/users/register/ HTTP/1.1" 500 109805
+ERROR 2022-09-20 14:50:13,552 log 14600 12280 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\users\views.py", line 53, in post
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 430, in run_validation
+    assert value is not None, '.validate() should return the validated data'
+AssertionError: .validate() should return the validated data
+ERROR 2022-09-20 14:50:13,558 basehttp 14600 12280 "POST /api/users/register/ HTTP/1.1" 500 109805
+ERROR 2022-09-20 14:51:22,262 log 13416 15384 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Maki\Python code\Courses\omdb-api\users\views.py", line 53, in post
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 429, in run_validation
+    value = self.validate(value)
+  File "C:\Maki\Python code\Courses\omdb-api\users\serializers.py", line 24, in validate
+    validated_data = validate_password(password1, password2)
+  File "C:\Maki\Python code\Courses\omdb-api\users\utils.py", line 11, in validate_password
+    if User.objects.filter(username=validated_data.get('username')).exists():
+NameError: name 'validated_data' is not defined
+ERROR 2022-09-20 14:51:22,269 basehttp 13416 15384 "POST /api/users/register/ HTTP/1.1" 500 119192
+WARNING 2022-09-20 14:52:54,273 log 18516 12172 Bad Request: /api/users/register/
+WARNING 2022-09-20 14:52:54,274 basehttp 18516 12172 "POST /api/users/register/ HTTP/1.1" 400 13151
+WARNING 2022-09-20 14:53:07,391 log 18516 12172 Bad Request: /api/users/register/
+WARNING 2022-09-20 14:53:07,392 basehttp 18516 12172 "POST /api/users/register/ HTTP/1.1" 400 13044
+WARNING 2022-09-20 14:53:33,506 log 13428 13476 Bad Request: /api/users/register/
+WARNING 2022-09-20 14:53:33,507 basehttp 13428 13476 "POST /api/users/register/ HTTP/1.1" 400 13343
+WARNING 2022-09-20 14:56:28,110 log 1532 7024 Unauthorized: /api/users/change_password/1/
+WARNING 2022-09-20 14:56:28,111 basehttp 1532 7024 "PUT /api/users/change_password/1/?password=1234&password2=1234&old=1111 HTTP/1.1" 401 183
+WARNING 2022-09-20 14:56:34,702 log 1532 7024 Unauthorized: /api/token/
+WARNING 2022-09-20 14:56:34,703 basehttp 1532 7024 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 14:56:42,504 log 1532 7024 Unauthorized: /api/token/
+WARNING 2022-09-20 14:56:42,505 basehttp 1532 7024 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 14:56:59,508 log 1532 7024 Bad Request: /api/users/change_password/1/
+WARNING 2022-09-20 14:56:59,509 basehttp 1532 7024 "PUT /api/users/change_password/1/?password=1234&password2=1234&old=1111 HTTP/1.1" 400 123
+WARNING 2022-09-20 14:58:01,944 log 1532 7024 Unauthorized: /api/token/
+WARNING 2022-09-20 14:58:01,945 basehttp 1532 7024 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 14:58:31,334 log 1532 7024 Bad Request: /api/users/change_password/1/
+WARNING 2022-09-20 14:58:31,335 basehttp 1532 7024 "PUT /api/users/change_password/1/ HTTP/1.1" 400 46
+WARNING 2022-09-20 14:58:50,215 log 1532 7024 Bad Request: /api/users/change_password/1/
+WARNING 2022-09-20 14:58:50,216 basehttp 1532 7024 "PUT /api/users/change_password/1/ HTTP/1.1" 400 102
+WARNING 2022-09-20 14:59:03,605 log 1532 7024 Bad Request: /api/users/change_password/1/
+WARNING 2022-09-20 14:59:03,606 basehttp 1532 7024 "PUT /api/users/change_password/1/ HTTP/1.1" 400 40
+WARNING 2022-09-20 15:00:29,860 log 10104 11968 Bad Request: /api/users/change_password/1/
+WARNING 2022-09-20 15:00:29,861 basehttp 10104 11968 "PUT /api/users/change_password/1/ HTTP/1.1" 400 63
+WARNING 2022-09-20 15:00:39,678 log 10104 11968 Bad Request: /api/users/change_password/1/
+WARNING 2022-09-20 15:00:39,679 basehttp 10104 11968 "PUT /api/users/change_password/1/ HTTP/1.1" 400 59
+WARNING 2022-09-20 15:01:33,005 log 9056 10184 Bad Request: /api/users/register/
+WARNING 2022-09-20 15:01:33,006 basehttp 9056 10184 "POST /api/users/register/ HTTP/1.1" 400 13337
+WARNING 2022-09-20 15:02:10,066 log 16012 14408 Unauthorized: /api/users/change_password/1/
+WARNING 2022-09-20 15:02:10,068 basehttp 16012 14408 "PUT /api/users/change_password/1/ HTTP/1.1" 401 183
+WARNING 2022-09-20 15:02:23,736 log 16012 14408 Bad Request: /api/users/change_password/1/
+WARNING 2022-09-20 15:02:23,737 basehttp 16012 14408 "PUT /api/users/change_password/1/ HTTP/1.1" 400 185
+WARNING 2022-09-20 15:02:31,212 log 16012 14408 Bad Request: /api/users/change_password/1/
+WARNING 2022-09-20 15:02:31,213 basehttp 16012 14408 "PUT /api/users/change_password/1/ HTTP/1.1" 400 123
+WARNING 2022-09-20 15:02:50,075 log 16012 14408 Unauthorized: /api/token/
+WARNING 2022-09-20 15:02:50,076 basehttp 16012 14408 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 15:03:08,081 log 16012 14408 Unauthorized: /api/token/
+WARNING 2022-09-20 15:03:08,082 basehttp 16012 14408 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 15:03:19,069 log 16012 14408 Unauthorized: /api/token/
+WARNING 2022-09-20 15:03:19,070 basehttp 16012 14408 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 15:03:32,266 log 16012 14408 Unauthorized: /api/users/change_password/1/
+WARNING 2022-09-20 15:03:32,269 basehttp 16012 14408 "PUT /api/users/change_password/1/ HTTP/1.1" 401 183
+WARNING 2022-09-20 15:03:51,999 log 16012 14408 Bad Request: /api/users/change_password/1/
+WARNING 2022-09-20 15:03:52,001 basehttp 16012 14408 "PUT /api/users/change_password/1/ HTTP/1.1" 400 63
+WARNING 2022-09-20 15:09:10,964 log 8472 2724 Unauthorized: /api/token/
+WARNING 2022-09-20 15:09:10,965 basehttp 8472 2724 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 15:09:17,662 log 8472 2724 Unauthorized: /api/token/
+WARNING 2022-09-20 15:09:17,663 basehttp 8472 2724 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 15:09:58,992 log 8472 2724 Unauthorized: /api/users/info/
+WARNING 2022-09-20 15:09:58,993 basehttp 8472 2724 "GET /api/users/info/ HTTP/1.1" 401 183
+WARNING 2022-09-20 15:10:15,070 log 17188 17036 Unauthorized: /api/users/info/
+WARNING 2022-09-20 15:10:15,071 basehttp 17188 17036 "GET /api/users/info/ HTTP/1.1" 401 183
+WARNING 2022-09-20 15:10:17,505 log 17188 17036 Unauthorized: /api/users/info/
+WARNING 2022-09-20 15:10:17,506 basehttp 17188 17036 "GET /api/users/info/ HTTP/1.1" 401 183
+WARNING 2022-09-20 15:10:40,813 log 20448 10048 Unauthorized: /api/users/info/
+WARNING 2022-09-20 15:10:40,815 basehttp 20448 10048 "GET /api/users/info/ HTTP/1.1" 401 183
+WARNING 2022-09-20 15:10:57,933 log 20448 10048 Unauthorized: /api/users/info/
+WARNING 2022-09-20 15:10:57,934 basehttp 20448 10048 "GET /api/users/info/ HTTP/1.1" 401 183
+WARNING 2022-09-20 15:11:12,418 log 20448 10048 Unauthorized: /api/users/change_password/1/
+WARNING 2022-09-20 15:11:12,419 basehttp 20448 10048 "PUT /api/users/change_password/1/ HTTP/1.1" 401 183
+WARNING 2022-09-20 15:11:26,077 log 20448 10048 Not Found: /api/users/change_password/1/
+WARNING 2022-09-20 15:11:26,078 basehttp 20448 10048 "PUT /api/users/change_password/1/ HTTP/1.1" 404 23
+WARNING 2022-09-20 15:11:33,287 log 20448 10048 Bad Request: /api/users/change_password/7/
+WARNING 2022-09-20 15:11:33,288 basehttp 20448 10048 "PUT /api/users/change_password/7/ HTTP/1.1" 400 63
+WARNING 2022-09-20 15:11:41,803 log 20448 10048 Bad Request: /api/users/change_password/7/
+WARNING 2022-09-20 15:11:41,805 basehttp 20448 10048 "PUT /api/users/change_password/7/ HTTP/1.1" 400 63
+WARNING 2022-09-20 15:11:46,854 log 20448 10048 Bad Request: /api/users/change_password/7/
+WARNING 2022-09-20 15:11:46,855 basehttp 20448 10048 "PUT /api/users/change_password/7/ HTTP/1.1" 400 63
+WARNING 2022-09-20 15:11:48,190 log 20448 10048 Bad Request: /api/users/change_password/7/
+WARNING 2022-09-20 15:11:48,191 basehttp 20448 10048 "PUT /api/users/change_password/7/ HTTP/1.1" 400 63
+ERROR 2022-09-20 15:13:40,022 log 18196 4144 Internal Server Error: /api/users/change_password/7/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 226, in put
+    return self.update(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 65, in update
+    instance = self.get_object()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 99, in get_object
+    self.check_object_permissions(self.request, obj)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 345, in check_object_permissions
+    if not permission.has_object_permission(request, self, obj):
+  File "C:\Maki\Python code\Courses\omdb-api\users\permissions.py", line 6, in has_object_permission
+    return obj.user == request.user or request.user.is_superuser
+AttributeError: 'User' object has no attribute 'user'
+ERROR 2022-09-20 15:13:40,031 basehttp 18196 4144 "PUT /api/users/change_password/7/ HTTP/1.1" 500 112287
+WARNING 2022-09-20 15:13:51,547 log 15816 964 Forbidden: /api/users/change_password/7/
+WARNING 2022-09-20 15:13:51,548 basehttp 15816 964 "PUT /api/users/change_password/7/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:14:15,556 log 15816 964 Forbidden: /api/users/change_password/9/
+WARNING 2022-09-20 15:14:15,557 basehttp 15816 964 "PUT /api/users/change_password/9/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:14:21,861 log 15816 964 Forbidden: /api/users/change_password/10/
+WARNING 2022-09-20 15:14:21,863 basehttp 15816 964 "PUT /api/users/change_password/10/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:14:26,815 log 15816 964 Forbidden: /api/users/change_password/10/
+WARNING 2022-09-20 15:14:26,816 basehttp 15816 964 "PUT /api/users/change_password/10/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:14:27,591 log 15816 964 Forbidden: /api/users/change_password/10/
+WARNING 2022-09-20 15:14:27,592 basehttp 15816 964 "PUT /api/users/change_password/10/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:14:31,086 log 15816 964 Forbidden: /api/users/change_password/10/
+WARNING 2022-09-20 15:14:31,087 basehttp 15816 964 "PUT /api/users/change_password/10/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:14:31,842 log 15816 964 Forbidden: /api/users/change_password/10/
+WARNING 2022-09-20 15:14:31,843 basehttp 15816 964 "PUT /api/users/change_password/10/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:14:34,986 log 15816 964 Forbidden: /api/users/change_password/10/
+WARNING 2022-09-20 15:14:34,987 basehttp 15816 964 "PUT /api/users/change_password/10/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:14:48,347 log 4668 8008 Forbidden: /api/users/change_password/10/
+WARNING 2022-09-20 15:14:48,348 basehttp 4668 8008 "PUT /api/users/change_password/10/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:14:55,221 log 12540 14316 Forbidden: /api/users/change_password/10/
+WARNING 2022-09-20 15:14:55,222 basehttp 12540 14316 "PUT /api/users/change_password/10/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:15:50,212 log 20232 13428 Forbidden: /api/users/change_password/10/
+WARNING 2022-09-20 15:15:50,213 basehttp 20232 13428 "PUT /api/users/change_password/10/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:15:58,374 log 20232 13428 Forbidden: /api/users/change_password/10/
+WARNING 2022-09-20 15:15:58,375 basehttp 20232 13428 "PUT /api/users/change_password/10/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:16:13,348 log 4264 7572 Forbidden: /api/users/change_password/10/
+WARNING 2022-09-20 15:16:13,351 basehttp 4264 7572 "PUT /api/users/change_password/10/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:16:30,346 log 4264 7572 Forbidden: /api/users/change_password/10/
+WARNING 2022-09-20 15:16:30,347 basehttp 4264 7572 "PUT /api/users/change_password/10/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:16:31,298 log 4264 7572 Forbidden: /api/users/change_password/10/
+WARNING 2022-09-20 15:16:31,299 basehttp 4264 7572 "PUT /api/users/change_password/10/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:16:32,081 log 4264 7572 Forbidden: /api/users/change_password/10/
+WARNING 2022-09-20 15:16:32,082 basehttp 4264 7572 "PUT /api/users/change_password/10/ HTTP/1.1" 403 63
+ERROR 2022-09-20 15:16:40,549 log 18740 16500 Internal Server Error: /api/users/change_password/10/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 226, in put
+    return self.update(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 65, in update
+    instance = self.get_object()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 99, in get_object
+    self.check_object_permissions(self.request, obj)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 345, in check_object_permissions
+    if not permission.has_object_permission(request, self, obj):
+  File "C:\Maki\Python code\Courses\omdb-api\users\permissions.py", line 6, in has_object_permission
+    return obj.user == request.user.is_superuser
+AttributeError: 'User' object has no attribute 'user'
+ERROR 2022-09-20 15:16:40,559 basehttp 18740 16500 "PUT /api/users/change_password/10/ HTTP/1.1" 500 112286
+ERROR 2022-09-20 15:17:26,261 log 16744 19708 Internal Server Error: /api/users/change_password/10/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\request.py", line 416, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 226, in put
+    return self.update(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 65, in update
+    instance = self.get_object()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 99, in get_object
+    self.check_object_permissions(self.request, obj)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 345, in check_object_permissions
+    if not permission.has_object_permission(request, self, obj):
+  File "C:\Maki\Python code\Courses\omdb-api\users\permissions.py", line 6, in has_object_permission
+    return request.username == request.user or request.user.is_superuser
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\request.py", line 418, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'username'
+ERROR 2022-09-20 15:17:26,275 basehttp 16744 19708 "PUT /api/users/change_password/10/ HTTP/1.1" 500 120408
+ERROR 2022-09-20 15:17:45,485 log 21456 19628 Internal Server Error: /api/users/change_password/10/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 226, in put
+    return self.update(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 65, in update
+    instance = self.get_object()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 99, in get_object
+    self.check_object_permissions(self.request, obj)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 345, in check_object_permissions
+    if not permission.has_object_permission(request, self, obj):
+  File "C:\Maki\Python code\Courses\omdb-api\users\permissions.py", line 6, in has_object_permission
+    return request.user == obj.user or request.user.is_superuser
+AttributeError: 'User' object has no attribute 'user'
+ERROR 2022-09-20 15:17:45,495 basehttp 21456 19628 "PUT /api/users/change_password/10/ HTTP/1.1" 500 112318
+WARNING 2022-09-20 15:17:55,124 log 8756 17208 Bad Request: /api/users/change_password/10/
+WARNING 2022-09-20 15:17:55,126 basehttp 8756 17208 "PUT /api/users/change_password/10/ HTTP/1.1" 400 63
+WARNING 2022-09-20 15:18:13,402 log 8756 17208 Bad Request: /api/users/change_password/10/
+WARNING 2022-09-20 15:18:13,403 basehttp 8756 17208 "PUT /api/users/change_password/10/ HTTP/1.1" 400 123
+WARNING 2022-09-20 15:18:22,700 log 8756 17208 Bad Request: /api/users/change_password/10/
+WARNING 2022-09-20 15:18:22,706 basehttp 8756 17208 "PUT /api/users/change_password/10/ HTTP/1.1" 400 59
+WARNING 2022-09-20 15:18:43,347 log 8756 17208 Bad Request: /api/users/change_password/10/
+WARNING 2022-09-20 15:18:43,348 basehttp 8756 17208 "PUT /api/users/change_password/10/ HTTP/1.1" 400 63
+WARNING 2022-09-20 15:18:50,248 log 8756 17208 Bad Request: /api/users/change_password/10/
+WARNING 2022-09-20 15:18:50,249 basehttp 8756 17208 "PUT /api/users/change_password/10/ HTTP/1.1" 400 63
+WARNING 2022-09-20 15:19:03,582 log 8756 17208 Bad Request: /api/users/change_password/10/
+WARNING 2022-09-20 15:19:03,583 basehttp 8756 17208 "PUT /api/users/change_password/10/ HTTP/1.1" 400 63
+WARNING 2022-09-20 15:19:39,032 log 20556 18912 Bad Request: /api/users/change_password/10/
+WARNING 2022-09-20 15:19:39,033 basehttp 20556 18912 "PUT /api/users/change_password/10/ HTTP/1.1" 400 63
+WARNING 2022-09-20 15:19:50,243 log 20556 18912 Bad Request: /api/users/change_password/10/
+WARNING 2022-09-20 15:19:50,244 basehttp 20556 18912 "PUT /api/users/change_password/10/ HTTP/1.1" 400 63
+WARNING 2022-09-20 15:20:06,208 log 20556 18912 Unauthorized: /api/token/
+WARNING 2022-09-20 15:20:06,209 basehttp 20556 18912 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 15:20:42,899 log 240 19228 Unauthorized: /api/token/
+WARNING 2022-09-20 15:20:42,900 basehttp 240 19228 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 15:21:39,794 log 16868 11180 Unauthorized: /api/users/change_password/10/
+WARNING 2022-09-20 15:21:39,795 basehttp 16868 11180 "PUT /api/users/change_password/10/ HTTP/1.1" 401 183
+WARNING 2022-09-20 15:21:56,815 log 16868 11180 Unauthorized: /api/token/
+WARNING 2022-09-20 15:21:56,816 basehttp 16868 11180 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 15:23:07,305 log 10004 7568 Method Not Allowed: /api/users/register/
+WARNING 2022-09-20 15:23:07,306 basehttp 10004 7568 "GET /api/users/register/ HTTP/1.1" 405 12982
+WARNING 2022-09-20 15:23:25,818 log 10004 7568 Bad Request: /api/users/register/
+WARNING 2022-09-20 15:23:25,819 basehttp 10004 7568 "POST /api/users/register/ HTTP/1.1" 400 13347
+WARNING 2022-09-20 15:23:27,528 log 10004 7568 Method Not Allowed: /api/users/register/
+WARNING 2022-09-20 15:23:27,529 basehttp 10004 7568 "GET /api/users/register/ HTTP/1.1" 405 12982
+WARNING 2022-09-20 15:23:55,482 log 10004 20392 Unauthorized: /api/token/
+WARNING 2022-09-20 15:23:55,483 basehttp 10004 20392 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 15:23:59,461 log 10004 20392 Unauthorized: /api/token/
+WARNING 2022-09-20 15:23:59,462 basehttp 10004 20392 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 15:24:22,015 log 10004 20392 Not Found: /api/users/change_password/10/
+WARNING 2022-09-20 15:24:22,017 basehttp 10004 20392 "PUT /api/users/change_password/10/ HTTP/1.1" 404 23
+WARNING 2022-09-20 15:24:29,478 log 10004 20392 Bad Request: /api/users/change_password/12/
+WARNING 2022-09-20 15:24:29,479 basehttp 10004 20392 "PUT /api/users/change_password/12/ HTTP/1.1" 400 185
+WARNING 2022-09-20 15:24:46,751 log 10004 20392 Unauthorized: /api/token/
+WARNING 2022-09-20 15:24:46,752 basehttp 10004 20392 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 15:25:05,570 log 8348 3672 Unauthorized: /api/token/
+WARNING 2022-09-20 15:25:05,572 basehttp 8348 3672 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 15:25:32,872 log 8348 3672 Bad Request: /api/users/change_password/12/
+WARNING 2022-09-20 15:25:32,873 basehttp 8348 3672 "PUT /api/users/change_password/12/ HTTP/1.1" 400 63
+WARNING 2022-09-20 15:25:56,152 log 8348 3672 Bad Request: /api/users/change_password/12/
+WARNING 2022-09-20 15:25:56,153 basehttp 8348 3672 "PUT /api/users/change_password/12/ HTTP/1.1" 400 63
+WARNING 2022-09-20 15:26:08,601 log 8348 3672 Bad Request: /api/users/change_password/12/
+WARNING 2022-09-20 15:26:08,602 basehttp 8348 3672 "PUT /api/users/change_password/12/ HTTP/1.1" 400 63
+WARNING 2022-09-20 15:26:37,936 log 8348 3672 Unauthorized: /api/token/
+WARNING 2022-09-20 15:26:37,937 basehttp 8348 3672 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 15:26:47,490 log 8348 3672 Unauthorized: /api/token/
+WARNING 2022-09-20 15:26:47,491 basehttp 8348 3672 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 15:27:03,367 log 8348 3672 Bad Request: /api/users/change_password/12/
+WARNING 2022-09-20 15:27:03,368 basehttp 8348 3672 "PUT /api/users/change_password/12/ HTTP/1.1" 400 63
+WARNING 2022-09-20 15:27:17,773 log 8348 3672 Unauthorized: /api/token/
+WARNING 2022-09-20 15:27:17,775 basehttp 8348 3672 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 15:27:52,768 log 11320 17872 Forbidden: /api/users/change_password/12/
+WARNING 2022-09-20 15:27:52,769 basehttp 11320 17872 "PUT /api/users/change_password/12/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:28:04,948 log 11320 17872 Forbidden: /api/users/change_password/13/
+WARNING 2022-09-20 15:28:04,949 basehttp 11320 17872 "PUT /api/users/change_password/13/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:28:06,045 log 11320 17872 Forbidden: /api/users/change_password/13/
+WARNING 2022-09-20 15:28:06,046 basehttp 11320 17872 "PUT /api/users/change_password/13/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:28:07,042 log 11320 17872 Forbidden: /api/users/change_password/13/
+WARNING 2022-09-20 15:28:07,043 basehttp 11320 17872 "PUT /api/users/change_password/13/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:28:07,480 log 11320 17872 Forbidden: /api/users/change_password/13/
+WARNING 2022-09-20 15:28:07,481 basehttp 11320 17872 "PUT /api/users/change_password/13/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:28:07,936 log 11320 17872 Forbidden: /api/users/change_password/13/
+WARNING 2022-09-20 15:28:07,937 basehttp 11320 17872 "PUT /api/users/change_password/13/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:28:15,812 log 8828 2848 Forbidden: /api/users/change_password/13/
+WARNING 2022-09-20 15:28:15,813 basehttp 8828 2848 "PUT /api/users/change_password/13/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:28:32,187 log 9364 9316 Forbidden: /api/users/change_password/13/
+WARNING 2022-09-20 15:28:32,188 basehttp 9364 9316 "PUT /api/users/change_password/13/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:28:39,644 log 12524 18012 Forbidden: /api/users/change_password/13/
+WARNING 2022-09-20 15:28:39,645 basehttp 12524 18012 "PUT /api/users/change_password/13/ HTTP/1.1" 403 63
+ERROR 2022-09-20 15:28:48,522 log 10352 9356 Internal Server Error: /api/users/change_password/13/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 226, in put
+    return self.update(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 65, in update
+    instance = self.get_object()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 99, in get_object
+    self.check_object_permissions(self.request, obj)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 345, in check_object_permissions
+    if not permission.has_object_permission(request, self, obj):
+  File "C:\Maki\Python code\Courses\omdb-api\users\permissions.py", line 6, in has_object_permission
+    return obj.username__id == request.user or request.user.is_superuser
+AttributeError: 'User' object has no attribute 'username__id'
+ERROR 2022-09-20 15:28:48,530 basehttp 10352 9356 "PUT /api/users/change_password/13/ HTTP/1.1" 500 112386
+ERROR 2022-09-20 15:28:57,514 log 15808 12828 Internal Server Error: /api/users/change_password/13/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 226, in put
+    return self.update(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 65, in update
+    instance = self.get_object()
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 99, in get_object
+    self.check_object_permissions(self.request, obj)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 345, in check_object_permissions
+    if not permission.has_object_permission(request, self, obj):
+  File "C:\Maki\Python code\Courses\omdb-api\users\permissions.py", line 6, in has_object_permission
+    return obj.username_id == request.user or request.user.is_superuser
+AttributeError: 'User' object has no attribute 'username_id'
+ERROR 2022-09-20 15:28:57,522 basehttp 15808 12828 "PUT /api/users/change_password/13/ HTTP/1.1" 500 112378
+WARNING 2022-09-20 15:29:35,244 log 15756 17220 Forbidden: /api/users/change_password/13/
+WARNING 2022-09-20 15:29:35,245 basehttp 15756 17220 "PUT /api/users/change_password/13/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:29:56,492 log 3860 13104 Forbidden: /api/users/change_password/13/
+WARNING 2022-09-20 15:29:56,493 basehttp 3860 13104 "PUT /api/users/change_password/13/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:30:18,432 log 14556 3520 Forbidden: /api/users/change_password/13/
+WARNING 2022-09-20 15:30:18,434 basehttp 14556 3520 "PUT /api/users/change_password/13/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:30:33,527 log 20440 15600 Unauthorized: /api/users/change_password/13/
+WARNING 2022-09-20 15:30:33,529 basehttp 20440 15600 "PUT /api/users/change_password/13/ HTTP/1.1" 401 183
+WARNING 2022-09-20 15:30:49,745 log 20440 15600 Bad Request: /api/users/change_password/13/
+WARNING 2022-09-20 15:30:49,747 basehttp 20440 15600 "PUT /api/users/change_password/13/ HTTP/1.1" 400 63
+WARNING 2022-09-20 15:31:15,829 log 20440 15600 Bad Request: /api/users/change_password/13/
+WARNING 2022-09-20 15:31:15,830 basehttp 20440 15600 "PUT /api/users/change_password/13/ HTTP/1.1" 400 63
+WARNING 2022-09-20 15:31:31,265 log 20440 15600 Bad Request: /api/users/change_password/13/
+WARNING 2022-09-20 15:31:31,267 basehttp 20440 15600 "PUT /api/users/change_password/13/ HTTP/1.1" 400 63
+WARNING 2022-09-20 15:32:06,540 log 20440 15600 Unauthorized: /api/token/
+WARNING 2022-09-20 15:32:06,541 basehttp 20440 15600 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 15:32:29,023 log 20440 15600 Forbidden: /api/users/change_password/13/
+WARNING 2022-09-20 15:32:29,024 basehttp 20440 15600 "PUT /api/users/change_password/13/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:32:56,275 log 16008 19972 Forbidden: /api/users/change_password/13/
+WARNING 2022-09-20 15:32:56,276 basehttp 16008 19972 "PUT /api/users/change_password/13/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:34:03,142 log 18032 1528 Forbidden: /api/users/change_password/13/
+WARNING 2022-09-20 15:34:03,143 basehttp 18032 1528 "PUT /api/users/change_password/13/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:34:14,117 log 4632 10460 Forbidden: /api/users/change_password/13/
+WARNING 2022-09-20 15:34:14,118 basehttp 4632 10460 "PUT /api/users/change_password/13/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:34:24,381 log 3904 17036 Bad Request: /api/users/change_password/13/
+WARNING 2022-09-20 15:34:24,383 basehttp 3904 17036 "PUT /api/users/change_password/13/ HTTP/1.1" 400 63
+WARNING 2022-09-20 15:34:34,459 log 3904 17036 Unauthorized: /api/token/
+WARNING 2022-09-20 15:34:34,460 basehttp 3904 17036 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 15:34:51,513 log 3904 17036 Forbidden: /api/users/change_password/12/
+WARNING 2022-09-20 15:34:51,514 basehttp 3904 17036 "PUT /api/users/change_password/12/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:35:15,837 log 3904 17036 Bad Request: /api/users/change_password/12/
+WARNING 2022-09-20 15:35:15,838 basehttp 3904 17036 "PUT /api/users/change_password/12/ HTTP/1.1" 400 63
+WARNING 2022-09-20 15:35:31,867 log 3904 17036 Bad Request: /api/users/change_password/12/
+WARNING 2022-09-20 15:35:31,868 basehttp 3904 17036 "PUT /api/users/change_password/12/ HTTP/1.1" 400 63
+WARNING 2022-09-20 15:35:35,975 log 3904 17036 Bad Request: /api/users/change_password/12/
+WARNING 2022-09-20 15:35:35,976 basehttp 3904 17036 "PUT /api/users/change_password/12/ HTTP/1.1" 400 63
+WARNING 2022-09-20 15:35:44,291 log 3904 17036 Bad Request: /api/users/change_password/12/
+WARNING 2022-09-20 15:35:44,292 basehttp 3904 17036 "PUT /api/users/change_password/12/ HTTP/1.1" 400 63
+WARNING 2022-09-20 15:35:55,566 log 3904 17036 Bad Request: /api/users/change_password/12/
+WARNING 2022-09-20 15:35:55,568 basehttp 3904 17036 "PUT /api/users/change_password/12/ HTTP/1.1" 400 63
+WARNING 2022-09-20 15:36:05,319 log 3904 17036 Bad Request: /api/users/change_password/13/
+WARNING 2022-09-20 15:36:05,320 basehttp 3904 17036 "PUT /api/users/change_password/13/ HTTP/1.1" 400 63
+WARNING 2022-09-20 15:36:11,116 log 3904 17036 Bad Request: /api/users/change_password/13/
+WARNING 2022-09-20 15:36:11,117 basehttp 3904 17036 "PUT /api/users/change_password/13/ HTTP/1.1" 400 63
+ERROR 2022-09-20 15:36:58,220 log 9636 7380 Internal Server Error: /api/users/change_password/13/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 226, in put
+    return self.update(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 485, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "C:\Maki\Python code\Courses\omdb-api\users\serializers.py", line 58, in validate_old_password
+    if not user.check_password(value):
+AttributeError: 'int' object has no attribute 'check_password'
+ERROR 2022-09-20 15:36:58,228 basehttp 9636 7380 "PUT /api/users/change_password/13/ HTTP/1.1" 500 122912
+ERROR 2022-09-20 15:37:40,540 log 7808 12444 Internal Server Error: /api/users/change_password/13/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 226, in put
+    return self.update(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 485, in to_internal_value
+    validated_value = validate_method(validated_value)
+TypeError: validate_old_password() missing 1 required positional argument: 'pk'
+ERROR 2022-09-20 15:37:40,547 basehttp 7808 12444 "PUT /api/users/change_password/13/ HTTP/1.1" 500 118379
+ERROR 2022-09-20 15:38:49,278 log 3304 5828 Internal Server Error: /api/users/change_password/13/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 226, in put
+    return self.update(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 485, in to_internal_value
+    validated_value = validate_method(validated_value)
+TypeError: validate_old_password() missing 1 required positional argument: 'pk'
+ERROR 2022-09-20 15:38:49,285 basehttp 3304 5828 "PUT /api/users/change_password/13/ HTTP/1.1" 500 118379
+WARNING 2022-09-20 15:38:59,441 log 18372 10104 Bad Request: /api/users/change_password/13/
+WARNING 2022-09-20 15:38:59,442 basehttp 18372 10104 "PUT /api/users/change_password/13/ HTTP/1.1" 400 63
+ERROR 2022-09-20 15:39:58,559 log 19480 16880 Internal Server Error: /api/users/change_password/13/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\request.py", line 416, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'check_password'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 226, in put
+    return self.update(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 485, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "C:\Maki\Python code\Courses\omdb-api\users\serializers.py", line 59, in validate_old_password
+    if not user.check_password(value):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\request.py", line 418, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'check_password'
+ERROR 2022-09-20 15:39:58,570 basehttp 19480 16880 "PUT /api/users/change_password/13/ HTTP/1.1" 500 130997
+WARNING 2022-09-20 15:40:22,920 log 10368 15572 Unauthorized: /api/users/change_password/13/
+WARNING 2022-09-20 15:40:22,922 basehttp 10368 15572 "PUT /api/users/change_password/13/ HTTP/1.1" 401 183
+ERROR 2022-09-20 15:40:37,885 log 10368 15572 Internal Server Error: /api/users/change_password/13/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 226, in put
+    return self.update(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 485, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "C:\Maki\Python code\Courses\omdb-api\users\serializers.py", line 59, in validate_old_password
+    if not user.check_password(value):
+AttributeError: 'QueryDict' object has no attribute 'check_password'
+ERROR 2022-09-20 15:40:37,893 basehttp 10368 15572 "PUT /api/users/change_password/13/ HTTP/1.1" 500 123017
+ERROR 2022-09-20 15:40:57,729 log 9940 6272 Internal Server Error: /api/users/change_password/13/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\request.py", line 416, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'values'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 226, in put
+    return self.update(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 485, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "C:\Maki\Python code\Courses\omdb-api\users\serializers.py", line 57, in validate_old_password
+    user = self.context['request'].values['pk']
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\request.py", line 418, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'values'
+ERROR 2022-09-20 15:40:57,741 basehttp 9940 6272 "PUT /api/users/change_password/13/ HTTP/1.1" 500 130772
+ERROR 2022-09-20 15:41:28,939 log 18368 8008 Internal Server Error: /api/users/change_password/13/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\request.py", line 416, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'get'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 226, in put
+    return self.update(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 485, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "C:\Maki\Python code\Courses\omdb-api\users\serializers.py", line 57, in validate_old_password
+    user = self.context['request'].get('pk')
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\request.py", line 418, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'get'
+ERROR 2022-09-20 15:41:28,957 basehttp 18368 8008 "PUT /api/users/change_password/13/ HTTP/1.1" 500 130736
+ERROR 2022-09-20 15:41:50,364 log 20244 15668 Internal Server Error: /api/users/change_password/13/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 226, in put
+    return self.update(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 485, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "C:\Maki\Python code\Courses\omdb-api\users\serializers.py", line 57, in validate_old_password
+    user = self.context['request.get(pk)']
+KeyError: 'request.get(pk)'
+ERROR 2022-09-20 15:41:50,376 basehttp 20244 15668 "PUT /api/users/change_password/13/ HTTP/1.1" 500 122425
+ERROR 2022-09-20 15:44:34,096 log 2228 19356 Internal Server Error: /api/users/change_password/13/
+Traceback (most recent call last):
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\generics.py", line 226, in put
+    return self.update(request, *args, **kwargs)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "C:\Users\maksd\.virtualenvs\Courses-jFOWR8aS\lib\site-packages\rest_framework\serializers.py", line 485, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "C:\Maki\Python code\Courses\omdb-api\users\serializers.py", line 58, in validate_old_password
+    uid = self.kwargs.get(self.lookup_url_kwarg)
+AttributeError: 'ChangePasswordSerializer' object has no attribute 'kwargs'
+ERROR 2022-09-20 15:44:34,110 basehttp 2228 19356 "PUT /api/users/change_password/13/ HTTP/1.1" 500 123244
+WARNING 2022-09-20 15:46:25,043 log 13612 19284 Unauthorized: /api/users/change_password/13/
+WARNING 2022-09-20 15:46:25,045 basehttp 13612 19284 "PUT /api/users/change_password/13/ HTTP/1.1" 401 183
+WARNING 2022-09-20 15:46:44,672 log 13612 19284 Forbidden: /api/users/change_password/13/
+WARNING 2022-09-20 15:46:44,674 basehttp 13612 19284 "PUT /api/users/change_password/13/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:47:02,584 log 13612 19284 Unauthorized: /api/token/
+WARNING 2022-09-20 15:47:02,585 basehttp 13612 19284 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 15:47:29,856 log 13612 19284 Unauthorized: /api/token/
+WARNING 2022-09-20 15:47:29,857 basehttp 13612 19284 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 15:47:37,565 log 13612 19284 Forbidden: /api/users/change_password/12/
+WARNING 2022-09-20 15:47:37,567 basehttp 13612 19284 "PUT /api/users/change_password/12/ HTTP/1.1" 403 63
