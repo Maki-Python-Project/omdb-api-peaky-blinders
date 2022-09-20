@@ -24,22 +24,26 @@ class Command(BaseCommand):
 
         language = series['Language']
         actors = []
+
         for name_surname in series['Actors'].split(', '):
             name_surname = name_surname.split()
             actors.append({
                 'name': name_surname[0],
                 'surname': name_surname[1],
             })
+
         if not Actor.objects.exists():
             actors_serializer = ActorsSerializer(data=actors, many=True)
             if actors_serializer.is_valid():
                 actors_serializer.save()
 
         genres = []
+
         for genre in series['Genre'].split(', '):
             genres.append({
                 'name': genre,
             })
+
         if not Genre.objects.exists():
             genres_serializer = GenreSerializer(data=genres, many=True)
             if genres_serializer.is_valid():
@@ -112,7 +116,9 @@ class Command(BaseCommand):
                 'actors': actors,
                 'language': language
             }
+
             episode_serializer = EpisodeSerializer(data=episode_data)
+
             if episode_serializer.is_valid():
                 episode_serializer.save()
             else:

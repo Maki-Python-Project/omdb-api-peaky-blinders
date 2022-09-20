@@ -1,15 +1,16 @@
-from django.core.exceptions import ValidationError
-from django.core.validators import validate_email as django_validate_email
+from rest_framework import serializers
 
 
-def validate_email(value):
-    message_invalid = 'Enter a valid email address.'
+def validate_password(validated_data):
+    password1 = validated_data.get('password1')
+    password2 = validated_data.get('password2')
 
-    if not value:
-        return False, message_invalid
-    try:
-        django_validate_email(value)
-    except ValidationError:
-        return False, message_invalid
+    if password1 != password2:
+        errors = 'Passwords don\'t match.'
+        raise serializers.ValidationError({'password': errors})
 
-    return True, ''
+    if not any(not el.isnumeric() for el in password1):
+        msg = 'Password must contain at least one letter.'
+        raise serializers.ValidationError({'password': msg})
+
+    return validated_data
