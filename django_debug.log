@@ -5931,3 +5931,47 @@ INFO 2022-09-20 15:47:49,089 autoreload 13612 16692 C:\Maki\Python code\Courses\
 INFO 2022-09-20 15:47:50,703 autoreload 18756 17324 Watching for file changes with StatReloader
 INFO 2022-09-20 15:47:58,245 autoreload 18756 17324 C:\Maki\Python code\Courses\omdb-api\base\settings.py changed, reloading.
 INFO 2022-09-20 15:48:00,158 autoreload 15888 7280 Watching for file changes with StatReloader
+INFO 2022-09-20 15:51:10,320 autoreload 15888 7280 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-20 15:51:12,148 autoreload 2240 6232 Watching for file changes with StatReloader
+INFO 2022-09-20 15:51:50,220 autoreload 2240 6232 C:\Maki\Python code\Courses\omdb-api\base\settings.py changed, reloading.
+INFO 2022-09-20 15:51:51,906 autoreload 8628 7960 Watching for file changes with StatReloader
+INFO 2022-09-20 15:51:57,983 autoreload 11684 18652 Watching for file changes with StatReloader
+WARNING 2022-09-20 15:51:59,854 log 11684 9460 Unauthorized: /api/users/info/
+WARNING 2022-09-20 15:51:59,855 basehttp 11684 9460 "GET /api/users/info/ HTTP/1.1" 401 10219
+INFO 2022-09-20 15:52:09,388 autoreload 11684 18652 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-20 15:52:11,146 autoreload 10816 1704 Watching for file changes with StatReloader
+INFO 2022-09-20 15:52:11,750 basehttp 10816 19188 "GET /api/users/info/ HTTP/1.1" 200 10809
+INFO 2022-09-20 15:52:18,694 autoreload 10816 1704 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-20 15:52:20,947 autoreload 11540 10156 Watching for file changes with StatReloader
+INFO 2022-09-20 15:52:27,480 basehttp 11540 20392 "POST /api/token/ HTTP/1.1" 200 486
+WARNING 2022-09-20 15:52:37,751 log 11540 20392 Forbidden: /api/users/change_password/12/
+WARNING 2022-09-20 15:52:37,752 basehttp 11540 20392 "PUT /api/users/change_password/12/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:52:43,250 log 11540 20392 Bad Request: /api/users/change_password/13/
+WARNING 2022-09-20 15:52:43,252 basehttp 11540 20392 "PUT /api/users/change_password/13/ HTTP/1.1" 400 63
+INFO 2022-09-20 15:52:49,481 basehttp 11540 20392 "PUT /api/users/change_password/13/ HTTP/1.1" 200 2
+WARNING 2022-09-20 15:52:51,380 log 11540 20392 Unauthorized: /api/token/
+WARNING 2022-09-20 15:52:51,381 basehttp 11540 20392 "POST /api/token/ HTTP/1.1" 401 63
+INFO 2022-09-20 15:53:02,116 basehttp 11540 20392 "PUT /api/users/change_password/13/ HTTP/1.1" 200 2
+INFO 2022-09-20 15:53:04,004 basehttp 11540 20392 "POST /api/token/ HTTP/1.1" 200 486
+INFO 2022-09-20 15:53:10,813 autoreload 11540 10156 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
+INFO 2022-09-20 15:53:12,732 autoreload 13672 12280 Watching for file changes with StatReloader
+INFO 2022-09-20 15:54:02,038 autoreload 13672 12280 C:\Maki\Python code\Courses\omdb-api\users\urls.py changed, reloading.
+INFO 2022-09-20 15:54:04,544 autoreload 2692 14692 Watching for file changes with StatReloader
+INFO 2022-09-20 15:54:10,647 autoreload 2692 14692 C:\Maki\Python code\Courses\omdb-api\users\urls.py changed, reloading.
+INFO 2022-09-20 15:54:12,469 autoreload 19996 20804 Watching for file changes with StatReloader
+INFO 2022-09-20 15:54:17,299 autoreload 19996 20804 C:\Maki\Python code\Courses\omdb-api\base\settings.py changed, reloading.
+INFO 2022-09-20 15:54:19,300 autoreload 18040 11792 Watching for file changes with StatReloader
+WARNING 2022-09-20 15:54:24,036 log 18040 14520 Bad Request: /api/users/change_password/13/
+WARNING 2022-09-20 15:54:24,038 basehttp 18040 14520 "PUT /api/users/change_password/13/ HTTP/1.1" 400 63
+INFO 2022-09-20 15:54:30,739 basehttp 18040 14520 "PUT /api/users/change_password/13/ HTTP/1.1" 200 2
+WARNING 2022-09-20 15:54:33,164 log 18040 14520 Unauthorized: /api/token/
+WARNING 2022-09-20 15:54:33,165 basehttp 18040 14520 "POST /api/token/ HTTP/1.1" 401 63
+INFO 2022-09-20 15:54:36,036 basehttp 18040 14520 "POST /api/token/ HTTP/1.1" 200 486
+INFO 2022-09-20 15:54:43,093 basehttp 18040 14520 "PUT /api/users/change_password/13/ HTTP/1.1" 200 2
+WARNING 2022-09-20 15:54:45,190 log 18040 14520 Unauthorized: /api/token/
+WARNING 2022-09-20 15:54:45,192 basehttp 18040 14520 "POST /api/token/ HTTP/1.1" 401 63
+INFO 2022-09-20 15:54:49,233 basehttp 18040 14520 "POST /api/token/ HTTP/1.1" 200 486
+WARNING 2022-09-20 15:54:52,370 log 18040 14520 Forbidden: /api/users/change_password/12/
+WARNING 2022-09-20 15:54:52,372 basehttp 18040 14520 "PUT /api/users/change_password/12/ HTTP/1.1" 403 63
+INFO 2022-09-20 15:54:55,876 autoreload 18040 11792 C:\Maki\Python code\Courses\omdb-api\base\settings.py changed, reloading.
+INFO 2022-09-20 15:54:58,207 autoreload 7540 12336 Watching for file changes with StatReloader

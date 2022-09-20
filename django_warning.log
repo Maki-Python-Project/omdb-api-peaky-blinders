@@ -4050,3 +4050,19 @@ WARNING 2022-09-20 15:47:29,856 log 13612 19284 Unauthorized: /api/token/
 WARNING 2022-09-20 15:47:29,857 basehttp 13612 19284 "POST /api/token/ HTTP/1.1" 401 63
 WARNING 2022-09-20 15:47:37,565 log 13612 19284 Forbidden: /api/users/change_password/12/
 WARNING 2022-09-20 15:47:37,567 basehttp 13612 19284 "PUT /api/users/change_password/12/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:51:59,854 log 11684 9460 Unauthorized: /api/users/info/
+WARNING 2022-09-20 15:51:59,855 basehttp 11684 9460 "GET /api/users/info/ HTTP/1.1" 401 10219
+WARNING 2022-09-20 15:52:37,751 log 11540 20392 Forbidden: /api/users/change_password/12/
+WARNING 2022-09-20 15:52:37,752 basehttp 11540 20392 "PUT /api/users/change_password/12/ HTTP/1.1" 403 63
+WARNING 2022-09-20 15:52:43,250 log 11540 20392 Bad Request: /api/users/change_password/13/
+WARNING 2022-09-20 15:52:43,252 basehttp 11540 20392 "PUT /api/users/change_password/13/ HTTP/1.1" 400 63
+WARNING 2022-09-20 15:52:51,380 log 11540 20392 Unauthorized: /api/token/
+WARNING 2022-09-20 15:52:51,381 basehttp 11540 20392 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 15:54:24,036 log 18040 14520 Bad Request: /api/users/change_password/13/
+WARNING 2022-09-20 15:54:24,038 basehttp 18040 14520 "PUT /api/users/change_password/13/ HTTP/1.1" 400 63
+WARNING 2022-09-20 15:54:33,164 log 18040 14520 Unauthorized: /api/token/
+WARNING 2022-09-20 15:54:33,165 basehttp 18040 14520 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 15:54:45,190 log 18040 14520 Unauthorized: /api/token/
+WARNING 2022-09-20 15:54:45,192 basehttp 18040 14520 "POST /api/token/ HTTP/1.1" 401 63
+WARNING 2022-09-20 15:54:52,370 log 18040 14520 Forbidden: /api/users/change_password/12/
+WARNING 2022-09-20 15:54:52,372 basehttp 18040 14520 "PUT /api/users/change_password/12/ HTTP/1.1" 403 63
