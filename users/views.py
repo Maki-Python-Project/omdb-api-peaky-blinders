@@ -9,7 +9,20 @@ from .serializers import RegisterSerializer, UserSerializer
 from .pagination import StandardResultsSetPagination
 
 
+<<<<<<< Updated upstream
 User = get_user_model()
+=======
+class UserViewSet(viewsets.ModelViewSet):
+    pagination_class = StandardResultsSetPagination
+    permission_classes_by_action = {
+        'list': [IsAuthenticated, IsAdminUser],
+        'retrieve': [IsAuthenticated, IsAdminUser],
+        'destroy': [IsAuthenticated, IsAdminUser],
+    }
+
+    def get_queryset(self):
+        return User.objects.all()
+>>>>>>> Stashed changes
 
 
 class UserViewSet(viewsets.ModelViewSet):
