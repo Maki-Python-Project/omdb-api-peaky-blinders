@@ -9,6 +9,10 @@ services:
         - 8000
         depends_on:
         - db
+        - redis
+        networks:
+        - nginx_network
+        - database_network
     db:
         image: postgres
         volumes:
@@ -19,15 +23,47 @@ services:
         - POSTGRES_USER=postgres
         - POSTGRES_PASSWORD=admin
         - POSTGRES_DB=episode
+        networks:
+        - database_network
     nginx:
-      container_name: "nginx"
-      build: ./config/nginx/dev_conf.d
-      volumes:
-          - static_volume:/home/app/web/staticfiles
-      ports:
+        container_name: "nginx"
+        build: ./config/nginx/dev_conf.d
+        volumes:
+            - static_volume:/home/app/web/staticfiles
+        ports:
         - 80:80
-      depends_on:
+        depends_on:
         - db
+        networks:
+        - nginx_network
+    redis:
+        image: redis:alpine
+        networks:
+        - database_network
+        - nginx_network
+    celery:
+        restart: always
+        build:
+            context: .
+        command: celery -A base worker -l info
+        volumes:
+            - static_volume:/home/app/web/staticfiles
+        env_file:
+        - ./config/db/database_env
+        depends_on:
+        - db
+        - redis
+        - omdb
+        networks:
+        - nginx_network
+        - database_network
 volumes:
     postgres_database_volume:
     static_volume:
+
+networks:
+  nginx_network:
+    driver: bridge
+
+  database_network:
+    driver: bridge

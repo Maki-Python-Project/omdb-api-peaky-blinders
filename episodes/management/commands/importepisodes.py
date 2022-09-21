@@ -34,7 +34,8 @@ class Command(BaseCommand):
             if actors_serializer.is_valid():
                 actors_serializer.save()
 
-        genres= []
+        genres = []
+
         for genre in series['Genre'].split(', '):
             genres.append({
                 'name': genre,
@@ -46,25 +47,53 @@ class Command(BaseCommand):
 
         if not Episode.objects.exists():
             for i in range(1, seasons_count + 1):
-                response_season = urlopen(f'https://www.omdbapi.com/?t=Peaky%20Blinders&Season={i}&type=series&apikey={api_key}')
+                response_season = urlopen(
+                    f'https://www.omdbapi.com/?t=Peaky%20Blinders&Season={i}&type=series&apikey={api_key}'
+                )
                 season = json.loads(response_season.read())
                 episodes = season['Episodes']
-                self.import_season(i, episodes, int(episodes[0]['Episode']),
-                                   int(episodes[-1]['Episode']), genres, actors, language)
+                self.import_season(
+                    i,
+                    episodes,
+                    int(episodes[0]['Episode']),
+                    int(episodes[-1]['Episode']),
+                    genres,
+                    actors,
+                    language
+                )
         else:
             local_episode = Episode.objects.order_by('-season', '-number_episode')[0]
-            response_season = urlopen(f'https://www.omdbapi.com/?t=Peaky%20Blinders&Season={local_episode.season}&type=series&apikey={api_key}')
+            response_season = urlopen(
+                f'https://www.omdbapi.com/?t=Peaky%20Blinders&Season={local_episode.season}&type=series&apikey={api_key}'
+            )
             season = json.loads(response_season.read())
             episodes = season['Episodes']
 
-            if (local_episode.season == seasons_count and local_episode.number_episode < int(season['Episodes'][-1]['Episode'])):
-                self.import_season(local_episode.season, episodes, int(local_episode.number_episode),
-                                   int(season['Episodes'][-1]['Episode']), genres, actors, language)
+            if (local_episode.season == seasons_count and
+                    local_episode.number_episode < int(season['Episodes'][-1]['Episode'])):
+                self.import_season(
+                    local_episode.season,
+                    episodes,
+                    int(local_episode.number_episode),
+                    int(season['Episodes'][-1]['Episode']),
+                    genres,
+                    actors,
+                    language
+                    )
             elif local_episode.season < seasons_count:
-                self.import_season(local_episode.season, episodes, int(local_episode.number_episode),
-                                   int(season['Episodes'][-1]['Episode']), genres, actors, language)
+                self.import_season(
+                    local_episode.season,
+                    episodes,
+                    int(local_episode.number_episode),
+                    int(season['Episodes'][-1]['Episode']),
+                    genres,
+                    actors,
+                    language
+                )
                 for i in range(local_episode.season + 1, seasons_count + 1):
-                    response_season = urlopen(f'https://www.omdbapi.com/?t=Peaky%20Blinders&Season={i}&type=series&apikey={api_key}')
+                    response_season = urlopen(
+                        f'https://www.omdbapi.com/?t=Peaky%20Blinders&Season={i}&type=series&apikey={api_key}'
+                    )
                     season = json.loads(response_season.read())
                     episodes = season['Episodes']
                     self.import_season(i, episodes, int(episodes[0]['Episode']),
@@ -83,7 +112,9 @@ class Command(BaseCommand):
                 'actors': actors,
                 'language': language
             }
+
             episode_serializer = EpisodeSerializer(data=episode_data)
+
             if episode_serializer.is_valid():
                 episode_serializer.save()
             else:

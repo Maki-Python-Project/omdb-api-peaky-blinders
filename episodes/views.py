@@ -1,16 +1,23 @@
-from rest_framework import generics, filters, permissions
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
 from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import generics, filters, permissions
 from rest_framework.permissions import IsAuthenticated
 
 from .models import Episode, Comment
 from .serializers import EpisodeSerializer, CommentSerializer
-from .filters import CommentFilter
+from .filters import CommentFilter, ImdbFilter
 from .permissions import AdminOrAccountOwnerPermission
+from .pagination import StandardResultsSetPagination
+from .tasks import scraping
+
+
+scraping.delay()
 
 
 class EpisodeList(generics.ListCreateAPIView):
-    queryset = Episode.objects.all()
     serializer_class = EpisodeSerializer
+    pagination_class = StandardResultsSetPagination
     filter_backends = [
         DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter
     ]
@@ -19,6 +26,13 @@ class EpisodeList(generics.ListCreateAPIView):
     ]
     search_fields = ['title_episode', 'number_episode', 'season']
     ordering_fields = ['id', 'number_episode', 'season']
+
+    def get_queryset(self):
+        return Episode.objects.all()
+
+    @method_decorator(cache_page(60*60*3))
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
 
 
 class EpisodeDetail(generics.RetrieveUpdateDestroyAPIView):
@@ -46,3 +60,9 @@ class CommentDetail(generics.RetrieveUpdateDestroyAPIView):
         if self.request.method not in permissions.SAFE_METHODS:
             return [AdminOrAccountOwnerPermission(), IsAuthenticated()]
         return [IsAuthenticated()]
+
+
+class EpisodeImdb(generics.ListCreateAPIView):
+    queryset = Episode.objects.filter(imdb_rating__gte=8.8)
+    serializer_class = EpisodeSerializer
+    filterset_class = ImdbFilter
