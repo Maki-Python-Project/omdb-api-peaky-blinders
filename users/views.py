@@ -7,9 +7,10 @@ from rest_framework import viewsets
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.views.decorators.vary import vary_on_cookie
 
-from .serializers import RegisterSerializer, UserSerializer
+from .serializers import RegisterSerializer, UserSerializer, ChangePasswordSerializer
 from .pagination import StandardResultsSetPagination
 from .models import User
+from .permissions import AccountOwnerPermission
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -56,6 +57,12 @@ class RegisterApi(generics.GenericAPIView):
                 user, context=self.get_serializer_context()
             ).data
         })
+
+
+class ChangePasswordView(generics.UpdateAPIView):
+    queryset = User.objects.all()
+    permission_classes = (IsAuthenticated, AccountOwnerPermission)
+    serializer_class = ChangePasswordSerializer
 
 
 class LogoutView(generics.GenericAPIView):
