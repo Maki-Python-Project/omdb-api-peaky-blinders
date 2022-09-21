@@ -2,11 +2,11 @@ version: '3.8'
 services:
     omdb:
         build: .
-        command: gunicorn base.wsgi:application --bind 0.0.0.0:8443
+        command: gunicorn base.wsgi:application --bind 0.0.0.0:8000
         volumes:
             - static_volume:/home/app/web/staticfiles
         expose:
-        - 8443
+        - 8000
         depends_on:
         - db
         - redis
@@ -17,6 +17,8 @@ services:
         image: postgres
         volumes:
             - postgres_database_volume:/var/lib/postgresql/data
+        ports:
+        - 5434:5432
         env_file:
         - ./config/db/database_env
         networks:
@@ -27,7 +29,7 @@ services:
         volumes:
             - static_volume:/home/app/web/staticfiles
         ports:
-        - 8443:8443
+        - 80:80
         depends_on:
         - omdb
         networks:

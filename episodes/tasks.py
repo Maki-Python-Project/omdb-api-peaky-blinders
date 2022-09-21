@@ -14,6 +14,7 @@ load_dotenv()
 
 api_key = os.getenv('API_KEY')
 
+    genres = []
 
 def import_season(season, episodes, local_episode_number, current_episode_number,
                   genres, actors, language='English, Romanian, Irish Gaelic, Italian, Yiddish, French'):

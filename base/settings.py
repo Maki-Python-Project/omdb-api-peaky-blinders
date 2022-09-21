@@ -15,10 +15,9 @@ DEBUG = int(os.getenv('DEBUG', default=0))
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(' ')
 
-CSRF_TRUSTED_ORIGINS = ['http://localhost:8443']
-
-CELERY_BROKER_URL = "redis://redis:6379"
-CELERY_RESULT_BACKEND = "redis://redis:6379"
+# CSRF_TRUSTED_ORIGINS = ['http://localhost:8081']
+CELERY_BROKER_URL = "redis://redis:6380"
+CELERY_RESULT_BACKEND = "redis://redis:6380"
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -36,7 +35,7 @@ INSTALLED_APPS = [
 
     # local apps
     'episodes.apps.EpisodesConfig',
-    'users',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -86,7 +85,7 @@ DATABASES = {
         'PORT': 5434,
         'USER': 'postgres',
         'PASSWORD': '517484',
-        "NAME": "episods",
+        "NAME": "episode",
     }
 }
 
@@ -218,5 +217,3 @@ LOGGING = {
     }
 }
 
-CELERY_BROKER_URL = "redis://redis:6379"
-CELERY_RESULT_BACKEND = "redis://redis:6379"
