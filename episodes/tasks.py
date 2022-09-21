@@ -1,35 +1,125 @@
-# import requests
-from .serializers import EpisodeSerializer
-from .models import Episode
-from rest_framework.response import Response
-from rest_framework import status
-from .models import Episode
+import json
+import os
+
+from django.core.management.base import CommandError
 from celery import shared_task
+from urllib.request import urlopen
+from dotenv import load_dotenv
+
+from .models import Actor, Episode, Genre
+from .serializers import ActorsSerializer, EpisodeSerializer, GenreSerializer
 
 
-@shared_task()
-def parse_data():
-    queryset = Episode.objects.all().values()
-    new_data = list(queryset)
-    return new_data
-    # my_api_key = '5af9b7f2'
-    # url = f'http://www.omdbapi.com/?t=Peaky Blinders&type=series&apikey={my_api_key}'
-    # response = requests.get(url)
-    # if response.status_code == requests.codes.ok and response.json()['Response'] == 'True':
-    #     for i in range(int(response.json()['totalSeasons'])):
-    #         url += f'&season={i+1}'
-    #         response = requests.get(url)
-    #         data = {}
-    #         for elem in response.json()['Episodes']:
-    #             data['id'] = i+10
-    #             data['title_episode'] = elem["Title"]
-    #             data['season'] = i
-    #             data['released'] = elem['Released']
-    #             data['genre'] = "Horror"
-    #             data['number_episode'] = elem['Episode']
-    #             data['imdb_rating'] = elem['imdbRating']
-    #         serializer = EpisodeSerializer(data=data)
-    #         url = url.replace(f'season={i+1}', "")
-    #         if serializer.is_valid():
-    #             serializer.save()
-    #             return Response(serializer.data)
+load_dotenv()
+
+api_key = os.getenv('API_KEY')
+
+
+def import_season(season, episodes, local_episode_number, current_episode_number,
+                  genres, actors, language='English, Romanian, Irish Gaelic, Italian, Yiddish, French'):
+    for episode in episodes[local_episode_number - 1:current_episode_number]:
+        episode_data = {
+            'title_episode': episode['Title'],
+            'season': season,
+            'released': episode['Released'],
+            'number_episode': episode['Episode'],
+            'imdb_rating': episode['imdbRating'],
+            'genre': genres,
+            'actors': actors,
+            'language': language
+        }
+
+        episode_serializer = EpisodeSerializer(data=episode_data)
+
+        if episode_serializer.is_valid():
+            episode_serializer.save()
+        else:
+            raise CommandError(episode_serializer.errors)
+
+
+@shared_task
+def scraping():
+    response_series = urlopen(f'https://www.omdbapi.com/?i=tt2442560&apikey={api_key}')
+    series = json.loads(response_series.read())
+    seasons_count = int(series['totalSeasons'])
+
+    language = series['Language']
+    actors = []
+
+    for name_surname in series['Actors'].split(', '):
+        name_surname = name_surname.split()
+        actors.append({
+            'name': name_surname[0],
+            'surname': name_surname[1],
+        })
+
+    if not Actor.objects.exists():
+        actors_serializer = ActorsSerializer(data=actors, many=True)
+        if actors_serializer.is_valid():
+            actors_serializer.save()
+
+    genres = []
+
+    for genre in series['Genre'].split(', '):
+        genres.append({
+            'name': genre,
+        })
+
+    if not Genre.objects.exists():
+        genres_serializer = GenreSerializer(data=genres, many=True)
+        if genres_serializer.is_valid():
+            genres_serializer.save()
+
+    if not Episode.objects.exists():
+        for i in range(1, seasons_count + 1):
+            response_season = urlopen(
+                f'https://www.omdbapi.com/?t=Peaky%20Blinders&Season={i}&type=series&apikey={api_key}'
+            )
+            season = json.loads(response_season.read())
+            episodes = season['Episodes']
+            import_season(
+                i,
+                episodes,
+                int(episodes[0]['Episode']),
+                int(episodes[-1]['Episode']),
+                genres,
+                actors,
+                language
+            )
+    else:
+        local_episode = Episode.objects.order_by('-season', '-number_episode')[0]
+        response_season = urlopen(
+            f'https://www.omdbapi.com/?t=Peaky%20Blinders&Season={local_episode.season}&type=series&apikey={api_key}'
+        )
+        season = json.loads(response_season.read())
+        episodes = season['Episodes']
+
+        if (local_episode.season == seasons_count and
+                local_episode.number_episode < int(season['Episodes'][-1]['Episode'])):
+            import_season(
+                local_episode.season,
+                episodes,
+                int(local_episode.number_episode),
+                int(season['Episodes'][-1]['Episode']),
+                genres,
+                actors,
+                language
+                )
+        elif local_episode.season < seasons_count:
+            import_season(
+                local_episode.season,
+                episodes,
+                int(local_episode.number_episode),
+                int(season['Episodes'][-1]['Episode']),
+                genres,
+                actors,
+                language
+            )
+            for i in range(local_episode.season + 1, seasons_count + 1):
+                response_season = urlopen(
+                    f'https://www.omdbapi.com/?t=Peaky%20Blinders&Season={i}&type=series&apikey={api_key}'
+                )
+                season = json.loads(response_season.read())
+                episodes = season['Episodes']
+                import_season(i, episodes, int(episodes[0]['Episode']),
+                              int(episodes[-1]['Episode']), genres, actors, language)
