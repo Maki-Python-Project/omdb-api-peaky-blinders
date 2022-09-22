@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from django.core.mail import send_mail
 
 
 def validate_password(validated_data):
@@ -14,3 +15,13 @@ def validate_password(validated_data):
         raise serializers.ValidationError({'password': msg})
 
     return validated_data
+
+
+def send(user_email, user_name):
+    send_mail(
+        'You have just registered on our website',
+        f'Welcome, {user_name}',
+        'some-email@gmail.com',
+        [user_email],
+        fail_silently=False
+    )

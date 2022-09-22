@@ -11,6 +11,7 @@ from .serializers import RegisterSerializer, UserSerializer, ChangePasswordSeria
 from .pagination import StandardResultsSetPagination
 from .models import User
 from .permissions import AccountOwnerPermission
+from .tasks import send_a_message_to_email
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -52,6 +53,8 @@ class RegisterApi(generics.GenericAPIView):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
+        send_a_message_to_email.delay(user.email, user.username)
+
         return Response({
             'user': UserSerializer(
                 user, context=self.get_serializer_context()
