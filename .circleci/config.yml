@@ -1,16 +1,21 @@
 version: 2.1
 
+orbs:
+  python:circleci/python@0.2.1
+
 jobs:
-  say-hello:
-    docker:
-      - image: cimg/base:stable
+  build-and-test:
+    executor: python/default
     steps:
       - checkout
+      - python/load-cache
+      - python/install-deps
+      - python/save-cache
       - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
+          name: "Test"
+          command: ./manage.py test
 
 workflows:
-  say-hello-workflow:
+  main:
     jobs:
-      - say-hello
+      - build-and-test
