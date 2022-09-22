@@ -216,3 +216,12 @@ LOGGING = {
         },
     }
 }
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'some-email@gmail.com'
+EMAIL_HOST_PASSWORD = 'some-password'
+EMAIL_PORT = 587
+
+CELERY_BROKER_URL = "redis://redis:6379"
+CELERY_RESULT_BACKEND = "redis://redis:6379"
