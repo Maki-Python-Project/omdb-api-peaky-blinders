@@ -6063,3 +6063,22 @@ ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечн
 ERROR 2022-09-22 18:15:05,180 basehttp 2804 12620 "POST /api/users/register/ HTTP/1.1" 500 145024
 INFO 2022-09-22 18:15:50,605 autoreload 2804 19340 C:\Maki\Python code\Courses\omdb-api\users\views.py changed, reloading.
 INFO 2022-09-22 18:15:52,549 autoreload 3600 15592 Watching for file changes with StatReloader
+INFO 2022-09-23 20:19:42,933 autoreload 11752 2024 Watching for file changes with StatReloader
+INFO 2022-09-23 20:19:43,399 basehttp 11752 15028 "GET /api/episodes HTTP/1.1" 301 0
+INFO 2022-09-23 20:19:43,792 basehttp 11752 15028 "GET /api/episodes/ HTTP/1.1" 200 31010
+INFO 2022-09-23 20:19:43,961 basehttp 11752 17084 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2022-09-23 20:19:43,961 basehttp 11752 13960 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2022-09-23 20:19:43,966 basehttp 11752 15028 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2022-09-23 20:19:43,976 basehttp 11752 13960 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2022-09-23 20:19:43,985 basehttp 11752 15028 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2022-09-23 20:19:43,993 basehttp 11752 13960 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+INFO 2022-09-23 20:19:44,016 basehttp 11752 13960 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2022-09-23 20:19:44,024 basehttp 11752 15028 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2022-09-23 20:19:44,028 basehttp 11752 17084 "GET /static/rest_framework/js/jquery-3.5.1.min.js HTTP/1.1" 200 89476
+INFO 2022-09-23 20:19:44,031 basehttp 11752 15028 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2022-09-23 20:19:44,036 basehttp 11752 13960 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2022-09-23 20:19:44,077 basehttp 11752 13960 "GET /static/rest_framework/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+WARNING 2022-09-23 20:19:44,368 log 11752 13960 Not Found: /favicon.ico
+WARNING 2022-09-23 20:19:44,370 basehttp 11752 13960 "GET /favicon.ico HTTP/1.1" 404 2845
+INFO 2022-09-23 20:37:46,136 autoreload 9436 18544 Watching for file changes with StatReloader
+INFO 2022-09-23 20:38:22,600 basehttp 9436 10852 "GET /api/episodes/ HTTP/1.1" 200 31010
