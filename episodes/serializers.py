@@ -1,3 +1,4 @@
+from typing import Any
 from rest_framework import serializers
 from .models import Episode, Comment, Genre, Actor
 
@@ -37,7 +38,7 @@ class EpisodeSerializer(serializers.ModelSerializer):
             'language'
         ]
 
-    def create(self, validated_data):
+    def create(self, validated_data: Any) -> Episode:
         genres = validated_data.pop('genre')
         actors = validated_data.pop('actors')
         episode = Episode.objects.create(**validated_data)
