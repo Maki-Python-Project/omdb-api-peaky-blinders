@@ -4,20 +4,15 @@ from pathlib import Path
 from dotenv import load_dotenv
 from datetime import timedelta
 
-
 load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = True
+DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(' ')
-
-# CSRF_TRUSTED_ORIGINS = ['http://localhost:8081']
-CELERY_BROKER_URL = "redis://redis:6379"
-CELERY_RESULT_BACKEND = "redis://redis:6379"
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -70,12 +65,12 @@ WSGI_APPLICATION = "base.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        'HOST': 'host.docker.internal',
-        'PORT': 5434,
-        'USER': 'postgres',
-        'PASSWORD': '517484',
-        "NAME": "episode",
+        "ENGINE": os.getenv('ENGINE'),
+        'HOST': os.getenv('HOST'),
+        'PORT': os.getenv('PORT'),
+        'USER': os.getenv('USER'),
+        'PASSWORD': os.getenv('PASSWORD'),
+        'NAME': os.getenv('NAME'),
     }
 }
 
@@ -207,11 +202,11 @@ LOGGING = {
     }
 }
 
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'some-email@gmail.com'
-EMAIL_HOST_PASSWORD = 'some-password'
-EMAIL_PORT = 587
+EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS')
+EMAIL_HOST = os.getenv('EMAIL_HOST')
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+EMAIL_PORT = os.getenv('EMAIL_PORT')
 
-CELERY_BROKER_URL = "redis://redis:6379"
-CELERY_RESULT_BACKEND = "redis://redis:6379"
+CELERY_BROKER_URL = os.getenv('CELERY_BROKER_URL')
+CELERY_RESULT_BACKEND = os.getenv('CELERY_RESULT_BACKEND')
