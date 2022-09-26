@@ -1,3 +1,4 @@
+#Keep in sync with settings.py
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=517484
 POSTGRES_DB=episode

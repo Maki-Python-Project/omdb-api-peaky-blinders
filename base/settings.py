@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = int(os.getenv('DEBUG', default=0))
+DEBUG = True
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(' ')
 
@@ -68,16 +68,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "base.wsgi.application"
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.postgresql_psycopg2",
-#         'HOST': 'host.docker.internal',
-#         'PORT': 6666,
-#         'USER': 'postgres',
-#         'PASSWORD': 'admin',
-#         "NAME": "episode",
-#     }
-# }
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
