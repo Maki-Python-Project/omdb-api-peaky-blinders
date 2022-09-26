@@ -4,7 +4,7 @@ from .models import Comment, Episode
 
 
 class CommentFilter(filters.FilterSet):
-    episode = filters.CharFilter(field_name='episode__title_episode', lookup_expr='iexact')
+    episode = filters.CharFilter(field_name='episode__id', lookup_expr='iexact')
     author = filters.CharFilter(field_name='customer__username', lookup_expr='iexact')
 
     class Meta:

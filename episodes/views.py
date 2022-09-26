@@ -51,6 +51,7 @@ class CommentList(generics.ListCreateAPIView):
 
 class CommentDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Comment.objects.all()
+    filterset_class = CommentFilter
     serializer_class = CommentSerializer
 
     def get_permissions(self) -> permissions.BasePermission:
