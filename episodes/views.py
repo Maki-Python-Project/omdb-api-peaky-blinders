@@ -3,6 +3,7 @@ from django.views.decorators.cache import cache_page
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import generics, filters, permissions
 from rest_framework.permissions import IsAuthenticated
+from django.db.models.query import QuerySet
 
 from .models import Episode, Comment
 from .serializers import EpisodeSerializer, CommentSerializer
@@ -23,7 +24,7 @@ class EpisodeList(generics.ListCreateAPIView):
     search_fields = ['title_episode', 'number_episode', 'season']
     ordering_fields = ['id', 'number_episode', 'season']
 
-    def get_queryset(self):
+    def get_queryset(self) -> QuerySet[Episode]:
         return Episode.objects.all()
 
     @method_decorator(cache_page(60*60*3))

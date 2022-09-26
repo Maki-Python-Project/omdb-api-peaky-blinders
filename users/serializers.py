@@ -60,7 +60,7 @@ class ChangePasswordSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError({"old_password": "Old password is not correct"})
         return value
 
-    def update(self, instance, validated_data):
+    def update(self, instance, validated_data: OrderedDict):
 
         instance.set_password(validated_data['password1'])
         instance.save()

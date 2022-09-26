@@ -1,5 +1,7 @@
-from typing import Any
+from typing import Type
 from rest_framework import serializers
+from collections import OrderedDict
+
 from .models import Episode, Comment, Genre, Actor
 
 
@@ -38,7 +40,7 @@ class EpisodeSerializer(serializers.ModelSerializer):
             'language'
         ]
 
-    def create(self, validated_data: Any) -> Episode:
+    def create(self, validated_data: OrderedDict) -> Type[Episode]:
         genres = validated_data.pop('genre')
         actors = validated_data.pop('actors')
         episode = Episode.objects.create(**validated_data)
