@@ -1,16 +1,17 @@
 import pytest
-from urllib.request import urlopen
+
 from django.core.management import call_command
 from django.db.models import Max
+from rest_framework import status
+
+from episodes.models import Episode
 from users.fixtures import (
     api_client,
     user_token,
     user_data,
     superuser_token
 )
-from episodes.models import Episode
-from rest_framework import status
-from .fixtures import (
+from episodes.fixtures import (
     episode,
     episodes,
     comment,

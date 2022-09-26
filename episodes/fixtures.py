@@ -1,12 +1,13 @@
 import os
 import json
 import pytest
-from episodes.models import Episode, Genre, Actor, Comment
+
 from datetime import date
-from users.fixtures import user_token, user_data
-from users.models import User
 from urllib.request import urlopen
 from dotenv import load_dotenv
+
+from episodes.models import Episode, Genre, Actor, Comment
+from users.models import User
 
 
 load_dotenv()

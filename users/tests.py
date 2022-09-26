@@ -1,12 +1,13 @@
 import pytest
+
 from django.urls import reverse
 from rest_framework import status
-from .fixtures import (
+
+from users.fixtures import (
     api_client,
     user_data,
     user_token,
-    superuser_token,
-
+    superuser_token
 )
 
 
