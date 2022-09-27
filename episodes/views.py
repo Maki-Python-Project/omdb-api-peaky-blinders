@@ -12,9 +12,6 @@ from .pagination import StandardResultsSetPagination
 from .tasks import scraping
 
 
-scraping.delay()
-
-
 class EpisodeList(generics.ListCreateAPIView):
     serializer_class = EpisodeSerializer
     pagination_class = StandardResultsSetPagination
@@ -28,7 +25,7 @@ class EpisodeList(generics.ListCreateAPIView):
     ordering_fields = ['id', 'number_episode', 'season']
 
     def get_queryset(self):
-        return Episode.objects.all()
+        return Episode.objects.all().prefetch_related('genre', 'actors')
 
     @method_decorator(cache_page(60*60*3))
     def dispatch(self, request, *args, **kwargs):
@@ -36,13 +33,13 @@ class EpisodeList(generics.ListCreateAPIView):
 
 
 class EpisodeDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Episode.objects.all()
+    queryset = Episode.objects.all().prefetch_related('genre', 'actors')
     serializer_class = EpisodeSerializer
 
 
 class CommentList(generics.ListCreateAPIView):
     permission_classes = (IsAuthenticated,)
-    queryset = Comment.objects.all()
+    queryset = Comment.objects.all().select_related('customer')
     serializer_class = CommentSerializer
     filterset_class = CommentFilter
 
