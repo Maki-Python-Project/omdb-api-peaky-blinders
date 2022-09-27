@@ -1,10 +1,13 @@
 import pytest
+import json
+import numbers
 
 from django.core.management import call_command
 from django.db.models import Max
 from rest_framework import status
 
-from episodes.models import Episode
+from episodes.models import Episode, Comment
+from users.models import User
 from users.fixtures import (
     api_client,
     user_token,
@@ -49,9 +52,14 @@ def test_importepisodes_missing_season_episodes(omdb_season):
 
 
 @pytest.mark.django_db
-def test_episodes(api_client):
+def test_episodes(api_client, episodes):
     url = '/api/episodes/'
     response = api_client.get(url)
+    for result in response.data['results']:
+        assert Episode.objects.filter(
+            season=result['season'],
+            number_episode=result['number_episode']
+        ).exists(), "Can't find episode with given data"
     assert response.status_code == status.HTTP_200_OK, "Cannot retrieve episodes list"
 
 
@@ -59,6 +67,10 @@ def test_episodes(api_client):
 def test_episode(api_client, episode):
     url = f'/api/episodes/{episode["pk"]}/'
     response = api_client.get(url)
+    assert Episode.objects.filter(
+        season=response.data['season'],
+        number_episode=response.data['number_episode']
+    ), "Can't find episode with given data"
     assert response.status_code == status.HTTP_200_OK, 'Cannot retrieve specific episode'
 
 
@@ -74,6 +86,13 @@ def test_comments(api_client, comments, user_token):
     url = f'/api/comments/'
     api_client.credentials(HTTP_AUTHORIZATION=f'Bearer {user_token["access"]}')
     response = api_client.get(url)
+    print(response.data)
+    for result in response.data:
+        print(result)
+        assert Comment.objects.filter(
+            text=result['text'],
+            customer=User.objects.get(username=result['customer']).pk
+        ).exists(), "Can't find comment with given data"
     assert response.status_code == status.HTTP_200_OK, 'Cannot retrieve comments'
 
 
@@ -83,4 +102,8 @@ def test_comment(api_client, comment, superuser_token):
     api_client.credentials(
         HTTP_AUTHORIZATION=f'Bearer {superuser_token["access"]}')
     response = api_client.get(url)
+    assert Comment.objects.filter(
+        text=response.data['text'],
+        customer=User.objects.get(username=response.data['customer']).pk
+    ).exists(), "Can't find comment with given data"
     assert response.status_code == status.HTTP_200_OK, 'Cannot retrieve specific comment'
