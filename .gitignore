@@ -2,3 +2,6 @@
 .idea
 venv/
 .DS_Store
+.env
+episode
+__pycache__
