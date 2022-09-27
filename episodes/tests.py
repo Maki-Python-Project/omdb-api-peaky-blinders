@@ -3,7 +3,7 @@ import pytest
 
 @pytest.mark.django_db
 def test_capital_case():
-    assert 'Semaphore' == 'Semaphore' 
+    assert 'qq' == 'qq'
 
 # from django.core.management import call_command
 # from django.db.models import Max
