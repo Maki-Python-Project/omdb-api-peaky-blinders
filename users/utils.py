@@ -1,8 +1,9 @@
 from rest_framework import serializers
+from collections import OrderedDict
 from django.core.mail import send_mail
 
 
-def validate_password(validated_data):
+def validate_password(validated_data: OrderedDict) -> OrderedDict:
     password1 = validated_data.get('password1')
     password2 = validated_data.get('password2')
 
@@ -17,7 +18,7 @@ def validate_password(validated_data):
     return validated_data
 
 
-def send(user_email, user_name):
+def send(user_email: str, user_name: str) -> None:
     send_mail(
         'You have just registered on our website',
         f'Welcome, {user_name}',

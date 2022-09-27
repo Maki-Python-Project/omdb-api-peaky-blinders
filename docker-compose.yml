@@ -19,10 +19,8 @@ services:
             - postgres_database_volume:/var/lib/postgresql/data
         ports:
         - "6666:5432"
-        environment:
-        - POSTGRES_USER=postgres
-        - POSTGRES_PASSWORD=admin
-        - POSTGRES_DB=episode
+        env_file:
+        - ./config/db/database_env
         networks:
         - database_network
     nginx:
