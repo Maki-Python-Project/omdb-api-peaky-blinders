@@ -59,8 +59,6 @@ class Command(BaseCommand):
                 self.import_season(
                     i,
                     episodes,
-                    int(episodes[0]['Episode']),
-                    int(episodes[-1]['Episode']),
                     genres,
                     actors,
                     language
@@ -75,6 +73,7 @@ class Command(BaseCommand):
 
             if (local_episode.season == seasons_count and
                     local_episode.number_episode < int(season['Episodes'][-1]['Episode'])):
+                Episode.objects.filter(season=seasons_count).delete()
                 self.import_season(
                     local_episode.season,
                     episodes,
@@ -85,27 +84,27 @@ class Command(BaseCommand):
                     language
                     )
             elif local_episode.season < seasons_count:
+                Episode.objects.filter(season=seasons_count).delete()
                 self.import_season(
                     local_episode.season,
                     episodes,
-                    int(local_episode.number_episode),
-                    int(season['Episodes'][-1]['Episode']),
                     genres,
                     actors,
                     language
                 )
+                for i in range(local_episode.season, seasons_count + 1):
+                    Episode.objects.filter(season=i).delete()
                 for i in range(local_episode.season + 1, seasons_count + 1):
                     response_season = urlopen(
                         f'https://www.omdbapi.com/?t=Peaky%20Blinders&Season={i}&type=series&apikey={api_key}'
                     )
                     season = json.loads(response_season.read())
                     episodes = season['Episodes']
-                    self.import_season(i, episodes, int(episodes[0]['Episode']),
-                                       int(episodes[-1]['Episode']), genres, actors, language)
+                    self.import_season(i, episodes, genres, actors, language)
 
-    def import_season(self, season, episodes, local_episode_number, current_episode_number,
-                      genres, actors, language='English, Romanian, Irish Gaelic, Italian, Yiddish, French'):
-        for episode in episodes[local_episode_number - 1:current_episode_number]:
+    def import_season(self, season, episodes, genres, actors,
+                      language='English, Romanian, Irish Gaelic, Italian, Yiddish, French'):
+        for episode in episodes:
             episode_data = {
                 'title_episode': episode['Title'],
                 'season': season,
