@@ -7,6 +7,7 @@ from datetime import timedelta
 
 load_dotenv()
 
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY')
@@ -24,11 +25,19 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 
     # 3-rd party apps
+<<<<<<< HEAD
     "rest_framework",
     "rest_framework_simplejwt",
     "rest_framework_simplejwt.token_blacklist",
     "django_filters",
     "debug_toolbar",
+=======
+    'rest_framework',
+    'rest_framework_simplejwt',
+    'rest_framework_simplejwt.token_blacklist',
+    'django_filters',
+    'debug_toolbar',
+>>>>>>> maki
 
     # local apps
     "episodes",
@@ -46,6 +55,12 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+<<<<<<< HEAD
+=======
+if DEBUG:
+    MIDDLEWARE.append("debug_toolbar.middleware.DebugToolbarMiddleware")
+
+>>>>>>> maki
 INTERNAL_IPS = [
     "127.0.0.1",
 ]

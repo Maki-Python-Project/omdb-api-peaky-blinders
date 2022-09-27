@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework_simplejwt import views as jwt_views
 from rest_framework_simplejwt.views import TokenVerifyView
+from .settings import DEBUG
 
 
 urlpatterns = [
@@ -14,3 +15,6 @@ urlpatterns = [
     path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
     path('__debug__/', include('debug_toolbar.urls')),
 ]
+
+if DEBUG:
+    urlpatterns.append(path('__debug__/', include('debug_toolbar.urls')))

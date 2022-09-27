@@ -1,3 +1,5 @@
+import os
+
 from rest_framework import serializers
 from collections import OrderedDict
 from django.core.mail import send_mail
@@ -22,7 +24,7 @@ def send(user_email: str, user_name: str) -> None:
     send_mail(
         'You have just registered on our website',
         f'Welcome, {user_name}',
-        'some-email@gmail.com',
+        os.getenv('EMAIL_HOST'),
         [user_email],
         fail_silently=False
     )
