@@ -1,7 +1,6 @@
 from django.utils.decorators import method_decorator
 from django.views.decorators.cache import cache_page
 from django_filters.rest_framework import DjangoFilterBackend
-from requests import Response
 from rest_framework import generics, filters, permissions
 from rest_framework.permissions import IsAuthenticated
 from django.db.models.query import QuerySet
