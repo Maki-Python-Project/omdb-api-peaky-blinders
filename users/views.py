@@ -6,6 +6,8 @@ from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework import viewsets
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.views.decorators.vary import vary_on_cookie
+from django.db.models.query import QuerySet
+from typing import Type, Union
 
 from .serializers import RegisterSerializer, UserSerializer, ChangePasswordSerializer
 from .pagination import StandardResultsSetPagination
@@ -22,21 +24,21 @@ class UserViewSet(viewsets.ModelViewSet):
         'destroy': [IsAuthenticated, IsAdminUser],
     }
 
-    def get_queryset(self):
+    def get_queryset(self) -> QuerySet[User]:
         return User.objects.all()
 
-    def get_permissions(self):
+    def get_permissions(self) -> Union[Type[IsAuthenticated], Type[IsAdminUser]]:
         try:
             return [permission() for permission in self.permission_classes_by_action[self.action]]
         except KeyError:
             return [permission() for permission in self.permission_classes]
 
-    def get_serializer_class(self):
+    def get_serializer_class(self) -> Type[UserSerializer]:
         return UserSerializer
 
     @method_decorator(cache_page(60*5))
     @method_decorator(vary_on_cookie)
-    def list(self, request):
+    def list(self, request: Response) -> Response:
         queryset = self.get_queryset()
         page = self.paginate_queryset(queryset)
         if page is not None:

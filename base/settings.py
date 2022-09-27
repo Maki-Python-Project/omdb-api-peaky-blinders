@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = os.getenv('DEBUG')
+DEBUG = int(os.getenv('DEBUG'))
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(' ')
 
@@ -67,7 +67,7 @@ DATABASES = {
     "default": {
         "ENGINE": os.getenv('ENGINE'),
         'HOST': os.getenv('HOST'),
-        'PORT': os.getenv('PORT'),
+        'PORT': int(os.getenv('PORT')),
         'USER': os.getenv('USER'),
         'PASSWORD': os.getenv('PASSWORD'),
         'NAME': os.getenv('NAME'),
@@ -206,7 +206,7 @@ EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS')
 EMAIL_HOST = os.getenv('EMAIL_HOST')
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
-EMAIL_PORT = os.getenv('EMAIL_PORT')
+EMAIL_PORT = int(os.getenv('EMAIL_PORT'))
 
 CELERY_BROKER_URL = os.getenv('CELERY_BROKER_URL')
 CELERY_RESULT_BACKEND = os.getenv('CELERY_RESULT_BACKEND')
