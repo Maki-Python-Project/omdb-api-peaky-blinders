@@ -1,6 +1,4 @@
 import pytest
-import json
-import numbers
 
 from django.core.management import call_command
 from django.db.models import Max
