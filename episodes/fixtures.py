@@ -18,8 +18,15 @@ api_key = os.getenv('API_KEY')
 
 @pytest.fixture
 def episode(db):
-    actors = Actor(name='Name', surname='Actor')
-    genre = Genre(name='Genre')
+    actor_data = {
+        'name': 'Name',
+        'surname': 'Actor'
+    }
+    actors = Actor(**actor_data)
+    genre_data = {
+        'name': 'Genre'
+    }
+    genre = Genre(**genre_data)
     actors.save()
     genre.save()
     episode_data = {
@@ -58,6 +65,8 @@ def episodes(db):
     ]
     for episode_data in episodes_data:
         episode = Episode(**episode_data)
+        episode.actors.set([actors.pk])
+        episode.genre.set([genre.pk])
         episode.save()
     return episodes_data
 
