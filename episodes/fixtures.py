@@ -23,11 +23,11 @@ def episode(db):
         'surname': 'Actor'
     }
     actors = Actor(**actor_data)
+    actors.save()
     genre_data = {
         'name': 'Genre'
     }
     genre = Genre(**genre_data)
-    actors.save()
     genre.save()
     episode_data = {
         'pk': 1,
@@ -41,6 +41,8 @@ def episode(db):
 
     }
     episode = Episode(**episode_data)
+    episode.actors.set([actors.pk])
+    episode.genre.set([genre.pk])
     episode.save()
     return episode_data
 
