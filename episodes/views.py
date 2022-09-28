@@ -2,7 +2,7 @@ from django.utils.decorators import method_decorator
 from django.views.decorators.cache import cache_page
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import generics, filters, permissions
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from django.db.models.query import QuerySet
 
 from .models import Episode, Comment
@@ -32,7 +32,7 @@ class EpisodeList(generics.ListCreateAPIView):
         return super().dispatch(request, *args, **kwargs)
 
 
-class EpisodeDetail(generics.RetrieveUpdateDestroyAPIView):
+class EpisodeDetail(generics.RetrieveAPIView):
     queryset = Episode.objects.all().prefetch_related('genre', 'actors')
     serializer_class = EpisodeSerializer
 
