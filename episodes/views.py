@@ -27,7 +27,7 @@ class EpisodeList(generics.ListCreateAPIView):
     def get_queryset(self) -> QuerySet[Episode]:
         return Episode.objects.all().prefetch_related('genre', 'actors')
 
-    @method_decorator(cache_page(60*60*3))
+    @method_decorator(cache_page(60*2))
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
