@@ -74,14 +74,14 @@ def test_episode(api_client, episode):
 
 @pytest.mark.django_db
 def test_eppisode_imdb(api_client, episodes):
-    url = f'/api/episodes/imdb/'
+    url = '/api/episodes/imdb/'
     response = api_client.get(url)
     assert response.status_code == status.HTTP_200_OK, 'Cannot retrieve episodes with rating > 8.8'
 
 
 @pytest.mark.django_db
 def test_comments(api_client, comments, user_token):
-    url = f'/api/comments/'
+    url = '/api/comments/'
     api_client.credentials(HTTP_AUTHORIZATION=f'Bearer {user_token["access"]}')
     response = api_client.get(url)
     print(response.data)
